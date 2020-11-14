@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_QtTest", "Src\01_QtTest\01_QtTest.vcxproj", "{1F283DFC-2857-3339-BB16-D3AC7AF28631}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_HelloQt", "Src\02_HelloQt\02_HelloQt.vcxproj", "{2F52930A-099B-3099-BC47-083A510D7906}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_SignalAndSlot", "Src\03_SignalAndSlot\03_SignalAndSlot.vcxproj", "{BF179B80-D587-34CF-A0C2-2745F31CAAF7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_QT_Coordinate", "Src\04_QT_Coordinate\04_QT_Coordinate.vcxproj", "{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F283DFC-2857-3339-BB16-D3AC7AF28631}.Debug|x64.ActiveCfg = Debug|x64
+		{1F283DFC-2857-3339-BB16-D3AC7AF28631}.Debug|x64.Build.0 = Debug|x64
+		{1F283DFC-2857-3339-BB16-D3AC7AF28631}.Release|x64.ActiveCfg = Release|x64
+		{1F283DFC-2857-3339-BB16-D3AC7AF28631}.Release|x64.Build.0 = Release|x64
+		{2F52930A-099B-3099-BC47-083A510D7906}.Debug|x64.ActiveCfg = Debug|x64
+		{2F52930A-099B-3099-BC47-083A510D7906}.Debug|x64.Build.0 = Debug|x64
+		{2F52930A-099B-3099-BC47-083A510D7906}.Release|x64.ActiveCfg = Release|x64
+		{2F52930A-099B-3099-BC47-083A510D7906}.Release|x64.Build.0 = Release|x64
+		{BF179B80-D587-34CF-A0C2-2745F31CAAF7}.Debug|x64.ActiveCfg = Debug|x64
+		{BF179B80-D587-34CF-A0C2-2745F31CAAF7}.Debug|x64.Build.0 = Debug|x64
+		{BF179B80-D587-34CF-A0C2-2745F31CAAF7}.Release|x64.ActiveCfg = Release|x64
+		{BF179B80-D587-34CF-A0C2-2745F31CAAF7}.Release|x64.Build.0 = Release|x64
+		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Debug|x64.ActiveCfg = Debug|x64
+		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Debug|x64.Build.0 = Debug|x64
+		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Release|x64.ActiveCfg = Release|x64
+		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
