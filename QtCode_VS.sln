@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_SignalAndSlot", "Src\03_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_QT_Coordinate", "Src\04_QT_Coordinate\04_QT_Coordinate.vcxproj", "{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_QMainWindow", "Src\05_QMainWindow\05_QMainWindow.vcxproj", "{601C62B6-6F07-3F31-9721-63775AD832C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,10 @@ Global
 		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Debug|x64.Build.0 = Debug|x64
 		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Release|x64.ActiveCfg = Release|x64
 		{70E4EA5B-DB22-320C-9C99-4AA01ECCF702}.Release|x64.Build.0 = Release|x64
+		{601C62B6-6F07-3F31-9721-63775AD832C7}.Debug|x64.ActiveCfg = Debug|x64
+		{601C62B6-6F07-3F31-9721-63775AD832C7}.Debug|x64.Build.0 = Debug|x64
+		{601C62B6-6F07-3F31-9721-63775AD832C7}.Release|x64.ActiveCfg = Release|x64
+		{601C62B6-6F07-3F31-9721-63775AD832C7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
