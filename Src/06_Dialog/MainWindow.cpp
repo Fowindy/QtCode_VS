@@ -5,6 +5,7 @@
 #include <QAction>
 #include <QDialog>
 #include <QDebug>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -47,6 +48,15 @@ MainWindow::MainWindow(QWidget *parent)
 		qDlg->setAttribute(Qt::WA_DeleteOnClose);
 		qDlg->show();//非模态用show显示,不会阻塞进程,此句执行完毕便释放,看不到窗口
 		qDebug() << "非模态对话框";
+	});
+#pragma endregion
+
+#pragma region 关于对话框
+	QAction *qAbout = menu->addAction("关于");
+	connect(qAbout, &QAction::triggered,
+		[=]()
+	{
+		QMessageBox::about(this, "About", "关于Qt的版本介绍");
 	});
 #pragma endregion
 
