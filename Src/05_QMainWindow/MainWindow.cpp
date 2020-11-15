@@ -7,6 +7,7 @@
 #include <QPushButton>
 #include <QStatusBar>
 #include <QLabel>
+#include <QTextEdit>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -98,6 +99,11 @@ MainWindow::MainWindow(QWidget *parent)
 	sBar->addWidget(new QLabel("2", this));
 	//addPermanentWidget 从右往左添加
 	sBar->addPermanentWidget(new QLabel("3", this));
+#pragma endregion
+
+#pragma region 核心控件_文本编辑区
+	QTextEdit *textEdit = new QTextEdit(this);
+	setCentralWidget(textEdit);
 #pragma endregion
 
 }
