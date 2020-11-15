@@ -60,6 +60,26 @@ MainWindow::MainWindow(QWidget *parent)
 	});
 #pragma endregion
 
+#pragma region 问题对话框
+	QAction *pQuestion = menu->addAction("问题对话框");
+	connect(pQuestion, &QAction::triggered,
+		[=]()
+	{
+		int result = QMessageBox::question(this, "请选择!!!", "Are you OK?");
+		switch (result)
+		{
+		case QMessageBox::Yes:
+			qDebug() << "I am OK.";
+			break;
+		case QMessageBox::No:
+			qDebug() << "I am bad.";
+			break;
+		default:
+			break;
+		}
+	});
+#pragma endregion
+
 }
 MainWindow::~MainWindow()
 {
