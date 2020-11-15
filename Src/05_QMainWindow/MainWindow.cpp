@@ -5,6 +5,8 @@
 #include <QDebug>
 #include <QToolBar>
 #include <QPushButton>
+#include <QStatusBar>
+#include <QLabel>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -86,4 +88,14 @@ MainWindow::MainWindow(QWidget *parent)
 		pBtnDirectory->setText("Directory");
 	});
 #pragma endregion
+
+#pragma region 状态栏
+	QStatusBar *sBar = statusBar();
+	QLabel *label = new QLabel(this);
+	label->setText("Nomal text file");
+	sBar->addWidget(label);
+	//addWidget 从左往右添加
+	sBar->addWidget(new QLabel("2", this));
+#pragma endregion
+
 }
