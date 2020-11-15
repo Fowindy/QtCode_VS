@@ -8,6 +8,7 @@
 #include <QStatusBar>
 #include <QLabel>
 #include <QTextEdit>
+#include <QDockWidget>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -105,5 +106,11 @@ MainWindow::MainWindow(QWidget *parent)
 	QTextEdit *textEdit = new QTextEdit(this);
 	setCentralWidget(textEdit);
 #pragma endregion
+
+#pragma region 浮动窗口
+	QDockWidget *dock = new QDockWidget(this);
+	addDockWidget(Qt::RightDockWidgetArea, dock);
+#pragma endregion
+
 
 }
