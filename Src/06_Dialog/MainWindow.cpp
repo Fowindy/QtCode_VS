@@ -80,6 +80,29 @@ MainWindow::MainWindow(QWidget *parent)
 	});
 #pragma endregion
 
+#pragma region 问题对话框_使用自选按钮
+	QAction *pQuestion1 = menu->addAction("问题对话框_自选");
+	connect(pQuestion1, &QAction::triggered,
+		[=]()
+	{
+		int result = QMessageBox::question(this, "请选择!!!", "你吃了吗?", "吃了", "没吃", "过会吃");
+		switch (result)
+		{
+		case 0:
+			qDebug() << "吃过了";
+			break;
+		case 1:
+			qDebug() << "还没吃呢";
+			break;
+		case 2:
+			qDebug() << "过会去吃";
+			break;
+		default:
+			break;
+		}
+	});
+#pragma endregion
+
 }
 MainWindow::~MainWindow()
 {
