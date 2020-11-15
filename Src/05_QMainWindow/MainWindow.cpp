@@ -3,6 +3,7 @@
 #include <QMenuBar>	//菜单栏头文件
 #include <QMenu>
 #include <QDebug>
+#include <QToolBar>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -53,4 +54,12 @@ MainWindow::MainWindow(QWidget *parent)
 		qDebug() << "文件夹被按下" << num++;
 	}
 	);
+
+#pragma region 工具栏
+	//工具栏:本质是菜单项的快捷方式
+	QToolBar *toolBar = addToolBar("toolBar");
+	//工具栏添加[新建]快捷键动作
+	toolBar->addAction(pNew);
+#pragma endregion
+
 }
