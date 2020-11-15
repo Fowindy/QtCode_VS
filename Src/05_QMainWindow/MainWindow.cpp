@@ -12,4 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//添加[文件]父菜单
 	QMenu *pFile = mBar->addMenu("文件");
+
+	//添加[新建]子菜单项动作
+	QAction *pNew = pFile->addAction("新建");	//返回的是动作的指针
 }
