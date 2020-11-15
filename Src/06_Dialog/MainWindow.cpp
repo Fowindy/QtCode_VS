@@ -6,6 +6,7 @@
 #include <QDialog>
 #include <QDebug>
 #include <QMessageBox>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -102,6 +103,17 @@ MainWindow::MainWindow(QWidget *parent)
 		}
 	});
 #pragma endregion
+
+#pragma region 文件对话框
+	QAction *pFile = menu->addAction("文件对话框");
+	connect(pFile, &QAction::triggered,
+		[=]()
+	{
+		QString url = QFileDialog::getOpenFileName(this, "open", "../");
+		qDebug() << url;	//输出完整路径
+	});
+#pragma endregion
+
 
 }
 MainWindow::~MainWindow()
