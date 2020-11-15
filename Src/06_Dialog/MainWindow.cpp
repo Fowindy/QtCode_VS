@@ -104,12 +104,20 @@ MainWindow::MainWindow(QWidget *parent)
 	});
 #pragma endregion
 
-#pragma region 文件对话框
+#pragma region 文件对话框+可选格式
 	QAction *pFile = menu->addAction("文件对话框");
 	connect(pFile, &QAction::triggered,
 		[=]()
 	{
-		QString url = QFileDialog::getOpenFileName(this, "open", "../");
+		QString url = QFileDialog::getOpenFileName(
+			//父类
+			this,
+			//文件对话框标题
+			"open",
+			//文件对话框默认路径
+			"../",
+			//文件对话框+可选的格式
+			"Source(*.cpp *.h);;Text(*.txt);;Image(*.png *.jpg);;All(*.*)");
 		qDebug() << url;	//输出完整路径
 	});
 #pragma endregion
