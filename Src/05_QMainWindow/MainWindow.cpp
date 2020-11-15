@@ -5,7 +5,6 @@
 #include <QDebug>
 #include <QToolBar>
 #include <QPushButton>
-#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -66,13 +65,25 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//工具栏添加按钮样式[项目]的快捷方式
 	QPushButton *pBtnProject = new QPushButton(toolBar);
-	pBtnProject->move(50, 0);
+	pBtnProject->move(130, 0);
 	pBtnProject->setText("项目");
 	//工具栏添加[新建]快捷键动作_切换为Project
 	connect(pBtnProject, &QPushButton::clicked,
 		[=]()mutable
 	{
 		pBtnProject->setText("Project");
+	});
+
+	//工具栏添加按钮样式[文件夹]的快捷方式
+	QPushButton *pBtnDirectory = new QPushButton(this);
+	pBtnDirectory->setText("文件夹");
+	//推荐---将按钮绑定到工具栏---方式
+	toolBar->addWidget(pBtnDirectory);
+	//工具栏添加[文件夹]快捷键动作_切换为Directory
+	connect(pBtnDirectory, &QPushButton::clicked,
+		[=]()
+	{
+		pBtnDirectory->setText("Directory");
 	});
 #pragma endregion
 }
