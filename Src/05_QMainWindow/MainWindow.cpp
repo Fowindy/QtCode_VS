@@ -45,4 +45,12 @@ MainWindow::MainWindow(QWidget *parent)
 	pOpen->addSeparator();
 	//添加[打开]的子菜单[文件夹]动作
 	QAction *pDirectory = pOpen->addAction("文件夹");
+	//连接[文件夹]动作
+	num = 0;
+	connect(pDirectory, &QAction::triggered,
+		[=]()mutable
+	{
+		qDebug() << "文件夹被按下" << num++;
+	}
+	);
 }
