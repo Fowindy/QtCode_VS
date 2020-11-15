@@ -28,4 +28,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//添加[打开]子菜单项
 	QMenu *pOpen = pFile->addMenu("打开");
+	//添加[打开]的子菜单[项目]动作
+	QAction *pProject = pOpen->addAction("项目");
 }
