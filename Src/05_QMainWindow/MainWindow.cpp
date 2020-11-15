@@ -25,4 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
 		qDebug() << "新建被按下" << ++num;
 	}
 	);
+
+	//添加[打开]子菜单项
+	QMenu *pOpen = pFile->addMenu("打开");
 }
