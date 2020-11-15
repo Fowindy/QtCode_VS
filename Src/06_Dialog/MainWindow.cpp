@@ -3,6 +3,8 @@
 #include <QMenuBar>
 #include <QMenu>
 #include <QAction>
+#include <QDialog>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -17,6 +19,18 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//给菜单栏中添加[对话框菜单]
 	QMenu *menu = mBar->addMenu("对话框");
+
+	//给[对话框]菜单添加子[模态对话框]动作
+	QAction *qaDlg = menu->addAction("模态对话框");
+	//连接动作
+	connect(qaDlg, &QAction::triggered,
+		[=]()
+	{
+		QDialog qDlg;
+		qDlg.exec();//exec会阻塞进程,一直显示
+		qDebug() << "模态对话框";	//模态对话框关闭的时候才会显示
+	}
+	);
 }
 MainWindow::~MainWindow()
 {
