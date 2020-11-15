@@ -26,6 +26,9 @@ MainWindow::MainWindow(QWidget *parent)
 	}
 	);
 
+	//添加[新建]和[打开]中间分割线
+	pFile->addSeparator();
+
 	//添加[打开]子菜单项
 	QMenu *pOpen = pFile->addMenu("打开");
 	//添加[打开]的子菜单[项目]动作
