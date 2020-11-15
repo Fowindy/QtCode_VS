@@ -9,4 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	//菜单栏实例化
 	QMenuBar *mBar = menuBar();
+
+	//添加[文件]父菜单
+	QMenu *pFile = mBar->addMenu("文件");
 }
