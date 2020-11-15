@@ -4,10 +4,13 @@
 #include <QMenu>
 #include <QDebug>
 #include <QToolBar>
+#include <QPushButton>
+#include <QPalette>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 {
+	resize(800, 400);
 	//菜单栏实例化
 	QMenuBar *mBar = menuBar();
 
@@ -60,6 +63,16 @@ MainWindow::MainWindow(QWidget *parent)
 	QToolBar *toolBar = addToolBar("toolBar");
 	//工具栏添加[新建]快捷键动作
 	toolBar->addAction(pNew);
-#pragma endregion
 
+	//工具栏添加按钮样式[项目]的快捷方式
+	QPushButton *pBtnProject = new QPushButton(toolBar);
+	pBtnProject->move(50, 0);
+	pBtnProject->setText("项目");
+	//工具栏添加[新建]快捷键动作_切换为Project
+	connect(pBtnProject, &QPushButton::clicked,
+		[=]()mutable
+	{
+		pBtnProject->setText("Project");
+	});
+#pragma endregion
 }
