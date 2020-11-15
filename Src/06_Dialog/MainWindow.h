@@ -11,5 +11,5 @@ public:
 	MainWindow(QWidget *parent = Q_NULLPTR);
 	~MainWindow();
 private:
-	QDialog qDlg;
+	//QDialog qDlg;
 };
