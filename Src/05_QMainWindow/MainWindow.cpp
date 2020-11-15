@@ -96,6 +96,8 @@ MainWindow::MainWindow(QWidget *parent)
 	sBar->addWidget(label);
 	//addWidget 从左往右添加
 	sBar->addWidget(new QLabel("2", this));
+	//addPermanentWidget 从右往左添加
+	sBar->addPermanentWidget(new QLabel("3", this));
 #pragma endregion
 
 }
