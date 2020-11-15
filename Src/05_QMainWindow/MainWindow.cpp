@@ -110,6 +110,11 @@ MainWindow::MainWindow(QWidget *parent)
 #pragma region 浮动窗口
 	QDockWidget *dock = new QDockWidget(this);
 	addDockWidget(Qt::RightDockWidgetArea, dock);
+#pragma region 给浮动窗口添加文本编辑器
+	QTextEdit *dockText = new QTextEdit(this);
+	dock->setWidget(dockText);
+#pragma endregion
+
 #pragma endregion
 
 
