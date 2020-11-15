@@ -40,7 +40,11 @@ MainWindow::MainWindow(QWidget *parent)
 		[=]()
 	{
 		//QDialog qDlg;//1.看到窗口的第一种方式:将对话框以变量的形式定义在全局头文件中
-		QDialog *qDlg = new QDialog(this);//2.1.局部变量的方式,但是如果整个程序不结束的话,会一直占用内存
+		//QDialog *qDlg = new QDialog(this);//2.1.局部变量的方式,但是如果整个程序不结束的话,会一直占用内存
+
+		//2.2.模态对话框关闭的时候释放内存
+		QDialog *qDlg = new QDialog;
+		qDlg->setAttribute(Qt::WA_DeleteOnClose);
 		qDlg->show();//非模态用show显示,不会阻塞进程,此句执行完毕便释放,看不到窗口
 		qDebug() << "非模态对话框";
 	});
