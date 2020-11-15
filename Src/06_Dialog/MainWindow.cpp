@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 	//给菜单栏中添加[对话框菜单]
 	QMenu *menu = mBar->addMenu("对话框");
 
+#pragma region 模态对话框
 	//给[对话框]菜单添加子[模态对话框]动作
 	QAction *qaDlg = menu->addAction("模态对话框");
 	//连接动作
@@ -31,6 +32,19 @@ MainWindow::MainWindow(QWidget *parent)
 		qDebug() << "模态对话框";	//模态对话框关闭的时候才会显示
 	}
 	);
+#pragma endregion
+
+#pragma region 非模态对话框
+	QAction *dlg = menu->addAction("非模态对话框");
+	connect(dlg, &QAction::triggered,
+		[=]()
+	{
+		QDialog qDlg;
+		qDlg.show();//非模态用show显示,不会阻塞进程,此句执行完毕便释放,看不到窗口
+		qDebug() << "非模态对话框";
+	});
+#pragma endregion
+
 }
 MainWindow::~MainWindow()
 {
