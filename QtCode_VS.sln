@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_QMainWindow", "Src\05_QM
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_Dialog", "Src\06_Dialog\06_Dialog.vcxproj", "{1D45D51A-936C-45A7-968D-2119881E8772}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_Parts", "Src\07_Parts\07_Parts.vcxproj", "{94211819-47FD-34A2-8CA3-8133B7D46582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -45,6 +47,10 @@ Global
 		{1D45D51A-936C-45A7-968D-2119881E8772}.Debug|x64.Build.0 = Debug|x64
 		{1D45D51A-936C-45A7-968D-2119881E8772}.Release|x64.ActiveCfg = Debug|x64
 		{1D45D51A-936C-45A7-968D-2119881E8772}.Release|x64.Build.0 = Debug|x64
+		{94211819-47FD-34A2-8CA3-8133B7D46582}.Debug|x64.ActiveCfg = Debug|x64
+		{94211819-47FD-34A2-8CA3-8133B7D46582}.Debug|x64.Build.0 = Debug|x64
+		{94211819-47FD-34A2-8CA3-8133B7D46582}.Release|x64.ActiveCfg = Release|x64
+		{94211819-47FD-34A2-8CA3-8133B7D46582}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
