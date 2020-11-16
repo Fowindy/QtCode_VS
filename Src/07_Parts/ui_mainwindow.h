@@ -27,7 +27,7 @@ public:
     QAction *actionnew;
     QAction *actionbaocun;
     QWidget *centralwidget;
-    QPushButton *button;
+    QPushButton *MyButton;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -45,9 +45,9 @@ public:
         actionbaocun->setObjectName(QString::fromUtf8("actionbaocun"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        button = new QPushButton(centralwidget);
-        button->setObjectName(QString::fromUtf8("button"));
-        button->setGeometry(QRect(50, 120, 75, 23));
+        MyButton = new QPushButton(centralwidget);
+        MyButton->setObjectName(QString::fromUtf8("MyButton"));
+        MyButton->setGeometry(QRect(50, 120, 75, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -72,7 +72,7 @@ public:
         menu->addSeparator();
 
         retranslateUi(MainWindow);
-        QObject::connect(button, SIGNAL(clicked()), MainWindow, SLOT(close()));
+        QObject::connect(MyButton, SIGNAL(clicked()), MainWindow, SLOT(close()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -82,7 +82,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionnew->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
         actionbaocun->setText(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230", nullptr));
-        button->setText(QCoreApplication::translate("MainWindow", "button", nullptr));
+        MyButton->setText(QCoreApplication::translate("MainWindow", "button", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));
