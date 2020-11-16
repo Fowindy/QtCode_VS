@@ -19,6 +19,8 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBox>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -37,6 +39,11 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_3;
     QPushButton *pushButton_2;
+    QToolBox *toolBox;
+    QWidget *page;
+    QPushButton *pushButton_5;
+    QWidget *page_2;
+    QToolButton *toolButton;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -87,6 +94,23 @@ public:
         gridLayout->addWidget(pushButton_2, 0, 1, 1, 1);
 
         scrollArea->setWidget(scrollAreaWidgetContents);
+        toolBox = new QToolBox(centralwidget);
+        toolBox->setObjectName(QString::fromUtf8("toolBox"));
+        toolBox->setGeometry(QRect(500, 180, 69, 121));
+        page = new QWidget();
+        page->setObjectName(QString::fromUtf8("page"));
+        page->setGeometry(QRect(0, 0, 69, 69));
+        pushButton_5 = new QPushButton(page);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(0, 10, 75, 23));
+        toolBox->addItem(page, QString::fromUtf8("Page 1"));
+        page_2 = new QWidget();
+        page_2->setObjectName(QString::fromUtf8("page_2"));
+        page_2->setGeometry(QRect(0, 0, 69, 69));
+        toolButton = new QToolButton(page_2);
+        toolButton->setObjectName(QString::fromUtf8("toolButton"));
+        toolButton->setGeometry(QRect(10, 10, 37, 18));
+        toolBox->addItem(page_2, QString::fromUtf8("Page 2"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -113,6 +137,9 @@ public:
         retranslateUi(MainWindow);
         QObject::connect(MyButton, SIGNAL(clicked()), MainWindow, SLOT(close()));
 
+        toolBox->setCurrentIndex(1);
+
+
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
@@ -126,6 +153,10 @@ public:
         pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        toolBox->setItemText(toolBox->indexOf(page), QCoreApplication::translate("MainWindow", "Page 1", nullptr));
+        toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolBox->setItemText(toolBox->indexOf(page_2), QCoreApplication::translate("MainWindow", "Page 2", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));
