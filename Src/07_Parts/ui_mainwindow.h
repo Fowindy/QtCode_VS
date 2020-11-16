@@ -12,10 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -28,6 +30,13 @@ public:
     QAction *actionbaocun;
     QWidget *centralwidget;
     QPushButton *MyButton;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QGridLayout *gridLayout;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -48,6 +57,36 @@ public:
         MyButton = new QPushButton(centralwidget);
         MyButton->setObjectName(QString::fromUtf8("MyButton"));
         MyButton->setGeometry(QRect(50, 120, 75, 23));
+        scrollArea = new QScrollArea(centralwidget);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setGeometry(QRect(250, 140, 161, 72));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 174, 70));
+        gridLayout = new QGridLayout(scrollAreaWidgetContents);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        pushButton_4 = new QPushButton(scrollAreaWidgetContents);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        gridLayout->addWidget(pushButton_4, 1, 1, 1, 1);
+
+        pushButton = new QPushButton(scrollAreaWidgetContents);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout->addWidget(pushButton, 0, 0, 1, 1);
+
+        pushButton_3 = new QPushButton(scrollAreaWidgetContents);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        gridLayout->addWidget(pushButton_3, 1, 0, 1, 1);
+
+        pushButton_2 = new QPushButton(scrollAreaWidgetContents);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        gridLayout->addWidget(pushButton_2, 0, 1, 1, 1);
+
+        scrollArea->setWidget(scrollAreaWidgetContents);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -83,6 +122,10 @@ public:
         actionnew->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272", nullptr));
         actionbaocun->setText(QCoreApplication::translate("MainWindow", "\344\277\235\345\255\230", nullptr));
         MyButton->setText(QCoreApplication::translate("MainWindow", "button", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));
