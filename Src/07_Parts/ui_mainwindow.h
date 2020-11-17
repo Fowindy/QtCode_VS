@@ -22,6 +22,7 @@
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QKeySequenceEdit>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -85,6 +86,10 @@ public:
     QSlider *verticalSlider;
     QKeySequenceEdit *keySequenceEdit;
     QDial *dial;
+    QLabel *labelText;
+    QLabel *labelImage;
+    QLabel *labelGif;
+    QLabel *labelUrl;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -232,7 +237,19 @@ public:
         keySequenceEdit->setGeometry(QRect(240, 530, 113, 20));
         dial = new QDial(centralwidget);
         dial->setObjectName(QString::fromUtf8("dial"));
-        dial->setGeometry(QRect(180, 20, 50, 64));
+        dial->setGeometry(QRect(190, 250, 50, 64));
+        labelText = new QLabel(centralwidget);
+        labelText->setObjectName(QString::fromUtf8("labelText"));
+        labelText->setGeometry(QRect(20, 20, 71, 61));
+        labelImage = new QLabel(centralwidget);
+        labelImage->setObjectName(QString::fromUtf8("labelImage"));
+        labelImage->setGeometry(QRect(150, 20, 71, 61));
+        labelGif = new QLabel(centralwidget);
+        labelGif->setObjectName(QString::fromUtf8("labelGif"));
+        labelGif->setGeometry(QRect(260, 20, 71, 61));
+        labelUrl = new QLabel(centralwidget);
+        labelUrl->setObjectName(QString::fromUtf8("labelUrl"));
+        labelUrl->setGeometry(QRect(360, 20, 71, 61));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -289,6 +306,10 @@ public:
         comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "abcde", nullptr));
 
         lineEdit->setText(QCoreApplication::translate("MainWindow", "\347\216\213\345\262\263", nullptr));
+        labelText->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        labelImage->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        labelGif->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        labelUrl->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));

@@ -33,6 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
 	com->setCaseSensitivity(Qt::CaseInsensitive);
 
 	ui->lineEdit->setCompleter(com);
+
+	//QLabel_text
+	ui->labelText->setText("今天天气好晴朗");
 }
 
 MainWindow::~MainWindow()
