@@ -12,12 +12,15 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBox>
@@ -48,6 +51,14 @@ public:
     QTabWidget *tabWidget;
     QWidget *tab;
     QWidget *tab_2;
+    QStackedWidget *stackedWidget;
+    QWidget *page_3;
+    QCommandLinkButton *commandLinkButton;
+    QWidget *page_5;
+    QPushButton *pushButton_6;
+    QWidget *page_4;
+    QCheckBox *checkBox;
+    QPushButton *change;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -103,7 +114,7 @@ public:
         toolBox->setGeometry(QRect(500, 180, 69, 121));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
-        page->setGeometry(QRect(0, 0, 98, 28));
+        page->setGeometry(QRect(0, 0, 69, 69));
         pushButton_5 = new QPushButton(page);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
         pushButton_5->setGeometry(QRect(0, 10, 75, 23));
@@ -124,6 +135,30 @@ public:
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
         tabWidget->addTab(tab_2, QString());
+        stackedWidget = new QStackedWidget(centralwidget);
+        stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+        stackedWidget->setGeometry(QRect(80, 350, 201, 80));
+        page_3 = new QWidget();
+        page_3->setObjectName(QString::fromUtf8("page_3"));
+        commandLinkButton = new QCommandLinkButton(page_3);
+        commandLinkButton->setObjectName(QString::fromUtf8("commandLinkButton"));
+        commandLinkButton->setGeometry(QRect(20, 40, 185, 41));
+        stackedWidget->addWidget(page_3);
+        page_5 = new QWidget();
+        page_5->setObjectName(QString::fromUtf8("page_5"));
+        pushButton_6 = new QPushButton(page_5);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+        pushButton_6->setGeometry(QRect(20, 20, 75, 23));
+        stackedWidget->addWidget(page_5);
+        page_4 = new QWidget();
+        page_4->setObjectName(QString::fromUtf8("page_4"));
+        checkBox = new QCheckBox(page_4);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setGeometry(QRect(30, 40, 71, 16));
+        stackedWidget->addWidget(page_4);
+        change = new QPushButton(centralwidget);
+        change->setObjectName(QString::fromUtf8("change"));
+        change->setGeometry(QRect(10, 350, 75, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -172,6 +207,10 @@ public:
         toolBox->setItemText(toolBox->indexOf(page_2), QCoreApplication::translate("MainWindow", "Page 2", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Tab 2", nullptr));
+        commandLinkButton->setText(QCoreApplication::translate("MainWindow", "CommandLinkButton", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "CheckBox", nullptr));
+        change->setText(QCoreApplication::translate("MainWindow", "\345\210\207\346\215\242", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));

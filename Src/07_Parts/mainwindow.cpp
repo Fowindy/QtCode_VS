@@ -17,3 +17,9 @@ MainWindow::~MainWindow()
 	delete ui;
 }
 
+void MainWindow::on_change_clicked()
+{
+	static int i = 0;	//静态的,每次不释放这个值,实现切换
+	ui->stackedWidget->setCurrentIndex(++i % 3);
+}
+
