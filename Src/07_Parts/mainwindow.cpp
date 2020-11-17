@@ -20,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
 	ui->lineEdit->setText("Fowindy");
 	//设置内容显示间隙
 	ui->lineEdit->setTextMargins(15, 10, 0, 0);
+	//设置密码显示模式(黑点)
+	ui->lineEdit->setEchoMode(QLineEdit::Password);
 }
 
 MainWindow::~MainWindow()
