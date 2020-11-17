@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
@@ -59,6 +60,7 @@ public:
     QWidget *page_4;
     QCheckBox *checkBox;
     QPushButton *change;
+    QComboBox *comboBox;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -159,6 +161,11 @@ public:
         change = new QPushButton(centralwidget);
         change->setObjectName(QString::fromUtf8("change"));
         change->setGeometry(QRect(10, 350, 75, 23));
+        comboBox = new QComboBox(centralwidget);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        comboBox->setGeometry(QRect(20, 440, 69, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -211,6 +218,9 @@ public:
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         checkBox->setText(QCoreApplication::translate("MainWindow", "CheckBox", nullptr));
         change->setText(QCoreApplication::translate("MainWindow", "\345\210\207\346\215\242", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "12345", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "abcde", nullptr));
+
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));
