@@ -36,6 +36,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 	//QLabel_text
 	ui->labelText->setText("今天天气好晴朗");
+	//QLabel_image
+	ui->labelImage->setPixmap(QPixmap(":/image/Luffy.png"));
+	//让图片自适应label大小
+	ui->labelImage->setScaledContents(true);
 }
 
 MainWindow::~MainWindow()

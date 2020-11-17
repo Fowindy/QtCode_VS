@@ -35,6 +35,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e0460e96-ab68-42f0-ab4a-96febe240085}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,7 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="mainwindow.ui">
-      <Filter>Form Files</Filter>
+      <Filter>Resource Files</Filter>
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="image.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>
