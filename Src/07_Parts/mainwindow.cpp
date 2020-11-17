@@ -51,6 +51,12 @@ MainWindow::MainWindow(QWidget *parent)
 	myMovie->start();
 	//动画自适应大小
 	ui->labelGif->setScaledContents(true);
+
+	//QLabel_Url
+	//设置html
+	ui->labelUrl->setText("<h1><a href = \"https://www.baidu.com\">百度一下</a></h1>");
+	//设置点击打开外部链接
+	ui->labelUrl->setOpenExternalLinks(true);
 }
 
 MainWindow::~MainWindow()
