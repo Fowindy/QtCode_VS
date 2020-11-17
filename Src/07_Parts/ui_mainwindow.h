@@ -15,17 +15,26 @@
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
+#include <QtWidgets/QDateEdit>
+#include <QtWidgets/QDateTimeEdit>
+#include <QtWidgets/QDial>
+#include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QKeySequenceEdit>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
+#include <QtWidgets/QScrollBar>
+#include <QtWidgets/QSlider>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTimeEdit>
 #include <QtWidgets/QToolBox>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QWidget>
@@ -65,6 +74,17 @@ public:
     QComboBox *comboBox;
     QFontComboBox *fontComboBox;
     QLineEdit *lineEdit;
+    QSpinBox *spinBox;
+    QDoubleSpinBox *doubleSpinBox;
+    QTimeEdit *timeEdit;
+    QDateEdit *dateEdit;
+    QDateTimeEdit *dateTimeEdit;
+    QScrollBar *horizontalScrollBar;
+    QScrollBar *verticalScrollBar;
+    QSlider *horizontalSlider;
+    QSlider *verticalSlider;
+    QKeySequenceEdit *keySequenceEdit;
+    QDial *dial;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -176,6 +196,43 @@ public:
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setGeometry(QRect(200, 440, 113, 20));
+        spinBox = new QSpinBox(centralwidget);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        spinBox->setGeometry(QRect(20, 480, 42, 22));
+        doubleSpinBox = new QDoubleSpinBox(centralwidget);
+        doubleSpinBox->setObjectName(QString::fromUtf8("doubleSpinBox"));
+        doubleSpinBox->setGeometry(QRect(80, 480, 62, 22));
+        timeEdit = new QTimeEdit(centralwidget);
+        timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
+        timeEdit->setGeometry(QRect(150, 480, 118, 22));
+        dateEdit = new QDateEdit(centralwidget);
+        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
+        dateEdit->setGeometry(QRect(280, 480, 150, 22));
+        dateTimeEdit = new QDateTimeEdit(centralwidget);
+        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
+        dateTimeEdit->setGeometry(QRect(20, 510, 194, 22));
+        horizontalScrollBar = new QScrollBar(centralwidget);
+        horizontalScrollBar->setObjectName(QString::fromUtf8("horizontalScrollBar"));
+        horizontalScrollBar->setGeometry(QRect(310, 410, 160, 16));
+        horizontalScrollBar->setOrientation(Qt::Horizontal);
+        verticalScrollBar = new QScrollBar(centralwidget);
+        verticalScrollBar->setObjectName(QString::fromUtf8("verticalScrollBar"));
+        verticalScrollBar->setGeometry(QRect(450, 240, 16, 160));
+        verticalScrollBar->setOrientation(Qt::Vertical);
+        horizontalSlider = new QSlider(centralwidget);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(220, 510, 160, 22));
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        verticalSlider = new QSlider(centralwidget);
+        verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
+        verticalSlider->setGeometry(QRect(490, 390, 22, 160));
+        verticalSlider->setOrientation(Qt::Vertical);
+        keySequenceEdit = new QKeySequenceEdit(centralwidget);
+        keySequenceEdit->setObjectName(QString::fromUtf8("keySequenceEdit"));
+        keySequenceEdit->setGeometry(QRect(240, 530, 113, 20));
+        dial = new QDial(centralwidget);
+        dial->setObjectName(QString::fromUtf8("dial"));
+        dial->setGeometry(QRect(180, 20, 50, 64));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
