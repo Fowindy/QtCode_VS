@@ -18,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
 	qDebug() << str;
 	//设置内容
 	ui->lineEdit->setText("Fowindy");
+	//设置内容显示间隙
+	ui->lineEdit->setTextMargins(15, 10, 0, 0);
 }
 
 MainWindow::~MainWindow()
