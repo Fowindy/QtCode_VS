@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QCompleter>
 #include <QStringList>
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -40,6 +41,16 @@ MainWindow::MainWindow(QWidget *parent)
 	ui->labelImage->setPixmap(QPixmap(":/image/Luffy.png"));
 	//让图片自适应label大小
 	ui->labelImage->setScaledContents(true);
+
+	//QLabel_gif
+	//创建动画对象
+	QMovie *myMovie = new QMovie(":/image/mario.gif");
+	//设置动画
+	ui->labelGif->setMovie(myMovie);
+	//启动动画
+	myMovie->start();
+	//动画自适应大小
+	ui->labelGif->setScaledContents(true);
 }
 
 MainWindow::~MainWindow()

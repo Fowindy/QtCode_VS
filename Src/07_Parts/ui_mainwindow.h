@@ -246,10 +246,10 @@ public:
         labelImage->setGeometry(QRect(150, 20, 71, 61));
         labelGif = new QLabel(centralwidget);
         labelGif->setObjectName(QString::fromUtf8("labelGif"));
-        labelGif->setGeometry(QRect(260, 20, 71, 61));
+        labelGif->setGeometry(QRect(260, 20, 171, 101));
         labelUrl = new QLabel(centralwidget);
         labelUrl->setObjectName(QString::fromUtf8("labelUrl"));
-        labelUrl->setGeometry(QRect(360, 20, 71, 61));
+        labelUrl->setGeometry(QRect(470, 20, 71, 61));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
