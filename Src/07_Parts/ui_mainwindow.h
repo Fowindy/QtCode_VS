@@ -28,6 +28,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QScrollBar>
@@ -92,6 +93,7 @@ public:
     QLabel *labelGif;
     QLabel *labelUrl;
     QLCDNumber *lcdNumber;
+    QProgressBar *progressBar;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -255,6 +257,10 @@ public:
         lcdNumber = new QLCDNumber(centralwidget);
         lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
         lcdNumber->setGeometry(QRect(610, 10, 64, 23));
+        progressBar = new QProgressBar(centralwidget);
+        progressBar->setObjectName(QString::fromUtf8("progressBar"));
+        progressBar->setGeometry(QRect(580, 70, 118, 23));
+        progressBar->setValue(24);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));

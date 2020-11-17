@@ -59,7 +59,13 @@ MainWindow::MainWindow(QWidget *parent)
 	ui->labelUrl->setOpenExternalLinks(true);
 
 	//数码管
-	ui->lcdNumber->display(123);
+	ui->lcdNumber->display(123);	//显示内容
+
+	//进度条
+	ui->progressBar->setMaximum(100);	//设定最大值
+	ui->progressBar->setMinimum(0);	//设定最小值
+	ui->progressBar->setValue(68);	//设定当前值
+	//ui->progressBar->show();	//显示,没有此句也会显示
 }
 
 MainWindow::~MainWindow()
