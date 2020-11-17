@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -10,6 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
 	//代码中重写按钮标题名和重写槽函数关闭为最大化
 	ui->MyButton->setText("123");
 	connect(ui->MyButton, &QPushButton::clicked, this, &MainWindow::showMaximized);
+
+	//QLineEdit控件
+	//获取内容
+	QString str = ui->lineEdit->text();
+	qDebug() << str;
+	//设置内容
+	ui->lineEdit->setText("Fowindy");
 }
 
 MainWindow::~MainWindow()

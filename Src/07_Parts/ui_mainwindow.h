@@ -17,6 +17,7 @@
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
@@ -63,6 +64,7 @@ public:
     QPushButton *change;
     QComboBox *comboBox;
     QFontComboBox *fontComboBox;
+    QLineEdit *lineEdit;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -171,6 +173,9 @@ public:
         fontComboBox = new QFontComboBox(centralwidget);
         fontComboBox->setObjectName(QString::fromUtf8("fontComboBox"));
         fontComboBox->setGeometry(QRect(110, 440, 71, 22));
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(200, 440, 113, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -226,6 +231,7 @@ public:
         comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "12345", nullptr));
         comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "abcde", nullptr));
 
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "\347\216\213\345\262\263", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menuEdit->setTitle(QCoreApplication::translate("MainWindow", "Edit", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\344\275\223", nullptr));
