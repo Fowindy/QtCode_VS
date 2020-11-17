@@ -15,6 +15,7 @@
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
+#include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -61,6 +62,7 @@ public:
     QCheckBox *checkBox;
     QPushButton *change;
     QComboBox *comboBox;
+    QFontComboBox *fontComboBox;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -166,6 +168,9 @@ public:
         comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setGeometry(QRect(20, 440, 69, 22));
+        fontComboBox = new QFontComboBox(centralwidget);
+        fontComboBox->setObjectName(QString::fromUtf8("fontComboBox"));
+        fontComboBox->setGeometry(QRect(110, 440, 71, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
