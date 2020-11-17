@@ -2,6 +2,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QCompleter>
+#include <QStringList>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -19,11 +21,18 @@ MainWindow::MainWindow(QWidget *parent)
 	//设置内容
 	ui->lineEdit->setText("Fowindy");
 	//设置内容显示间隙
-	ui->lineEdit->setTextMargins(15, 10, 0, 0);
+	//ui->lineEdit->setTextMargins(15, 10, 0, 0);
 	//设置密码显示模式(黑点)_输入显示黑点
-	ui->lineEdit->setEchoMode(QLineEdit::Password);
+	//ui->lineEdit->setEchoMode(QLineEdit::Password);
 	//设置密码显示模式_输入显示明码_输入完成显示黑点
-	ui->lineEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+	//ui->lineEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
+
+	QStringList list;
+	list << "hello" << "how are you" << "Here" << "window";
+	QCompleter *com = new QCompleter(list, this);
+	com->setCaseSensitivity(Qt::CaseInsensitive);
+
+	ui->lineEdit->setCompleter(com);
 }
 
 MainWindow::~MainWindow()
