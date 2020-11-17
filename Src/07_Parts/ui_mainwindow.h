@@ -22,6 +22,7 @@
 #include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QKeySequenceEdit>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
@@ -90,6 +91,7 @@ public:
     QLabel *labelImage;
     QLabel *labelGif;
     QLabel *labelUrl;
+    QLCDNumber *lcdNumber;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -250,6 +252,9 @@ public:
         labelUrl = new QLabel(centralwidget);
         labelUrl->setObjectName(QString::fromUtf8("labelUrl"));
         labelUrl->setGeometry(QRect(470, 20, 101, 61));
+        lcdNumber = new QLCDNumber(centralwidget);
+        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
+        lcdNumber->setGeometry(QRect(610, 10, 64, 23));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));

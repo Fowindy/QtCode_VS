@@ -57,6 +57,9 @@ MainWindow::MainWindow(QWidget *parent)
 	ui->labelUrl->setText("<h1><a href = \"https://www.baidu.com\">百度一下</a></h1>");
 	//设置点击打开外部链接
 	ui->labelUrl->setOpenExternalLinks(true);
+
+	//数码管
+	ui->lcdNumber->display(123);
 }
 
 MainWindow::~MainWindow()
