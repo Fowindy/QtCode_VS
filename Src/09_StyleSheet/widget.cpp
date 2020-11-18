@@ -45,6 +45,10 @@ Widget::Widget(QWidget *parent)
 		"QPushButton:hover{"
 		"border-image:url(:/image/Luffy.png);"
 		"}"
+		//鼠标点击再切换一张照片
+		"QPushButton:pressed{"
+		"border-image:url(:/image/LuffyQ.png);"
+		"}"
 	);
 }
 
