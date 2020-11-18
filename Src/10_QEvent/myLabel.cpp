@@ -13,6 +13,13 @@ myLabel::~myLabel()
 
 void myLabel::mousePressEvent(QMouseEvent *ev)
 {
+	int i = ev->x();
+	int j = ev->y();
+	/**
+	 * 最终显示需要把整型转换为字符串_Qt格式化字符串说明
+	 * QString str = QString("abc %1 ^_^ %2").arg(123).arg("mike");
+	 * str = abc 123 ^_^ mike
+	 */
 
 }
 
