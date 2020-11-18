@@ -13,3 +13,8 @@ void myLabel::mousePressEvent(QMouseEvent *ev)
 {
 
 }
+
+void myLabel::mouseReleaseEvent(QMouseEvent *ev)
+{
+
+}
