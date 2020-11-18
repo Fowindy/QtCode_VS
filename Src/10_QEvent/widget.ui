@@ -21,6 +21,13 @@
      </property>
     </widget>
    </item>
+   <item>
+    <widget class="myLabel" name="label_2">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
