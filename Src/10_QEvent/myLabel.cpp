@@ -5,6 +5,8 @@
 myLabel::myLabel(QWidget *parent)
 	: QLabel(parent)
 {
+	//设置默认追踪鼠标_软件启动就可以看到鼠标移动实时状态
+	this->setMouseTracking(true);
 }
 
 myLabel::~myLabel()
