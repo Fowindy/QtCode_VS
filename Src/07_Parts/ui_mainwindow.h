@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCalendarWidget>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QCommandLinkButton>
@@ -94,6 +95,7 @@ public:
     QLabel *labelUrl;
     QLCDNumber *lcdNumber;
     QProgressBar *progressBar;
+    QCalendarWidget *calendar_Widget;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menuEdit;
@@ -261,6 +263,9 @@ public:
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
         progressBar->setGeometry(QRect(580, 70, 118, 23));
         progressBar->setValue(24);
+        calendar_Widget = new QCalendarWidget(centralwidget);
+        calendar_Widget->setObjectName(QString::fromUtf8("calendar_Widget"));
+        calendar_Widget->setGeometry(QRect(510, 320, 248, 197));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
