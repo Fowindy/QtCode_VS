@@ -23,5 +23,11 @@ void Widget::keyPressEvent(QKeyEvent *ev)
 
 	//键盘按键的ASCII码转换字符
 	qDebug() << (char)ev->key();
+
+	//特殊按键判断
+	if (ev->key() == Qt::Key_Shift)
+	{
+		qDebug() << "Shift";
+	}
 }
 
