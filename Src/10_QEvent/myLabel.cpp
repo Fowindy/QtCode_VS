@@ -21,6 +21,9 @@ void myLabel::mousePressEvent(QMouseEvent *ev)
 	 * str = abc 123 ^_^ mike
 	 */
 
+	 //Qt格式化字符串_加嵌套css样式
+	QString text = QString("<center><h1>Mouse Press Coordinate: (%1,%2)</h1></center>")
+		.arg(i).arg(j);
 }
 
 void myLabel::mouseReleaseEvent(QMouseEvent *ev)
