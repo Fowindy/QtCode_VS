@@ -16,6 +16,15 @@ Widget::Widget(QWidget *parent)
 	 */
 	ui->label->setStyleSheet("QLabel{color:rgb(0,220,235);"
 		"background-color:#9013fe;}");
+
+	/**
+	 * 方箱模型(margin,border,padding,content)
+	 * 1.空白(margin):位于边框外,默认透明;
+	 * 2.边框(border):边框为部件提供了四周的框架;
+	 * 3.填充(padding):填充在边框和内容区域之间提供了空白间隔;
+	 * 4.内容(content):控件内容放置区
+	 * 注意:对于一个平面部件,比如一个空白,边框和填充都是0像素的部件而言,这四个矩形完全重合;
+	 */
 }
 
 Widget::~Widget()
