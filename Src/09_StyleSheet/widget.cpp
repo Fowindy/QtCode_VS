@@ -7,6 +7,11 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+
+	//表示此样式对Widget中所有的QLabel类型适应_全局作用
+	this->setStyleSheet("QLabel{color:rgb(0,220,235);"
+		"background-color:#9013fe;}");
+
 	//颜色的三种表示方式:
 	/**
 	 * 1.rgb(0,220,235);
@@ -14,8 +19,9 @@ Widget::Widget(QWidget *parent)
 	 * 3.red
 	 * 4.background = background-color
 	 */
-	ui->label->setStyleSheet("QLabel{color:rgb(0,220,235);"
-		"background-color:#9013fe;}");
+	 //表示此样式仅对此label对象适应_局部作用
+	ui->label->setStyleSheet("QLabel{color:rgb(0,0,0);"
+		"background-color:red;}");
 
 	/**
 	 * 方箱模型(margin,border,padding,content)

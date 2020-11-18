@@ -20,6 +20,7 @@ class Ui_Widget
 {
 public:
     QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QWidget *Widget)
     {
@@ -29,6 +30,9 @@ public:
         label = new QLabel(Widget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(140, 110, 181, 141));
+        label_2 = new QLabel(Widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(140, 360, 91, 71));
 
         retranslateUi(Widget);
 
@@ -39,6 +43,7 @@ public:
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
         label->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
+        label_2->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
     } // retranslateUi
 
 };
