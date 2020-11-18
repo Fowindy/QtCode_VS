@@ -21,5 +21,6 @@ protected:
 	void timerEvent(QTimerEvent *);
 private:
 	Ui::Widget *ui;
+	int timerId;	//定义定时器的Id
 };
 #endif // WIDGET_H
