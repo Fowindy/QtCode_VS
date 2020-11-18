@@ -40,7 +40,12 @@ Widget::Widget(QWidget *parent)
 		"border:10px outset red;"
 		//默认背景图
 		"border-image:url(:/image/Sunny.jpg);"
-		"}");
+		"}"
+		//鼠标放在上面切换一张背景图
+		"QPushButton:hover{"
+		"border-image:url(:/image/Luffy.png);"
+		"}"
+	);
 }
 
 Widget::~Widget()
