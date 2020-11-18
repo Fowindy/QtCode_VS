@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QSplitter" name="splitter">
       <property name="orientation">
-       <enum>Qt::Horizontal</enum>
+       <enum>Qt::Vertical</enum>
       </property>
       <widget class="QTextBrowser" name="textBrowser"/>
       <widget class="QTextBrowser" name="textBrowser_2"/>
