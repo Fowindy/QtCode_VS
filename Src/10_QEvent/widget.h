@@ -17,7 +17,8 @@ public:
 protected:
 	//键盘按下事件
 	void keyPressEvent(QKeyEvent *);	//占位符参数，方便以后修改函数定义且不需要修改接口
-
+	//计时器事件
+	void timerEvent(QTimerEvent *);
 private:
 	Ui::Widget *ui;
 };

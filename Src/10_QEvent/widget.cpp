@@ -9,6 +9,7 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	this->startTimer(1000);	//以毫秒为单位	每一秒触发定时器
 }
 
 Widget::~Widget()
@@ -29,5 +30,12 @@ void Widget::keyPressEvent(QKeyEvent *ev)
 	{
 		qDebug() << "Shift";
 	}
+}
+
+void Widget::timerEvent(QTimerEvent *ev)
+{
+	static int sec = 0;
+	ui->label->setText(QString("<center><h1>timer out: %1</h1></center>").arg(sec++
+	));
 }
 
