@@ -73,5 +73,5 @@ void myLabel::enterEvent(QEvent *ev)
 
 void myLabel::leaveEvent(QEvent *ev)
 {
-	MyMethod("Leave", ev);
+	MyMethod("Leave");	//默认参数可以省略
 }
