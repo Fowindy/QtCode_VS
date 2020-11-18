@@ -1,4 +1,4 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 
 #include <QWidget>
@@ -9,13 +9,16 @@ QT_END_NAMESPACE
 
 class Widget : public QWidget
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    Widget(QWidget *parent = nullptr);
-    ~Widget();
+	Widget(QWidget *parent = nullptr);
+	~Widget();
+protected:
+	//键盘按下事件
+	void keyPressEvent(QKeyEvent *);	//占位符参数，方便以后修改函数定义且不需要修改接口
 
 private:
-    Ui::Widget *ui;
+	Ui::Widget *ui;
 };
 #endif // WIDGET_H
