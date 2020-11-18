@@ -38,6 +38,8 @@ Widget::Widget(QWidget *parent)
 	ui->pushButton->setStyleSheet("QPushButton{"
 		//边框:10px宽度 红色
 		"border:10px outset red;"
+		//默认背景图
+		"border-image:url(:/image/Sunny.jpg);"
 		"}");
 }
 
