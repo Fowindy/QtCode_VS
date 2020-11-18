@@ -24,6 +24,8 @@ void myLabel::mousePressEvent(QMouseEvent *ev)
 	 //Qt格式化字符串_加嵌套css样式
 	QString text = QString("<center><h1>Mouse Press Coordinate: (%1,%2)</h1></center>")
 		.arg(i).arg(j);
+	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
+	this->setText(text);
 }
 
 void myLabel::mouseReleaseEvent(QMouseEvent *ev)
