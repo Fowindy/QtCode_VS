@@ -4,12 +4,16 @@
 #include <QDebug>
 #include <QKeyEvent>
 
+
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
 	, ui(new Ui::Widget)
 {
+	sec1 = 0;
+	sec2 = 0;
 	ui->setupUi(this);
 	timerId = this->startTimer(1000);	//以毫秒为单位	每一秒触发定时器
+	this->timerId2 = this->startTimer(500);	//以毫秒为单位	每500毫秒触发定时器
 }
 
 Widget::~Widget()
@@ -34,14 +38,29 @@ void Widget::keyPressEvent(QKeyEvent *ev)
 
 void Widget::timerEvent(QTimerEvent *ev)
 {
-	static int sec = 0;
-	ui->label->setText(QString("<center><h1>timer out: %1</h1></center>").arg(++sec
-	));
-	if (sec == 5)
+	if (ev->timerId() == this->timerId)
+	{
+		TimerMethod(sec1, "Timer1", ev->timerId(), ui->label);
+	}
+	else if (ev->timerId() == this->timerId2)
+	{
+		TimerMethod(sec2, "Timer2", ev->timerId(), ui->label_2);
+	}
+}
+
+void Widget::TimerMethod(int &sec, QString timerType, int timerId, myLabel* label)
+{
+	label->setText(QString("<center><h1>%2 out: %1</h1></center>")
+		.arg(++sec)
+		.arg(timerType)
+	);
+	if (timerId == this->timerId && sec == 25)
 	{
 		this->killTimer(timerId);
-		ui->label->setText(QString("<center><h1><font color=red>定时器关闭: %1</h1></center>")
-			.arg(sec));
+		label->setText(QString("<center><h1><font color=red>定时器%2关闭: %1</h1></center>")
+			.arg(sec)
+			.arg(timerType)
+		);
 	}
 }
 

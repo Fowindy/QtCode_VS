@@ -22,6 +22,7 @@ class Ui_Widget
 public:
     QVBoxLayout *verticalLayout;
     myLabel *label;
+    myLabel *label_2;
 
     void setupUi(QWidget *Widget)
     {
@@ -35,6 +36,11 @@ public:
 
         verticalLayout->addWidget(label);
 
+        label_2 = new myLabel(Widget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout->addWidget(label_2);
+
 
         retranslateUi(Widget);
 
@@ -45,6 +51,7 @@ public:
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
         label->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
+        label_2->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
     } // retranslateUi
 
 };
