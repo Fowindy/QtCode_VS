@@ -23,7 +23,9 @@ Widget::Widget(QWidget *parent)
 	ui->label->setStyleSheet("QLabel{color:rgb(0,0,0);"
 		"background-color:red;"
 		//背景图片:默认重复平铺
-		"background-image:url(:/image/Sunny.jpg)}");
+		"background-image:url(:/image/Sunny.jpg);"
+		//80 80 80 80:从原图的上下左右各往里裁剪80
+		"border-image:url(:/image/Sunny.jpg) 80 80 80 80 stretch stretch;}");
 
 	/**
 	 * 方箱模型(margin,border,padding,content)
