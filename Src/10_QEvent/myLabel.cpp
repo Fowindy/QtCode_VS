@@ -47,10 +47,10 @@ void myLabel::MyMethod(QMouseEvent * ev, QString buttonType)
 
 void myLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
-
+	MyMethod(ev, "Release");
 }
 
 void myLabel::mouseMoveEvent(QMouseEvent *ev)
 {
-
+	MyMethod(ev, "Move");
 }
