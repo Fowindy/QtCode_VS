@@ -31,6 +31,10 @@ SmallWidget::SmallWidget(QWidget *parent)
 		slider, &QSlider::setValue);
 #pragma endregion
 
+#pragma region [重点]滑块控件控制自增整型控件动作
+	//因为&QSlider::valueChanged 和 &QSpinBox::setValue没有重载,所以不需要强转指定类型
+	connect(slider, &QSlider::valueChanged, spin, &QSpinBox::setValue);
+#pragma endregion
 
 }
 
