@@ -12,6 +12,9 @@ public:
 protected:
 	//子类头文件重写父类虚函数(声明)_鼠标按下
 	void mousePressEvent(QMouseEvent *ev);
+
+	void MyMethod(QMouseEvent * ev, QString buttonType);
+
 	//子类头文件重写父类虚函数(声明)_鼠标释放
 	void mouseReleaseEvent(QMouseEvent *ev);
 	//子类头文件重写父类虚函数(声明)_鼠标移动

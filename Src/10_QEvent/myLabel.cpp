@@ -13,6 +13,11 @@ myLabel::~myLabel()
 
 void myLabel::mousePressEvent(QMouseEvent *ev)
 {
+	MyMethod(ev, "Press");
+}
+
+void myLabel::MyMethod(QMouseEvent * ev, QString buttonType)
+{
 	int i = ev->x();
 	int j = ev->y();
 	/**
@@ -34,8 +39,8 @@ void myLabel::mousePressEvent(QMouseEvent *ev)
 		buttonInfo = "MidButton";
 	}
 	//Qt格式化字符串_加嵌套css样式
-	QString text = QString("<center><h1>Mouse %1 Press Coordinate: (%2,%3)</h1></center>")
-		.arg(buttonInfo).arg(i).arg(j);
+	QString text = QString("<center><h1>Mouse %1 %4 Coordinate: (%2,%3)</h1></center>")
+		.arg(buttonInfo).arg(i).arg(j).arg(buttonType);
 	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
 	this->setText(text);
 }
