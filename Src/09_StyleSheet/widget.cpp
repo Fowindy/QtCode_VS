@@ -21,7 +21,9 @@ Widget::Widget(QWidget *parent)
 	 */
 	 //表示此样式仅对此label对象适应_局部作用
 	ui->label->setStyleSheet("QLabel{color:rgb(0,0,0);"
-		"background-color:red;}");
+		"background-color:red;"
+		//背景图片:默认重复平铺
+		"background-image:url(:/image/Sunny.jpg)}");
 
 	/**
 	 * 方箱模型(margin,border,padding,content)

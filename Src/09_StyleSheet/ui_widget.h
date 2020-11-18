@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,6 +20,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Widget
 {
 public:
+    QVBoxLayout *verticalLayout;
     QLabel *label;
     QLabel *label_2;
 
@@ -27,12 +29,18 @@ public:
         if (Widget->objectName().isEmpty())
             Widget->setObjectName(QString::fromUtf8("Widget"));
         Widget->resize(800, 600);
+        verticalLayout = new QVBoxLayout(Widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(Widget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(140, 110, 181, 141));
+
+        verticalLayout->addWidget(label);
+
         label_2 = new QLabel(Widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(140, 360, 91, 71));
+
+        verticalLayout->addWidget(label_2);
+
 
         retranslateUi(Widget);
 
