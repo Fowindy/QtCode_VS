@@ -19,6 +19,9 @@ Widget::~Widget()
 void Widget::keyPressEvent(QKeyEvent *ev)
 {
 	//显示键盘按键的ASCII码
-	qDebug() << ev->key();
+	//qDebug() << ev->key();
+
+	//键盘按键的ASCII码转换字符
+	qDebug() << (char)ev->key();
 }
 
