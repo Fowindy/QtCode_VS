@@ -35,6 +35,10 @@ Widget::Widget(QWidget *parent)
 	 * 4.内容(content):控件内容放置区
 	 * 注意:对于一个平面部件,比如一个空白,边框和填充都是0像素的部件而言,这四个矩形完全重合;
 	 */
+	ui->pushButton->setStyleSheet("QPushButton{"
+		//边框:10px宽度 红色
+		"border:10px outset red;"
+		"}");
 }
 
 Widget::~Widget()
