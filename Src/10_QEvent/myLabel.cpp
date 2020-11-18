@@ -1,7 +1,7 @@
-#include "myLabel.h"
+﻿#include "myLabel.h"
 
 myLabel::myLabel(QWidget *parent)
-	: QWidget(parent)
+	: QLabel(parent)
 {
 }
 

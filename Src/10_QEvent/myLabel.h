@@ -1,8 +1,8 @@
 ﻿#pragma once
 
-#include <QWidget>
+#include <QLabel>
 
-class myLabel : public QWidget
+class myLabel : public QLabel
 {
 	Q_OBJECT
 
