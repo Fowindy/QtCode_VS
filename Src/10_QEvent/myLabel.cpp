@@ -46,6 +46,15 @@ void myLabel::MyMethod(QMouseEvent * ev, QString buttonType)
 	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
 	this->setText(text);
 }
+//MyMethod方法重载
+void myLabel::MyMethod(QString buttonType, QEvent *)
+{
+	//Qt格式化字符串_加嵌套css样式
+	QString text = QString("<center><h1>Mouse %1 </h1></center>")
+		.arg(buttonType);
+	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
+	this->setText(text);
+}
 
 void myLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
@@ -54,5 +63,15 @@ void myLabel::mouseReleaseEvent(QMouseEvent *ev)
 
 void myLabel::mouseMoveEvent(QMouseEvent *ev)
 {
-	MyMethod(ev, "Move");
+	//MyMethod(ev, "Move");
+}
+
+void myLabel::enterEvent(QEvent *ev)
+{
+	MyMethod("Enter", ev);
+}
+
+void myLabel::leaveEvent(QEvent *ev)
+{
+	MyMethod("Leave", ev);
 }
