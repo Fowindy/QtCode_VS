@@ -8,3 +8,8 @@ myLabel::myLabel(QWidget *parent)
 myLabel::~myLabel()
 {
 }
+
+void myLabel::mousePressEvent(QMouseEvent *ev)
+{
+
+}
