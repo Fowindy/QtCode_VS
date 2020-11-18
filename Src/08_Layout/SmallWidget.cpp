@@ -22,6 +22,16 @@ SmallWidget::SmallWidget(QWidget *parent)
 
 	//如果不指定,则需要下面这一步---[1]
 	//setLayout(hLayout);
+
+#pragma region [重点]自增整型控件控制滑块控件动作
+	//因为:&QSpinBox::valueChanged有两个重载(int和Qstring),所以需要指定类型(强转int)
+	//void (QSpinBox::*)(int)  ===  void valueChanged(int)
+	//valueChanged方法名,属于指针 因此	QSpinBox::*
+	connect(spin, static_cast<void (QSpinBox::*)(int)>(&QSpinBox::valueChanged),
+		slider, &QSlider::setValue);
+#pragma endregion
+
+
 }
 
 SmallWidget::~SmallWidget()

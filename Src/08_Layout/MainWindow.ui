@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>233</width>
-    <height>312</height>
+    <width>231</width>
+    <height>356</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -163,6 +163,9 @@
       </layout>
      </widget>
     </item>
+    <item row="3" column="0">
+     <widget class="SmallWidget" name="widget_4" native="true"/>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -170,7 +173,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>233</width>
+     <width>231</width>
      <height>23</height>
     </rect>
    </property>
@@ -186,6 +189,14 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SmallWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">smallwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="Resource.qrc"/>
  </resources>

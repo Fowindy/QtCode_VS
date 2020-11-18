@@ -6,15 +6,18 @@ TEMPLATE = app
 TARGET = 08_Layout
 DESTDIR = ../../x64/Debug
 QT += core gui widgets
-CONFIG += C++11
+CONFIG += debug
 LIBS += -L"."
 DEPENDPATH += .
 MOC_DIR += .
 OBJECTS_DIR += debug
-UI_DIR += ./UI
+UI_DIR += .
 RCC_DIR += .
-HEADERS += ./MainWindow.h
-SOURCES += ./MainWindow.cpp \
+HEADERS += ./MainWindow.h \
+    ./SmallWidget.h
+SOURCES += ./SmallWidget.cpp \
+    ./MainWindow.cpp \
     ./main.cpp
 FORMS += ./MainWindow.ui
-RESOURCES += MainWindow.qrc
+RESOURCES += MainWindow.qrc \
+    Resource.qrc
