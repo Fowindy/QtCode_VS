@@ -31,6 +31,12 @@ protected:
 
 	//重写event事件
 	bool event(QEvent *);
+
+	//事件过滤器
+	bool eventFilter(QObject *watched, QEvent *event);
+
+	bool MyFilterMethod(QString color, QString buttonName, QMouseEvent * mEnv);
+
 private:
 	Ui::Widget *ui;
 	int timerId;	//定义定时器的Id

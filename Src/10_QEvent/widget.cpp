@@ -23,6 +23,11 @@ Widget::Widget(QWidget *parent)
 	{
 		qDebug() << "按钮被按下";
 	});
+
+	//label_2事件过滤器安装
+	ui->label_2->installEventFilter(this);
+	//label_2鼠标捕捉
+	ui->label_2->setMouseTracking(true);
 }
 
 Widget::~Widget()
@@ -90,6 +95,37 @@ void Widget::closeEvent(QCloseEvent *event)
 	{
 		event->ignore();
 	}
+}
+
+bool Widget::eventFilter(QObject *watched, QEvent *event)
+{
+	if (watched == ui->label_2)
+	{
+		//将QEvent父类对象转换为Q
+		QMouseEvent *mEnv = static_cast<QMouseEvent *>(event);
+		QString color, buttonName;
+		//判断按钮事件:按钮按下(左红坐标,右蓝坐标,中绿坐标)
+		switch (mEnv->type())
+		{
+		case QEvent::MouseMove:
+			return MyFilterMethod("red", "MouseMove", mEnv);
+			break;
+		case QEvent::MouseButtonPress:
+			return MyFilterMethod("blue", "MouseButtonPress", mEnv);
+			break;
+		case QEvent::MouseButtonRelease:
+			return MyFilterMethod("green", "MouseButtonRelease", mEnv);
+			break;
+		}
+	}
+	return QWidget::eventFilter(watched, event);
+}
+
+bool Widget::MyFilterMethod(QString color, QString buttonName, QMouseEvent * mEnv)
+{
+	ui->label_2->setText(QString("<center><h2><font color=%1>%4:(%2,%3)</h2></center>")
+		.arg(color).arg(mEnv->x()).arg(mEnv->y()).arg(buttonName));
+	return true;
 }
 
 //bool Widget::event(QEvent *e)
