@@ -111,3 +111,30 @@ void Widget::closeEvent(QCloseEvent *event)
 //	return false;
 //}
 
+bool Widget::event(QEvent *e)
+{
+	//    //事件分发
+	//    switch( e->type() )
+	//    {
+	//        case QEvent::Close:
+	//            closeEvent(e);
+	//        break;
+	//    case QEvent::MouseMove:
+	//        mouseMoveEvent(e);
+	//        break;
+	//        /*
+	//         *  ……
+	//        */
+	//    }
+
+	if (e->type() == QEvent::Timer)
+	{
+		//干掉定时器 如果返回true，事件停止传播
+		return true;
+	}
+	else
+	{
+		return QWidget::event(e);
+	}
+}
+
