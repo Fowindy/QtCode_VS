@@ -70,3 +70,8 @@ void Widget::TimerMethod(int &sec, QString timerType, int timerId, myLabel* labe
 	}
 }
 
+void Widget::mousePressEvent(QMouseEvent *event)
+{
+	qDebug() << "父组件接收到myButton的事件传递";
+}
+

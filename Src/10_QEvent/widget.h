@@ -23,6 +23,8 @@ protected:
 	void timerEvent(QTimerEvent *);
 
 	void TimerMethod(int &sec, QString timerType, int timerId, myLabel* label);
+	//父组件鼠标按下事件验证传递
+	void mousePressEvent(QMouseEvent *event);
 
 private:
 	Ui::Widget *ui;
