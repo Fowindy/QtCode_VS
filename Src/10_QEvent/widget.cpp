@@ -128,6 +128,7 @@ bool Widget::MyFilterMethod(QString color, QString buttonName, QMouseEvent * mEn
 	return true;
 }
 
+
 bool Widget::event(QEvent *e)
 {
 	//    //事件分发
