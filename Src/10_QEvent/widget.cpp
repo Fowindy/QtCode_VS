@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QKeyEvent>
 #include <QMessageBox>
+#include <QEvent>
+#include <QMouseEvent>
 
 
 Widget::Widget(QWidget *parent)
@@ -88,5 +90,24 @@ void Widget::closeEvent(QCloseEvent *event)
 	{
 		event->ignore();
 	}
+}
+
+bool Widget::event(QEvent *e)
+{
+	//事件分发
+	switch (e->type())
+	{
+	case QEvent::MouseButtonPress:
+		//使用dynamic_cast将父类转成子类(比static_cast有检查,更安全)
+		mousePressEvent(dynamic_cast<QMouseEvent*>(e));
+		break;
+	case QEvent::Close:
+		closeEvent(dynamic_cast<QCloseEvent*>(e));
+		break;
+		/**
+		 * ......
+		 */
+	}
+	return false;
 }
 

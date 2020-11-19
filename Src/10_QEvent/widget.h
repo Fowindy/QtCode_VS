@@ -28,6 +28,9 @@ protected:
 
 	//案例:父组件关闭窗口,提示是否关闭
 	void closeEvent(QCloseEvent *event);
+
+	//重写event事件
+	bool event(QEvent *);
 private:
 	Ui::Widget *ui;
 	int timerId;	//定义定时器的Id
