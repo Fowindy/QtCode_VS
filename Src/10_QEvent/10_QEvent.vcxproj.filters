@@ -45,12 +45,18 @@
     <ClCompile Include="myLabel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="myButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="widget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="myLabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="myButton.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
