@@ -52,6 +52,8 @@ void Widget::paintEvent(QPaintEvent *event)
 	//画直线_竖向直线x轴坐标不变
 	p.drawLine(50, 50, 50, 150);
 
+	//画矩形_起点坐标+宽+高
+	p.drawRect(150, 150, 100, 50);
 	p.end();
 }
 
