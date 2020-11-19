@@ -32,6 +32,8 @@ void Widget::paintEvent(QPaintEvent *event)
 
 	//画直线_横向直线y轴坐标不变
 	p.drawLine(50, 50, 150, 50);
+	//画直线_竖向直线x轴坐标不变
+	p.drawLine(50, 50, 50, 150);
 	p.end();
 }
 
