@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09_StyleSheet", "Src\09_Sty
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_QEvent", "Src\10_QEvent\10_QEvent.vcxproj", "{B0741190-2F21-4FA9-8EAC-9182B67D9DC9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_PaintEvent", "Src\11_PaintEvent\11_PaintEvent.vcxproj", "{8FBE4678-3289-4094-8A36-5A904DB85988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -141,6 +143,14 @@ Global
 		{B0741190-2F21-4FA9-8EAC-9182B67D9DC9}.Release|x64.ActiveCfg = Release|x64
 		{B0741190-2F21-4FA9-8EAC-9182B67D9DC9}.Release|x64.Build.0 = Release|x64
 		{B0741190-2F21-4FA9-8EAC-9182B67D9DC9}.Release|x86.ActiveCfg = Release|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Debug|Win32.ActiveCfg = Debug|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Debug|x64.ActiveCfg = Debug|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Debug|x64.Build.0 = Debug|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Debug|x86.ActiveCfg = Debug|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Release|Win32.ActiveCfg = Release|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Release|x64.ActiveCfg = Release|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Release|x64.Build.0 = Release|x64
+		{8FBE4678-3289-4094-8A36-5A904DB85988}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
