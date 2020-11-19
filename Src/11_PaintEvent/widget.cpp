@@ -3,6 +3,7 @@
 #include "ui_widget.h"
 #include <QPainter>
 #include <QPen>
+#include <QBrush>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -46,6 +47,18 @@ void Widget::paintEvent(QPaintEvent *event)
 
 	//把画笔交给画家
 	p.setPen(pen);
+
+#pragma region 画刷
+	//定义画刷
+	QBrush brush;
+	//设置画刷颜色
+	brush.setColor(Qt::red);
+	//设置样式
+	brush.setStyle(Qt::CrossPattern);
+	//把画刷交给画家
+	p.setBrush(brush);
+#pragma endregion
+
 
 	//画直线_横向直线y轴坐标不变
 	p.drawLine(50, 50, 150, 50);
