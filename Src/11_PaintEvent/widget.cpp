@@ -2,6 +2,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QPainter>
+#include <QPen>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -30,10 +31,27 @@ void Widget::paintEvent(QPaintEvent *event)
 	//第三种方式:使用rect:获取左上角坐标和宽度高度
 	p.drawPixmap(rect(), QPixmap("./image/timg.jpg"));
 
+	//定义画笔
+	QPen pen;
+	//设置线宽
+	pen.setWidth(5);
+	//设置颜色_通过枚举_局限性
+	//pen.setColor(Qt::red);
+
+	//设置颜色_通过rgb
+	pen.setColor(QColor(160, 41, 192));
+
+	//设置风格_虚线
+	pen.setStyle(Qt::DotLine);
+
+	//把画笔交给画家
+	p.setPen(pen);
+
 	//画直线_横向直线y轴坐标不变
 	p.drawLine(50, 50, 150, 50);
 	//画直线_竖向直线x轴坐标不变
 	p.drawLine(50, 50, 50, 150);
+
 	p.end();
 }
 
