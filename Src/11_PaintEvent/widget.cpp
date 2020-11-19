@@ -24,6 +24,8 @@ void Widget::paintEvent(QPaintEvent *event)
 	QPainter p;	//创建画家对象
 	p.begin(this);	//指定当前窗口为绘图设备
 	//绘图操作
+	//画背景图
+	p.drawPixmap(0, 0, width(), height(), QPixmap("./image/AiLianShuo.jpg"));
 	p.end();
 }
 
