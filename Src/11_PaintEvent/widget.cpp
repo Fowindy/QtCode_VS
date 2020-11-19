@@ -54,6 +54,9 @@ void Widget::paintEvent(QPaintEvent *event)
 
 	//画矩形_起点坐标+宽+高
 	p.drawRect(150, 150, 100, 50);
+
+	//画圆形_圆心+宽半径+高半径
+	p.drawEllipse(QPoint(150, 150), 100, 50);
 	p.end();
 }
 
