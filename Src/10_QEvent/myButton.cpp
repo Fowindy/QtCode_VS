@@ -1,4 +1,7 @@
-﻿#include "myButton.h"
+﻿#pragma execution_character_set("utf-8")
+#include "myButton.h"
+#include <QMouseEvent>
+#include <QDebug>
 
 myButton::myButton(QWidget *parent)
 	: QPushButton(parent)
@@ -7,4 +10,20 @@ myButton::myButton(QWidget *parent)
 
 myButton::~myButton()
 {
+}
+
+void myButton::mousePressEvent(QMouseEvent *e)
+{
+	//判断是否为鼠标左键按下
+	if (e->button() == Qt::LeftButton)
+	{
+		//事件的接收,接收后就会往下传递
+		qDebug() << "鼠标左键按下";
+	}
+	else
+	{
+		//不做处理
+		//事件的忽略,忽略后事件继续传递
+		QPushButton::mousePressEvent(e);
+	}
 }

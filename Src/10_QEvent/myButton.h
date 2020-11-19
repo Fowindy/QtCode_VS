@@ -9,4 +9,7 @@ class myButton : public QPushButton
 public:
 	myButton(QWidget *parent);
 	~myButton();
+protected:
+	//重写此按钮鼠标按下事件
+	void mousePressEvent(QMouseEvent *e);
 };
