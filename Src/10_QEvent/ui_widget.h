@@ -11,8 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <mybutton.h>
 #include <mylabel.h>
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +26,9 @@ public:
     QVBoxLayout *verticalLayout;
     myLabel *label;
     myLabel *label_2;
+    QHBoxLayout *horizontalLayout;
+    myButton *pushButton;
+    QSpacerItem *horizontalSpacer;
 
     void setupUi(QWidget *Widget)
     {
@@ -41,6 +47,20 @@ public:
 
         verticalLayout->addWidget(label_2);
 
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        pushButton = new myButton(Widget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
 
         retranslateUi(Widget);
 
@@ -52,6 +72,7 @@ public:
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
         label->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
+        pushButton->setText(QCoreApplication::translate("Widget", "PushButton", nullptr));
     } // retranslateUi
 
 };
