@@ -14,6 +14,12 @@ Widget::Widget(QWidget *parent)
 	ui->setupUi(this);
 	timerId = this->startTimer(1000);	//以毫秒为单位	每一秒触发定时器
 	this->timerId2 = this->startTimer(500);	//以毫秒为单位	每500毫秒触发定时器
+
+	connect(ui->pushButton, &myButton::clicked,
+		[=]()
+	{
+		qDebug() << "按钮被按下";
+	});
 }
 
 Widget::~Widget()

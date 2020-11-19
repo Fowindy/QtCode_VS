@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "myLabel.h"
+#include "myButton.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
