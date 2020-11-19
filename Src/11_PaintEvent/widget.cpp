@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "widget.h"
 #include "ui_widget.h"
+#include <QPainter>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -16,5 +17,7 @@ Widget::~Widget()
 
 void Widget::paintEvent(QPaintEvent *event)
 {
+	//第一种方法:直接构造方式
+	QPainter p(this);
 }
 
