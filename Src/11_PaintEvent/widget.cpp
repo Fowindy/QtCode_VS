@@ -28,7 +28,10 @@ void Widget::paintEvent(QPaintEvent *event)
 	//p.drawPixmap(0, 0, width(), height(), QPixmap("./image/AiLianShuo.jpg"));
 
 	//第三种方式:使用rect:获取左上角坐标和宽度高度
-	p.drawPixmap(rect(), QPixmap("./image/AiLianShuo.jpg"));
+	p.drawPixmap(rect(), QPixmap("./image/timg.jpg"));
+
+	//画直线_横向直线y轴坐标不变
+	p.drawLine(50, 50, 150, 50);
 	p.end();
 }
 
