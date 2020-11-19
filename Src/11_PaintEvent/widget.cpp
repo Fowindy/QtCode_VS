@@ -18,6 +18,12 @@ Widget::~Widget()
 void Widget::paintEvent(QPaintEvent *event)
 {
 	//第一种方法:直接构造方式
-	QPainter p(this);
+	//QPainter p(this);
+
+	//第二种方式:调用begin和end函数方式
+	QPainter p;	//创建画家对象
+	p.begin(this);	//指定当前窗口为绘图设备
+	//绘图操作
+	p.end();
 }
 
