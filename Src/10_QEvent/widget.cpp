@@ -130,6 +130,10 @@ bool Widget::event(QEvent *e)
 	if (e->type() == QEvent::Timer)
 	{
 		//干掉定时器 如果返回true，事件停止传播
+#pragma region 不干掉定时器
+		QTimerEvent *env = static_cast<QTimerEvent *>(e);
+		timerEvent(env);
+#pragma endregion
 		return true;
 	}
 	else
