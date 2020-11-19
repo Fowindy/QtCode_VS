@@ -57,7 +57,7 @@ void Widget::timerEvent(QTimerEvent *ev)
 	}
 }
 
-void Widget::TimerMethod(int &sec, QString timerType, int timerId, myLabel* label)
+void Widget::TimerMethod(int &sec, QString timerType, int timerId, QLabel* label)
 {
 	label->setText(QString("<center><h1>%2 out: %1</h1></center>")
 		.arg(++sec)

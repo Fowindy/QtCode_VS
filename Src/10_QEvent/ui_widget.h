@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -25,7 +26,7 @@ class Ui_Widget
 public:
     QVBoxLayout *verticalLayout;
     myLabel *label;
-    myLabel *label_2;
+    QLabel *label_2;
     QHBoxLayout *horizontalLayout;
     myButton *pushButton;
     QSpacerItem *horizontalSpacer;
@@ -42,7 +43,7 @@ public:
 
         verticalLayout->addWidget(label);
 
-        label_2 = new myLabel(Widget);
+        label_2 = new QLabel(Widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
 
         verticalLayout->addWidget(label_2);

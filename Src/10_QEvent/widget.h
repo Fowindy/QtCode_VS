@@ -22,7 +22,7 @@ protected:
 	//计时器事件
 	void timerEvent(QTimerEvent *);
 
-	void TimerMethod(int &sec, QString timerType, int timerId, myLabel* label);
+	void TimerMethod(int &sec, QString timerType, int timerId, QLabel* label);
 	//父组件鼠标按下事件验证传递
 	void mousePressEvent(QMouseEvent *event);
 
