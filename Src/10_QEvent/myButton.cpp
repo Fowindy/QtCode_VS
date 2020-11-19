@@ -19,6 +19,8 @@ void myButton::mousePressEvent(QMouseEvent *e)
 	{
 		//事件的接收,接收后就会往下传递
 		qDebug() << "鼠标左键按下";
+
+		e->ignore();//忽略,事件继续往下传递,给谁传递?
 	}
 	else
 	{
