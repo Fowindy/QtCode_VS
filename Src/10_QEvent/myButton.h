@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 
-#include <QWidget>
+#include <QPushButton>
 
-class myButton : public QWidget
+class myButton : public QPushButton
 {
 	Q_OBJECT
 
