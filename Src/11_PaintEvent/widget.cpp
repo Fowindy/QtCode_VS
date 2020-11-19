@@ -66,9 +66,13 @@ void Widget::paintEvent(QPaintEvent *event)
 	p.drawLine(50, 50, 50, 150);
 
 	//画矩形_起点坐标+宽+高
+	brush.setColor(Qt::green);
+	p.setBrush(brush);
 	p.drawRect(150, 150, 100, 50);
 
 	//画圆形_圆心+宽半径+高半径
+	brush.setColor(Qt::red);
+	p.setBrush(brush);
 	p.drawEllipse(QPoint(150, 150), 100, 50);
 	p.end();
 }
