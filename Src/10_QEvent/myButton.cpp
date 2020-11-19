@@ -21,6 +21,7 @@ void myButton::mousePressEvent(QMouseEvent *e)
 		qDebug() << "鼠标左键按下";
 
 		e->ignore();//忽略,事件继续往下传递,给谁传递?
+					//事件传递给了父组件(Widget),不是给父类(QPushButton)
 	}
 	else
 	{
