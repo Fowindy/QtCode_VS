@@ -25,7 +25,10 @@ void Widget::paintEvent(QPaintEvent *event)
 	p.begin(this);	//指定当前窗口为绘图设备
 	//绘图操作
 	//画背景图
-	p.drawPixmap(0, 0, width(), height(), QPixmap("./image/AiLianShuo.jpg"));
+	//p.drawPixmap(0, 0, width(), height(), QPixmap("./image/AiLianShuo.jpg"));
+
+	//第三种方式:使用rect:获取左上角坐标和宽度高度
+	p.drawPixmap(rect(), QPixmap("./image/AiLianShuo.jpg"));
 	p.end();
 }
 
