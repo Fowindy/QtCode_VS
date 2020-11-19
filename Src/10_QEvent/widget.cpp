@@ -134,7 +134,20 @@ bool Widget::event(QEvent *e)
 		QTimerEvent *env = static_cast<QTimerEvent *>(e);
 		timerEvent(env);
 #pragma endregion
+
 		return true;
+	}
+	//只获取键盘B按下才事件处理
+	else if (e->type() == QEvent::KeyPress)
+	{
+		//类型转换
+		QKeyEvent *env = static_cast<QKeyEvent *>(e);
+		if (env->key() == Qt::Key_B)
+		{
+			return QWidget::event(e);
+		}
+		return true;
+
 	}
 	else
 	{
