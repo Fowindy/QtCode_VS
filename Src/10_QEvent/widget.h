@@ -26,6 +26,8 @@ protected:
 	//父组件鼠标按下事件验证传递
 	void mousePressEvent(QMouseEvent *event);
 
+	//案例:父组件关闭窗口,提示是否关闭
+	void closeEvent(QCloseEvent *event);
 private:
 	Ui::Widget *ui;
 	int timerId;	//定义定时器的Id

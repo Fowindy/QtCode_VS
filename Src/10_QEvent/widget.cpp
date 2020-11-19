@@ -3,6 +3,7 @@
 #include "ui_widget.h"
 #include <QDebug>
 #include <QKeyEvent>
+#include <QMessageBox>
 
 
 Widget::Widget(QWidget *parent)
@@ -73,5 +74,19 @@ void Widget::TimerMethod(int &sec, QString timerType, int timerId, myLabel* labe
 void Widget::mousePressEvent(QMouseEvent *event)
 {
 	qDebug() << "父组件接收到myButton的事件传递";
+}
+
+void Widget::closeEvent(QCloseEvent *event)
+{
+	//弹出QMessageBox来提示用户选择
+	int result = QMessageBox::question(this, "关闭窗口", "确定关闭窗口?", "确定", "取消");
+	if (result == 0)
+	{
+		event->accept();
+	}
+	else
+	{
+		event->ignore();
+	}
 }
 
