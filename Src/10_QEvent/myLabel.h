@@ -13,9 +13,9 @@ protected:
 	//子类头文件重写父类虚函数(声明)_鼠标按下
 	void mousePressEvent(QMouseEvent *ev);
 
-	void MyMethod(QMouseEvent * ev = nullptr, QString buttonType = NULL);
+	void MyMethod(QMouseEvent* ev);
 	//MyMethod方法重载
-	void MyMethod(QString buttonType, QEvent * ev = nullptr);
+	void MyMethod(QEvent* ev);
 	//子类头文件重写父类虚函数(声明)_鼠标释放
 	void mouseReleaseEvent(QMouseEvent *ev);
 	//子类头文件重写父类虚函数(声明)_鼠标移动

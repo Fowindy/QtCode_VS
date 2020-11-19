@@ -30,7 +30,7 @@ protected:
 	void closeEvent(QCloseEvent *event);
 
 	//重写event事件
-	bool event(QEvent *);
+	//bool event(QEvent *);
 private:
 	Ui::Widget *ui;
 	int timerId;	//定义定时器的Id
