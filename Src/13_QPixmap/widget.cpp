@@ -17,6 +17,8 @@ Widget::Widget(QWidget *parent)
 	 //因为QPixmap本身是绘图设备,不在窗口中绘图,则不需要在paintEvent事件中实现
 	//创建绘图设备QPixmap并指定绘图设备的大小
 	QPixmap pixmap(400, 300);
+	//创建画家并指定绘图设备
+	QPainter p(&pixmap);
 }
 
 Widget::~Widget()
