@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_PaintEvent", "Src\11_Pai
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12_QBitmap", "Src\12_QBitmap\12_QBitmap.vcxproj", "{84A1B24E-9C0D-4241-BBDF-FB58DE897A1E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_QPixmap", "Src\13_QPixmap\13_QPixmap.vcxproj", "{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -161,6 +163,14 @@ Global
 		{84A1B24E-9C0D-4241-BBDF-FB58DE897A1E}.Release|x64.ActiveCfg = Release|x64
 		{84A1B24E-9C0D-4241-BBDF-FB58DE897A1E}.Release|x64.Build.0 = Release|x64
 		{84A1B24E-9C0D-4241-BBDF-FB58DE897A1E}.Release|x86.ActiveCfg = Release|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Debug|Win32.ActiveCfg = Debug|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Debug|x64.ActiveCfg = Debug|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Debug|x64.Build.0 = Debug|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Debug|x86.ActiveCfg = Debug|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Release|Win32.ActiveCfg = Release|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Release|x64.ActiveCfg = Release|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Release|x64.Build.0 = Release|x64
+		{3B5F4137-E4FC-4948-A3BA-D9A6D78CA267}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
