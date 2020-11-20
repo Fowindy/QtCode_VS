@@ -15,24 +15,11 @@ myLabel::~myLabel()
 
 void myLabel::mousePressEvent(QMouseEvent *ev)
 {
-	MyMethod(ev);
+	MyMethod(ev, "Press");
 }
 
-void myLabel::MyMethod(QMouseEvent * ev)
+void myLabel::MyMethod(QMouseEvent * ev, QString buttonType)
 {
-	QString buttonName;
-	switch (ev->type())
-	{
-	case QEvent::MouseButtonPress:
-		buttonName = "MouseButtonPress";
-		break;
-	case QEvent::MouseButtonRelease:
-		buttonName = "MouseButtonRelease";
-		break;
-	case QEvent::MouseMove:
-		buttonName = "MouseMove";
-		break;
-	}
 	int i = ev->x();
 	int j = ev->y();
 	/**
@@ -55,46 +42,36 @@ void myLabel::MyMethod(QMouseEvent * ev)
 	}
 	//Qt格式化字符串_加嵌套css样式
 	QString text = QString("<center><h1>Mouse %1 %4 Coordinate: (%2,%3)</h1></center>")
-		.arg(buttonInfo).arg(i).arg(j).arg(buttonName);
+		.arg(buttonInfo).arg(i).arg(j).arg(buttonType);
 	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
 	this->setText(text);
 }
 //MyMethod方法重载
-void myLabel::MyMethod(QEvent *ev)
+void myLabel::MyMethod(QString buttonType, QEvent *)
 {
-	QString buttonName;
-	switch (ev->type())
-	{
-	case QEvent::Enter:
-		buttonName = "Enter";
-		break;
-	case QEvent::Leave:
-		buttonName = "Leave";
-		break;
-	}
 	//Qt格式化字符串_加嵌套css样式
 	QString text = QString("<center><h1>Mouse %1 </h1></center>")
-		.arg(buttonName);
+		.arg(buttonType);
 	//显示,目前无法显示,因为自定义myLabel没有和ui绑定(提升)
 	this->setText(text);
 }
 
 void myLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
-	MyMethod(ev);
+	MyMethod(ev, "Release");
 }
 
 void myLabel::mouseMoveEvent(QMouseEvent *ev)
 {
-	MyMethod(ev);
+	//MyMethod(ev, "Move");
 }
 
 void myLabel::enterEvent(QEvent *ev)
 {
-	MyMethod(ev);
+	MyMethod("Enter", ev);
 }
 
 void myLabel::leaveEvent(QEvent *ev)
 {
-	MyMethod(ev);	//默认参数可以省略
+	MyMethod("Leave");	//默认参数可以省略
 }
