@@ -23,5 +23,7 @@ void Widget::paintEvent(QPaintEvent *)
 	QPainter p(this);
 	//QPixmap_图片背景透明_彩色
 	p.drawPixmap(0, 0, QPixmap("../image/butterfly_tm.png"));
+	//QBitmap_图片背景透明_黑白
+	p.drawPixmap(200, 0, QBitmap("../image/butterfly_tm.png"));
 }
 
