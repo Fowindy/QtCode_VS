@@ -3,10 +3,10 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = 07_Parts
+TARGET = 08_Layout
 DESTDIR = ./debug
 QT += core gui widgets
-CONFIG += C++11
+CONFIG += debug
 DEFINES += _WINDOWS _UNICODE _ENABLE_EXTENDED_ALIGNED_STORAGE WIN64 QT_DEPRECATED_WARNINGS
 LIBS += -lshell32
 DEPENDPATH += .
@@ -14,8 +14,10 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./mainwindow.h
+HEADERS += ./widget.h \
+    ./SmallWidget.h
 SOURCES += ./main.cpp \
-    ./mainwindow.cpp
-FORMS += ./mainwindow.ui
-RESOURCES += image.qrc
+    ./SmallWidget.cpp \
+    ./widget.cpp
+FORMS += ./widget.ui
+RESOURCES += widget.qrc

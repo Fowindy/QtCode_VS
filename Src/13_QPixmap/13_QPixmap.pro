@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = 07_Parts
+TARGET = 13_QPixmap
 DESTDIR = ./debug
 QT += core gui widgets
 CONFIG += C++11
@@ -14,8 +14,8 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./mainwindow.h
+HEADERS += ./widget.h
 SOURCES += ./main.cpp \
-    ./mainwindow.cpp
-FORMS += ./mainwindow.ui
-RESOURCES += image.qrc
+    ./widget.cpp
+FORMS += ./widget.ui
+RESOURCES += widget.qrc

@@ -22,7 +22,7 @@ protected:
 	//计时器事件
 	void timerEvent(QTimerEvent *);
 
-	void TimerMethod(int &sec, QString timerType, int timerId, QLabel* label);
+	void TimerMethod(int &sec, QString timerType, int timerId, myLabel* label);
 	//父组件鼠标按下事件验证传递
 	void mousePressEvent(QMouseEvent *event);
 
@@ -31,12 +31,6 @@ protected:
 
 	//重写event事件
 	bool event(QEvent *);
-
-	//事件过滤器
-	bool eventFilter(QObject *watched, QEvent *event);
-
-	bool MyFilterMethod(QString color, QString buttonName, QMouseEvent * mEnv);
-
 private:
 	Ui::Widget *ui;
 	int timerId;	//定义定时器的Id
