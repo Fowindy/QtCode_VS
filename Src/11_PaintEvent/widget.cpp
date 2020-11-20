@@ -33,7 +33,7 @@ void Widget::paintEvent(QPaintEvent *event)
 	//p.drawPixmap(0, 0, width(), height(), QPixmap("./image/AiLianShuo.jpg"));
 
 	//第三种方式:使用rect:获取左上角坐标和宽度高度
-	p.drawPixmap(rect(), QPixmap("./image/timg.jpg"));
+	p.drawPixmap(rect(), QPixmap(":/image/timg.jpg"));
 
 	//定义画笔
 	QPen pen;
@@ -79,7 +79,7 @@ void Widget::paintEvent(QPaintEvent *event)
 	p.drawEllipse(QPoint(150, 150), 100, 50);
 
 	//画笑脸
-	p.drawPixmap(x, y, 80, 80, QPixmap("./image/face.png"));
+	p.drawPixmap(x, y, 80, 80, QPixmap(":/image/face.png"));
 	p.end();
 }
 

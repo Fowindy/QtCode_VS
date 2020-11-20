@@ -200,10 +200,10 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="widget.qrc" />
+    <QtMoc Include="SmallWidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="SmallWidget.h" />
+    <QtRcc Include="widget.qrc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

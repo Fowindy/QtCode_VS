@@ -1,4 +1,5 @@
-﻿<RCC>
-    <qresource prefix="/new/prefix1">
+<RCC>
+    <qresource prefix="/">
+        <file>image/Luffy.png</file>
     </qresource>
 </RCC>

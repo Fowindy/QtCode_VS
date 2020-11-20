@@ -68,7 +68,7 @@ public:
         label = new QLabel(widget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setMaximumSize(QSize(100, 100));
-        label->setPixmap(QPixmap(QString::fromUtf8("../image/Luffy.png")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/image/Luffy.png")));
         label->setScaledContents(true);
 
         horizontalLayout->addWidget(label);

@@ -42,7 +42,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../image/Luffy.png</pixmap>
+         <pixmap resource="widget.qrc">:/image/Luffy.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -199,6 +199,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="widget.qrc"/>
+ </resources>
  <connections/>
 </ui>
