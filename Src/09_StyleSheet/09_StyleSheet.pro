@@ -3,7 +3,7 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = 07_Parts
+TARGET = 09_StyleSheet
 DESTDIR = ./debug
 QT += core gui widgets
 CONFIG += C++11
@@ -14,8 +14,8 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./mainwindow.h
+HEADERS += ./widget.h
 SOURCES += ./main.cpp \
-    ./mainwindow.cpp
-FORMS += ./mainwindow.ui
+    ./widget.cpp
+FORMS += ./widget.ui
 RESOURCES += image.qrc
