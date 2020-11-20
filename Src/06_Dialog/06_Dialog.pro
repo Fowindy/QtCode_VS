@@ -13,6 +13,4 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += GeneratedFiles
 RCC_DIR += GeneratedFiles
-HEADERS += ./MainWindow.h
-SOURCES += ./MainWindow.cpp \
-    ./main.cpp
+include(06_Dialog.pri)

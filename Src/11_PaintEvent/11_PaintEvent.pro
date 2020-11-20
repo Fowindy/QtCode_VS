@@ -14,8 +14,4 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./widget.h
-SOURCES += ./main.cpp \
-    ./widget.cpp
-FORMS += ./widget.ui
-RESOURCES += widget.qrc
+include(11_PaintEvent.pri)

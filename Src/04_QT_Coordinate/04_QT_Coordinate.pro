@@ -6,15 +6,13 @@ TEMPLATE = app
 TARGET = 04_QT_Coordinate
 DESTDIR = ../03_SignalAndSlot/x64/Debug
 QT += core gui widgets
-CONFIG += debug
-LIBS += -L"."
+CONFIG += C++11
+DEFINES += _WINDOWS _UNICODE _ENABLE_EXTENDED_ALIGNED_STORAGE WIN64
+LIBS += -L"." \
+    -lshell32
 DEPENDPATH += .
 MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += GeneratedFiles
 RCC_DIR += GeneratedFiles
-HEADERS += ./MyWidget.h \
-    ./MyButton.h
-SOURCES += ./MyButton.cpp \
-    ./MyWidget.cpp \
-    ./main.cpp
+include(04_QT_Coordinate.pri)

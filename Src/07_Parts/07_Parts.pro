@@ -14,8 +14,4 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./mainwindow.h
-SOURCES += ./main.cpp \
-    ./mainwindow.cpp
-FORMS += ./mainwindow.ui
-RESOURCES += image.qrc
+include(07_Parts.pri)

@@ -14,12 +14,4 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./widget.h \
-    ./myLabel.h \
-    ./myButton.h
-SOURCES += ./main.cpp \
-    ./myButton.cpp \
-    ./myLabel.cpp \
-    ./widget.cpp
-FORMS += ./widget.ui
-RESOURCES += widget.qrc
+include(10_QEvent.pri)
