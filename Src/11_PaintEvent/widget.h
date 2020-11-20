@@ -21,5 +21,9 @@ protected:
 	void paintEvent(QPaintEvent *event);
 private:
 	Ui::Widget *ui;
+	int x;	//x坐标
+	int y;	//y坐标
+private slots:
+	void on_pushButton_clicked();
 };
 #endif // WIDGET_H

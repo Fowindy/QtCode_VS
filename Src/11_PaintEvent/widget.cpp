@@ -10,6 +10,9 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//x初始坐标为0
+	x = 0;
+	y = 200;
 }
 
 Widget::~Widget()
@@ -74,6 +77,22 @@ void Widget::paintEvent(QPaintEvent *event)
 	brush.setColor(Qt::red);
 	p.setBrush(brush);
 	p.drawEllipse(QPoint(150, 150), 100, 50);
+
+	//画笑脸
+	p.drawPixmap(x, y, 80, 80, QPixmap("./image/face.png"));
 	p.end();
+}
+
+void Widget::on_pushButton_clicked()
+{
+	x += 80;
+	//如果到了边界,重设为0
+	if (x + 80 > width())
+	{
+		y + 80 > height() - 80 ? y = 200 : y += 80;
+		x = 0;
+	}
+	//刷新窗口,让窗口重绘,整个窗口都刷新
+	update();	//间接调用paintEvent()
 }
 
