@@ -15,6 +15,14 @@ Widget::Widget(QWidget *parent)
 	p.begin(&image);
 	//绘图
 	p.drawImage(0, 0, QImage(":/image/face.png"));
+	//对绘图设备前50个像素点进行操作:修改成绿色
+	for (int i = 0; i < 50; i++)
+	{
+		for (int j = 0; j < 50; j++)
+		{
+			image.setPixel(QPoint(i, j), qRgb(0, 255, 0));
+		}
+	}
 	p.end();
 	//绘图设备保存图片
 	image.save("./image/image.png");
