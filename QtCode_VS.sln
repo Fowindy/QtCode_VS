@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13_QPixmap", "Src\13_QPixma
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_Layout", "Src\08_Layout\08_Layout.vcxproj", "{2436A8F6-C7DA-4BBD-A642-B35E4251F216}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_41_QImage", "Src\14_41_QImage\14_41_QImage.vcxproj", "{5760682A-866B-4174-B53F-9F13FEF65C32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -171,6 +173,14 @@ Global
 		{2436A8F6-C7DA-4BBD-A642-B35E4251F216}.Release|x64.ActiveCfg = Release|x64
 		{2436A8F6-C7DA-4BBD-A642-B35E4251F216}.Release|x64.Build.0 = Release|x64
 		{2436A8F6-C7DA-4BBD-A642-B35E4251F216}.Release|x86.ActiveCfg = Release|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Debug|Win32.ActiveCfg = Debug|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Debug|x64.ActiveCfg = Debug|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Debug|x64.Build.0 = Debug|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Debug|x86.ActiveCfg = Debug|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|Win32.ActiveCfg = Release|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x64.ActiveCfg = Release|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x64.Build.0 = Release|x64
+		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
