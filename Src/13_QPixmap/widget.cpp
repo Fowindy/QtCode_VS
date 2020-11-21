@@ -21,6 +21,8 @@ Widget::Widget(QWidget *parent)
 	QPainter p(&pixmap);
 	//把笑脸图画到QPixmap设备上(内存中)
 	p.drawPixmap(0, 0, 80, 80, QPixmap(":/image/face.png"));
+	//保存图片
+	pixmap.save("./image/pixmap.jpg");
 }
 
 Widget::~Widget()
