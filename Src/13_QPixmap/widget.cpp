@@ -20,11 +20,13 @@ Widget::Widget(QWidget *parent)
 	//创建画家并指定绘图设备
 	QPainter p(&pixmap);
 	//填充黑色背景色_通过画家
-	p.fillRect(0, 0, 400, 300, QBrush(Qt::black));
+	//p.fillRect(0, 0, 400, 300, QBrush(Qt::black));
+	//填充黑色背景色_通过设备
+	pixmap.fill(Qt::black);
 	//把笑脸图画到QPixmap设备上(内存中)
 	p.drawPixmap(0, 0, 80, 80, QPixmap(":/image/face.png"));
 	//保存图片
-	pixmap.save("./image/pixmap.jpg");
+	pixmap.save("./image/pixmap.png");
 }
 
 Widget::~Widget()
