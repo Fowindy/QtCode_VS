@@ -3,6 +3,7 @@
 #include "ui_widget.h"
 #include <QPainter>
 #include <QImage>
+#include <QDebug>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -23,6 +24,8 @@ Widget::Widget(QWidget *parent)
 			image.setPixel(QPoint(i, j), qRgb(0, 255, 0));
 		}
 	}
+	//获取某一个像素点的颜色值
+	qDebug() << "颜色:" << image.pixel(25, 25);
 	p.end();
 	//绘图设备保存图片
 	image.save("./image/image.png");
