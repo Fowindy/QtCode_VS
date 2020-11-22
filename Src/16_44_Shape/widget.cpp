@@ -11,6 +11,8 @@ Widget::Widget(QWidget *parent)
 	ui->setupUi(this);
 	//setWindowFlags去widget窗口边框_Qt::FramelessWindowHint_加内联函数windowFlags
 	setWindowFlags(Qt::FramelessWindowHint | windowFlags());
+	//设定widget窗口背景透明_Qt::WA_TranslucentBackground
+	setAttribute(Qt::WA_TranslucentBackground);
 }
 
 Widget::~Widget()
