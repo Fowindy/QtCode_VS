@@ -91,6 +91,9 @@ void Widget::on_buttonWrite_clicked()
 			QByteArray array = buf.toUtf8();	//中文
 			//[知识点:QString -> QByteArray]---第二种:转换本地编码
 			//array = buf.toLocal8Bit();	//本地编码
+
+			//[知识点:QByteArray -> char*]---array.data()
+			char *ch = array.data();
 		}
 		//使用完关闭资源
 		file.close();
