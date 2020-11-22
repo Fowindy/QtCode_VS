@@ -20,12 +20,33 @@ Widget::Widget(QWidget *parent)
 	//画一条横向直线
 	painter.drawLine(50, 50, 150, 50);
 	painter.end();
-	//画好后保存
-	picture.save("./image/picture.png");
+	//画好后保存_二进制图片_外面不可查看
+	picture.save("./picture.png");
 }
 
 Widget::~Widget()
 {
 	delete ui;
+}
+
+//************************************
+// Method:    paintEvent
+// Access:    protected 
+// Returns:   void
+// Author: 	  Fowindy
+// Parameter: QPaintEvent *
+// Created:   2020/11/22 21:51
+//************************************
+//paintEvent事件显示图片
+void Widget::paintEvent(QPaintEvent *)
+{
+	//创建画家对象
+	QPainter painter(this);
+	//创建画具对象
+	QPicture picture;
+	//往画具中加载生成的二进制图片
+	picture.load("./picture.png");
+	//画家在widget画出图片
+	painter.drawPicture(0, 0, picture);
 }
 
