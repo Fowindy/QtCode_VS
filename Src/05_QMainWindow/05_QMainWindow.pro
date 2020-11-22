@@ -4,7 +4,7 @@
 
 TEMPLATE = app
 TARGET = 05_QMainWindow
-DESTDIR = ../../x64/Debug
+DESTDIR = ./debug
 QT += core gui widgets
 CONFIG += C++11
 DEFINES += _WINDOWS _UNICODE _ENABLE_EXTENDED_ALIGNED_STORAGE WIN64

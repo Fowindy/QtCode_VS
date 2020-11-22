@@ -4,7 +4,7 @@
 
 TEMPLATE = app
 TARGET = 06_Dialog
-DESTDIR = ../../x64/Debug
+DESTDIR = ./debug
 QT += core gui widgets
 CONFIG += C++11
 LIBS += -L"."

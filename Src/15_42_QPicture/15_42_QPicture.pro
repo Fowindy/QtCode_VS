@@ -3,16 +3,15 @@
 # ------------------------------------------------------
 
 TEMPLATE = app
-TARGET = 04_QT_Coordinate
+TARGET = 15_42_QPicture
 DESTDIR = ./debug
 QT += core gui widgets
 CONFIG += C++11
-DEFINES += _WINDOWS _UNICODE _ENABLE_EXTENDED_ALIGNED_STORAGE WIN64
-LIBS += -L"." \
-    -lshell32
+DEFINES += _WINDOWS _UNICODE _ENABLE_EXTENDED_ALIGNED_STORAGE WIN64 QT_DEPRECATED_WARNINGS
+LIBS += -lshell32
 DEPENDPATH += .
 MOC_DIR += .
 OBJECTS_DIR += debug
-UI_DIR += GeneratedFiles
-RCC_DIR += GeneratedFiles
-include(04_QT_Coordinate.pri)
+UI_DIR += .
+RCC_DIR += .
+include(15_42_QPicture.pri)
