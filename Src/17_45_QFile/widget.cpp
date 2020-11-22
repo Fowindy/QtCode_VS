@@ -63,4 +63,20 @@ void Widget::on_buttonWrite_clicked()
 {
 	//保存对话框获取保存路径
 	QString path = QFileDialog::getSaveFileName(this, "save", "./File", "文本文档(*.txt)");
+	//判断路径是否为空
+	if (path.isEmpty() != true)
+	{
+		//创建文件对象
+		QFile file;
+		//文件对象关联文件
+		file.setFileName(path);
+		//打开文件,只写方式
+		bool isOpen = file.open(QIODevice::WriteOnly);
+		//打开成功
+		if (isOpen == true)
+		{
+			//ui->textEdit->toPlainText()获取编辑区内容
+			QString str = ui->textEdit->toPlainText();
+		}
+	}
 }
