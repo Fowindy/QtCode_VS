@@ -40,6 +40,7 @@ Widget::~Widget()
 //paintEvent事件显示图片
 void Widget::paintEvent(QPaintEvent *)
 {
+#if 0
 	//创建画家对象
 	QPainter painter(this);
 	//创建画具对象
@@ -49,5 +50,6 @@ void Widget::paintEvent(QPaintEvent *)
 	picture.load("./picture.png");
 	//画家在widget画出图片
 	painter.drawPicture(0, 0, picture);
+#endif
 }
 
