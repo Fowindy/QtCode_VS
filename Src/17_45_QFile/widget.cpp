@@ -34,7 +34,9 @@ void Widget::on_buttonRead_Clicked()
 			QByteArray byteArray = file.readAll();
 			//显示到编辑区
 			//第一种方式:字节数组通过构造函数直接转换QString
-			ui->textEdit->setText(QString(byteArray));
+			//ui->textEdit->setText(QString(byteArray));
+			//第二种方式:字符数组自动转换QString
+			ui->textEdit->setText(byteArray);	//字符数组自动转换QString
 		}
 	}
 }
