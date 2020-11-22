@@ -94,6 +94,16 @@ void Widget::on_buttonWrite_clicked()
 
 			//[知识点:QByteArray -> char*]---array.data()
 			char *ch = array.data();
+
+			//[知识点:char* -> QString]
+			char *ch1 = (char*)"abc";
+#pragma region 第二种:先用字符数组进行存储,后用指针
+			char str1[] = "hello";
+			ch1 = str1;
+#pragma endregion
+
+			QString c = QString(ch1);
+
 		}
 		//使用完关闭资源
 		file.close();
