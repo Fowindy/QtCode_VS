@@ -83,11 +83,14 @@ void Widget::on_buttonWrite_clicked()
 			//[复习]---第二种:QString -> c++ string ->char *
 			//file.write(str.toStdString().data());
 
+			//[知识点:转换本地编码]---str.toLocal8Bit()
+			file.write(str.toLocal8Bit());
+
 			//[知识点:QString -> QByteArray]---第一种:转换中文
 			QString buf = "123";
 			QByteArray array = buf.toUtf8();	//中文
 			//[知识点:QString -> QByteArray]---第二种:转换本地编码
-			array = buf.toLocal8Bit();	//本地编码
+			//array = buf.toLocal8Bit();	//本地编码
 		}
 		//使用完关闭资源
 		file.close();
