@@ -13,6 +13,9 @@ Widget::Widget(QWidget *parent)
 	QPainter painter;
 	//2.创建画具对象
 	QPicture picture;
+	//把画具给画家
+	painter.begin(&picture);
+	painter.end();
 }
 
 Widget::~Widget()
