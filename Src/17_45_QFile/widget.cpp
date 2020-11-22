@@ -78,7 +78,10 @@ void Widget::on_buttonWrite_clicked()
 			//ui->textEdit->toPlainText()获取编辑区内容
 			QString str = ui->textEdit->toPlainText();
 			//写文件QString -> QByteArray 第一种:直接转UTF8
-			file.write(str.toUtf8());
+			//file.write(str.toUtf8());
+
+			//[复习]---第二种:QString -> c++ string ->char *
+			file.write(str.toStdString().data());
 		}
 		//使用完关闭资源
 		file.close();
