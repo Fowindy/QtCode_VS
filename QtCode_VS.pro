@@ -22,4 +22,6 @@ SUBDIRS += Src/01_QtTest/01_QtTest.pro \
     Src/13_QPixmap/13_QPixmap.pro \
     Src/08_Layout/08_Layout.pro \
     Src/14_41_QImage/14_41_QImage.pro \
-    Src/15_42_QPicture/15_42_QPicture.pro
+    Src/15_42_QPicture/15_42_QPicture.pro \
+    Src/16_44_Shape/16_44_Shape.pro \
+    Src/17_45_QFile/17_45_QFile.pro
