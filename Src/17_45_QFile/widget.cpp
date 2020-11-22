@@ -81,7 +81,11 @@ void Widget::on_buttonWrite_clicked()
 			//file.write(str.toUtf8());
 
 			//[复习]---第二种:QString -> c++ string ->char *
-			file.write(str.toStdString().data());
+			//file.write(str.toStdString().data());
+
+			//[知识点:QString -> QByteArray]---第一种:转换中文
+			QString buf = "123";
+			QByteArray array = buf.toUtf8();	//中文
 		}
 		//使用完关闭资源
 		file.close();
