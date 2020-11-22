@@ -58,3 +58,9 @@ void Widget::on_buttonRead_clicked()
 		file.close();
 	}
 }
+
+void Widget::on_buttonWrite_clicked()
+{
+	//保存对话框获取保存路径
+	QString path = QFileDialog::getSaveFileName(this, "save", "./File", "文本文档(*.txt)");
+}

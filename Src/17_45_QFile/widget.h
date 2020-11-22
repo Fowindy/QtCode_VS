@@ -20,5 +20,6 @@ private:
 
 private slots:
 	void on_buttonRead_clicked();
+	void on_buttonWrite_clicked();
 };
 #endif // WIDGET_H
