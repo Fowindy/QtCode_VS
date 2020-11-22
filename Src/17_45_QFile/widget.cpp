@@ -30,13 +30,17 @@ void Widget::on_buttonRead_clicked()
 		bool isOpen = file.open(QIODevice::ReadOnly);
 		if (isOpen == true)
 		{
+#if 第一种读取方式:全部读取
 			//一次性读完到字符数组_readAll默认为utf-8编码,其他乱码
 			QByteArray byteArray = file.readAll();
 			//显示到编辑区
 			//第一种方式:字节数组通过构造函数直接转换QString
 			//ui->textEdit->setText(QString(byteArray));
 			//第二种方式:字符数组自动转换QString
-			ui->textEdit->setText(byteArray);	//字符数组自动转换QString
+			ui->textEdit->setText(byteArray);	//字符数组自动转换QString  
+#endif
+
+
 		}
 		//文件对象用完关闭资源
 		file.close();
