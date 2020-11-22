@@ -45,6 +45,7 @@ void Widget::paintEvent(QPaintEvent *)
 	//创建画具对象
 	QPicture picture;
 	//往画具中加载生成的二进制图片
+	//[注意]---程序运行加载二进制图片(最好放在当前根目录,不然会导致Qt显示不全)
 	picture.load("./picture.png");
 	//画家在widget画出图片
 	painter.drawPicture(0, 0, picture);
