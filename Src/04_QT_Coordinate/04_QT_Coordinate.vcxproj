@@ -97,9 +97,9 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\03_SignalAndSlot\x64\Debug\</OutDir>
+    <OutDir>debug\</OutDir>
     <IntDir>debug\</IntDir>
-    <TargetName>04_QT_Coordinate</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

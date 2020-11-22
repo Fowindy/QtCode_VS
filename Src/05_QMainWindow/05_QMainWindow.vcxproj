@@ -97,9 +97,9 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\..\x64\Debug\</OutDir>
+    <OutDir>debug\</OutDir>
     <IntDir>debug\</IntDir>
-    <TargetName>05_QMainWindow</TargetName>
+    <TargetName>$(ProjectName)</TargetName>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
