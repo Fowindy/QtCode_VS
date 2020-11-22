@@ -9,6 +9,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//setWindowFlags去widget窗口边框_Qt::FramelessWindowHint_加内联函数windowFlags
+	setWindowFlags(Qt::FramelessWindowHint | windowFlags());
 }
 
 Widget::~Widget()
