@@ -57,16 +57,26 @@ void Widget::paintEvent(QPaintEvent *)
 	//定义画家
 	QPainter painter(this);
 #pragma region QPixmap -> QImage
-	//定义画具对象
+	//定义画具对象_QPixmap
 	QPixmap pixmap;
 	//导入图片
 	pixmap.load(":/image/face.png");
 	//将QPixmap转换为QImage
-	QImage image = pixmap.toImage();
+	QImage tempImage = pixmap.toImage();
 	//画家画画_通过QImage
-	painter.drawImage(0, 0, image);
+	painter.drawImage(0, 0, tempImage);
 #pragma endregion
 
+#pragma region QImage -> QPixmap
+	//定义画具对象_QImage
+	QImage image;
+	//导入图片
+	image.load(":/image/face.png");
+	//将QImage转换为QPixmap
+	QPixmap tempPixmap = QPixmap::fromImage(tempImage);
+	//画家画画_通过QPixmap
+	painter.drawPixmap(150, 0, tempPixmap);
+#pragma endregion
 
 }
 
