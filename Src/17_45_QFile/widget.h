@@ -19,6 +19,6 @@ private:
 	Ui::Widget *ui;
 
 private slots:
-	void on_buttonRead_Clicked();
+	void on_buttonRead_clicked();
 };
 #endif // WIDGET_H
