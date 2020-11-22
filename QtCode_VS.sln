@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_Layout", "Src\08_Layout\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14_41_QImage", "Src\14_41_QImage\14_41_QImage.vcxproj", "{5760682A-866B-4174-B53F-9F13FEF65C32}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15_42_QPicture", "Src\15_42_QPicture\15_42_QPicture.vcxproj", "{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -181,6 +183,14 @@ Global
 		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x64.ActiveCfg = Release|x64
 		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x64.Build.0 = Release|x64
 		{5760682A-866B-4174-B53F-9F13FEF65C32}.Release|x86.ActiveCfg = Release|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Debug|Win32.ActiveCfg = Debug|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Debug|x64.ActiveCfg = Debug|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Debug|x64.Build.0 = Debug|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Debug|x86.ActiveCfg = Debug|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Release|Win32.ActiveCfg = Release|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Release|x64.ActiveCfg = Release|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Release|x64.Build.0 = Release|x64
+		{443D32A3-28AA-47A7-8D4D-1E135B3AE1A7}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
