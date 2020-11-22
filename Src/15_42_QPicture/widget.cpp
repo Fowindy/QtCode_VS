@@ -3,6 +3,8 @@
 #include "ui_widget.h"
 #include <QPainter>
 #include <QPicture>
+#include <QPixmap>
+#include <QImage>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -51,5 +53,20 @@ void Widget::paintEvent(QPaintEvent *)
 	//画家在widget画出图片
 	painter.drawPicture(0, 0, picture);
 #endif
+
+	//定义画家
+	QPainter painter(this);
+#pragma region QPixmap -> QImage
+	//定义画具对象
+	QPixmap pixmap;
+	//导入图片
+	pixmap.load(":/image/face.png");
+	//将QPixmap转换为QImage
+	QImage image = pixmap.toImage();
+	//画家画画_通过QImage
+	painter.drawImage(0, 0, image);
+#pragma endregion
+
+
 }
 
