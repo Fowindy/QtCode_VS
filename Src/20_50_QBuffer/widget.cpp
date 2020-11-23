@@ -23,6 +23,27 @@ Widget::Widget(QWidget *parent)
 	//11111111\naaaaaaa
 	qDebug() << "array:" << byteArray;
 	//array:11111111\naaaaaaa
+
+#pragma region QBuffer第二种写入方式_推荐
+	//创建内存文件对象
+	QBuffer buffer;
+	//文件打开方式_只写
+	bool isOpen = buffer.open(QIODevice::WriteOnly);
+	//判断是否打开
+	if (true == isOpen)
+	{
+		//创建数据流对象并绑定文件
+		QDataStream dataStream(&buffer);
+		//数据流写入内容
+		dataStream << QString("测试") << 250;
+		//关闭文件
+		buffer.close();
+		//打印内存对象内容
+		qDebug() << buffer.buffer();
+		//\x00\x00\x00\x04mK\x8B\xD5\x00\x00\x00\xFA
+	}
+#pragma endregion
+
 }
 
 Widget::~Widget()
