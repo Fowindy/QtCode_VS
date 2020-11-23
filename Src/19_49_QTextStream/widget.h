@@ -15,7 +15,7 @@ public:
 	Widget(QWidget *parent = nullptr);
 	~Widget();
 	void writeData();
-
+	void readData();
 private:
 	Ui::Widget *ui;
 };
