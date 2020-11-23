@@ -4,6 +4,9 @@
 #include <QFile>	//文件
 #include <QFileDialog>	//文件对话框
 #include <QString>
+#include <QFileInfo>	//获取文件信息
+#include <QDateTime>	//时间格式
+#include <QDebug>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -56,6 +59,14 @@ void Widget::on_buttonRead_clicked()
 		}
 		//文件对象用完关闭资源
 		file.close();
+
+#pragma region 获取文件信息
+		//创建文件信息对象
+		QFileInfo fileInfo(path);
+		//文件名字_中文转QByteArray数组再转Char*_04_海阔天空歌词_utf8.txt
+		qDebug() << "文件名字:" << fileInfo.fileName().toUtf8().data();
+#pragma endregion
+
 	}
 }
 
