@@ -4,6 +4,8 @@
 #include <QTextStream>
 #include <QFile>
 #include <QDebug>
+#include <QFileDialog>
+#include <QTextEdit>
 #define cout qDebug() << "[" << __FILE__<< ":" << __LINE__ << "]"
 
 Widget::Widget(QWidget *parent)
@@ -65,4 +67,30 @@ void Widget::readData()
 	}
 	//关闭文件
 	file.close();
+}
+
+void Widget::on_buttonRead_clicked()
+{
+	QString path = QFileDialog::getOpenFileName(this, "打开文件", "./", "文本文件(*.txt);;图片文件(*.png *.jpg)");
+	if (false == path.isEmpty())
+	{
+		//创建文件对象
+#if 0
+		QFile file;
+		file.setFileName(path);
+#endif // 等价于下面直接构造
+		QFile file(path);
+		bool isOpen = file.open(QIODevice::ReadOnly);
+		if (true == isOpen)
+		{
+			QTextStream textStream(&file);
+			//指定编码格式
+			textStream.setCodec("UTF-8");
+			//第一种读取方式:全部读取
+			QString str = textStream.readAll();
+			ui->textEdit->setText(str);	//读UTF-8格式OK,读其他编码格式乱码
+		}
+		//关闭文件,释放资源
+		file.close();
+	}
 }
