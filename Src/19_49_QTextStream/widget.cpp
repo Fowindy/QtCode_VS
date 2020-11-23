@@ -9,6 +9,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//调用写文件方法
+	this->writeData();
 }
 
 Widget::~Widget()
@@ -26,7 +28,11 @@ void Widget::writeData()
 	//判断读取
 	if (true == isOpen)	//[技巧]:判断的时候true放在前面可以防止赋值误操作
 	{
+		//创建流对象
+		QTextStream textStream(&file);
+		//写入内容
+		textStream << QString("主要看气质") << 250;	//[犯错]:一定要QString()包含内容,不然乱码
+		//关闭文件对象,释放资源
+		file.close();
 	}
-	//创建流对象
-	QTextStream textStream(&file);
 }
