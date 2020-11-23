@@ -9,8 +9,10 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//创建字节数组
+	QByteArray byteArray;
 	//创建内存文件对象
-	QBuffer memFile;
+	QBuffer memFile(&byteArray);
 	memFile.open(QIODevice::WriteOnly);
 
 	memFile.write("11111111\n");
@@ -19,6 +21,8 @@ Widget::Widget(QWidget *parent)
 	memFile.close();
 	qDebug() << memFile.buffer();
 	//11111111\naaaaaaa
+	qDebug() << "array:" << byteArray;
+	//array:11111111\naaaaaaa
 }
 
 Widget::~Widget()
