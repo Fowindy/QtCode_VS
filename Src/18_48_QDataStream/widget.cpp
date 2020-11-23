@@ -39,3 +39,17 @@ void Widget::writeData()
 		file.close();	//乱码:以二进制存储
 	}
 }
+
+void Widget::readData()
+{
+	//创建文件对象
+	QFile file("./test.txt");
+
+	//打开方式,只读方式打开
+	bool isOpen = file.open(QIODevice::ReadOnly);
+
+	if (isOpen)
+	{
+		QDataStream dataStream(&file);
+	}
+}
