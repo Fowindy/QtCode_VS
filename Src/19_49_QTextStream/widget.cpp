@@ -30,7 +30,9 @@ void Widget::writeData()
 	{
 		//创建流对象
 		QTextStream textStream(&file);
-		//写入内容
+		//指定编码格式_UTF-8
+		textStream.setCodec("UTF-8");
+		//写入内容_默认以电脑平台编码格式
 		textStream << QString("主要看气质") << 250;	//[犯错]:一定要QString()包含内容,不然乱码
 		//关闭文件对象,释放资源
 		file.close();
