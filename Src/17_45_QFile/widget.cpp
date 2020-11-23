@@ -65,6 +65,8 @@ void Widget::on_buttonRead_clicked()
 		QFileInfo fileInfo(path);
 		//文件名字_中文转QByteArray数组再转Char*_04_海阔天空歌词_utf8.txt
 		qDebug() << "文件名字:" << fileInfo.fileName().toUtf8().data();
+		//文件后缀_suffix_txt
+		qDebug() << "文件后缀:" << fileInfo.suffix();
 #pragma endregion
 
 	}
