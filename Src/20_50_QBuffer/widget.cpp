@@ -44,6 +44,22 @@ Widget::Widget(QWidget *parent)
 	}
 #pragma endregion
 
+#pragma region QBuffer第二种读取方式_推荐
+	//文件打开方式_只读
+	buffer.open(QIODevice::ReadOnly);
+	//创建数据流读取对象
+	QDataStream dataStreamIn;
+	dataStreamIn.setDevice(&buffer);
+	QString str;
+	int a;
+	dataStreamIn >> str >> a;
+	//关闭文件
+	buffer.close();
+	//打印读取的内容
+	qDebug() << str.toUtf8().data() << a;
+	//测试 250
+#pragma endregion
+
 }
 
 Widget::~Widget()
