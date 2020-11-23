@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17_45_QFile", "Src\17_45_QF
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18_48_QDataStream", "Src\18_48_QDataStream\18_48_QDataStream.vcxproj", "{B0BE7E3A-BD37-4129-9059-6723AE6C966B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19_49_QTextStream", "Src\19_49_QTextStream\19_49_QTextStream.vcxproj", "{46EBF97F-4D03-475E-9FB9-EB9F05B7C9FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -117,6 +119,10 @@ Global
 		{B0BE7E3A-BD37-4129-9059-6723AE6C966B}.Debug|x64.Build.0 = Debug|x64
 		{B0BE7E3A-BD37-4129-9059-6723AE6C966B}.Release|x64.ActiveCfg = Release|x64
 		{B0BE7E3A-BD37-4129-9059-6723AE6C966B}.Release|x64.Build.0 = Release|x64
+		{46EBF97F-4D03-475E-9FB9-EB9F05B7C9FA}.Debug|x64.ActiveCfg = Debug|x64
+		{46EBF97F-4D03-475E-9FB9-EB9F05B7C9FA}.Debug|x64.Build.0 = Debug|x64
+		{46EBF97F-4D03-475E-9FB9-EB9F05B7C9FA}.Release|x64.ActiveCfg = Release|x64
+		{46EBF97F-4D03-475E-9FB9-EB9F05B7C9FA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
