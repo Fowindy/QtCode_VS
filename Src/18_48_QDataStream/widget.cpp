@@ -3,6 +3,9 @@
 #include "ui_widget.h"
 #include <QDataStream>	//以二进制的方式读写文件
 #include <QFile>
+#include <QDebug>
+//定义cout输出宏格式:
+#define cout qDebug() << "[" << __FILE__ << ":" << __LINE__ << "]"
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -10,6 +13,7 @@ Widget::Widget(QWidget *parent)
 {
 	ui->setupUi(this);
 	this->writeData();
+	this->readData();
 }
 
 Widget::~Widget()
@@ -51,5 +55,16 @@ void Widget::readData()
 	if (isOpen)
 	{
 		QDataStream dataStream(&file);
+		//读文件的时候:按照写的顺序读取
+		QString str;
+		int a;
+		dataStream >> str >> a;
+		//打印读取内容:不建议使用qDebug,使用自定义宏的方式
+		//qDebug() << str.toUtf8().data() << a;
+
+		cout << str.toUtf8().data() << a;
+		//结果:[ d:\source\repos\qt\qtcode_vs\src\18_48_qdatastream\widget.cpp : 65 ] 主要看气质 250
 	}
+	//关闭文件
+	file.close();
 }
