@@ -69,6 +69,8 @@ void Widget::on_buttonRead_clicked()
 		qDebug() << "文件后缀:" << fileInfo.suffix();
 		//文件大小_size_字节单位--转Kb除以1024--转Mb再除以1024
 		qDebug() << "文件大小:" << fileInfo.size() / 1024.0 << "Kb";
+		//文件创建时间_created().toString_2020-11-23 02:52:17
+		qDebug() << "文件创建时间:" << fileInfo.created().toString("yyyy-MM-dd hh:mm:ss");
 #pragma endregion
 
 	}
