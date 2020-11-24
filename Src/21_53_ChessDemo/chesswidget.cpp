@@ -7,6 +7,8 @@
 ChessWidget::ChessWidget(QWidget *parent)
 	: QWidget(parent)
 {
+	//固定窗口大小_棋盘格子为方形
+	setFixedSize(800, 800);
 }
 
 ChessWidget::~ChessWidget()
