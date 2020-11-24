@@ -64,6 +64,9 @@ void ChessWidget::paintEvent(QPaintEvent *)
 
 		//所有横线
 		painter.drawLine(startX, startY + i * gridH, startX + 8 * gridW, startY + i * gridH);
+
+		//第一条竖线
+		painter.drawLine(startX, startY, startX, startY + 8 * gridH);
 	}
 }
 
