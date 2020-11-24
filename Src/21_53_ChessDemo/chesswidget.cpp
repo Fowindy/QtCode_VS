@@ -90,3 +90,9 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	}
 }
 
+void ChessWidget::mousePressEvent(QMouseEvent *event)
+{
+	//鼠标点击位置显示棋子
+
+}
+

@@ -13,6 +13,8 @@ public:
 protected:
 	//重写绘图事件
 	void paintEvent(QPaintEvent *);
+	//重写鼠标点击事件
+	void mousePressEvent(QMouseEvent *event);
 private:
 	int gridW;	//棋盘水平方向一个格子的宽度
 	int gridH;	//棋盘水平方向一个格子的高度
