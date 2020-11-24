@@ -24,4 +24,8 @@ SUBDIRS += Src/01_QtTest/01_QtTest.pro \
     Src/14_41_QImage/14_41_QImage.pro \
     Src/15_42_QPicture/15_42_QPicture.pro \
     Src/16_44_Shape/16_44_Shape.pro \
-    Src/17_45_QFile/17_45_QFile.pro
+    Src/17_45_QFile/17_45_QFile.pro \
+    Src/18_48_QDataStream/18_48_QDataStream.pro \
+    Src/19_49_QTextStream/19_49_QTextStream.pro \
+    Src/20_50_QBuffer/20_50_QBuffer.pro \
+    Src/21_53_ChessDemo/21_53_ChessDemo.pro
