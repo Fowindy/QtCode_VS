@@ -41,7 +41,7 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	//设置画笔线宽
 	pen.setWidth(4);
 	//设置画笔颜色
-	pen.setColor(Qt::darkBlue);
+	//pen.setColor(Qt::darkBlue);	//省略此句默认黑色
 	//将画笔交给画家
 	painter.setPen(pen);
 
@@ -66,7 +66,10 @@ void ChessWidget::paintEvent(QPaintEvent *)
 		painter.drawLine(startX, startY + i * gridH, startX + 8 * gridW, startY + i * gridH);
 
 		//第一条竖线
-		painter.drawLine(startX, startY, startX, startY + 8 * gridH);
+		//painter.drawLine(startX, startY, startX, startY + 8 * gridH);
+
+		//所有竖线
+		painter.drawLine(startX + i * gridW, startY, startX + i * gridW, startY + 8 * gridH);
 	}
 }
 
