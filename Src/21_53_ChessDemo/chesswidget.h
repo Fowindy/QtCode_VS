@@ -16,5 +16,7 @@ protected:
 private:
 	int gridW;	//棋盘水平方向一个格子的宽度
 	int gridH;	//棋盘水平方向一个格子的高度
+	int startX;	//棋盘起点x坐标
+	int startY; //棋盘起点y坐标
 };
 #endif // CHESSWIDGET_H
