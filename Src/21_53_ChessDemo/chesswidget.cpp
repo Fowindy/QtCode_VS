@@ -2,6 +2,7 @@
 #include "chesswidget.h"
 #include <QPainter>
 #include <QPixmap>
+#include <QPen>
 
 ChessWidget::ChessWidget(QWidget *parent)
 	: QWidget(parent)
@@ -32,5 +33,12 @@ void ChessWidget::paintEvent(QPaintEvent *)
 
 	//[推荐]---填充窗口式画图,优点:随窗口拉伸变化
 	painter.drawPixmap(rect(), QPixmap(":/Image/bk.jpg"));
+
+	/**
+	 * 设置画笔
+	 */
+	QPen pen;
+	//设置画笔线宽
+	pen.setWidth(4);
 }
 
