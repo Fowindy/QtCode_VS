@@ -42,5 +42,9 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	pen.setWidth(4);
 	//将画笔交给画家
 	painter.setPen(pen);
+
+	/**
+	 * 画棋盘
+	 */
 }
 
