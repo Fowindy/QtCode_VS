@@ -4,6 +4,7 @@
 #include <QPixmap>
 #include <QPen>
 #include <QMouseEvent>
+#include <QDebug>
 
 ChessWidget::ChessWidget(QWidget *parent)
 	: QWidget(parent)
@@ -97,8 +98,12 @@ void ChessWidget::mousePressEvent(QMouseEvent *event)
 	//获取鼠标点击坐标
 	int x = event->x();
 	int y = event->y();
-	//鼠标点击坐标转换为棋子下标
+	//鼠标点击坐标转换为棋子下标(从[0,0]开始)
 	chessIndexX = x / gridW - 1;
 	chessIndexY = y / gridH - 1;
+	//打印棋子下标
+	qDebug() << chessIndexX << chessIndexY;
+	//更新窗口显示,间接调用paintEvent()
+	update();
 }
 
