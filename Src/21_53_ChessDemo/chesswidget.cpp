@@ -9,6 +9,8 @@ ChessWidget::ChessWidget(QWidget *parent)
 {
 	//固定窗口大小_棋盘格子为方形
 	setFixedSize(800, 800);
+	chessIndexX = -1;	//默认不显示
+	chessIndexY = -1;	//默认不显示
 }
 
 ChessWidget::~ChessWidget()
@@ -72,6 +74,19 @@ void ChessWidget::paintEvent(QPaintEvent *)
 
 		//所有竖线
 		painter.drawLine(startX + i * gridW, startY, startX + i * gridW, startY + 8 * gridH);
+	}
+
+	/**
+	 * 画棋子_棋子默认在左上格子中
+	 *
+	 */
+	 //棋子默认第一格
+	//painter.drawPixmap(startX, startY, gridW, gridH, QPixmap(":/Image/face.png"));
+
+	//棋子随棋子下标_初始化不显示
+	if (chessIndexX != -1 && chessIndexY != -1)
+	{
+		painter.drawPixmap(startX + chessIndexX * gridW, startY + chessIndexY * gridH, gridW, gridH, QPixmap(":/Image/face.png"));
 	}
 }
 

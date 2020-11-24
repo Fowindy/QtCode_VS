@@ -18,5 +18,6 @@ private:
 	int gridH;	//棋盘水平方向一个格子的高度
 	int startX;	//棋盘起点x坐标
 	int startY; //棋盘起点y坐标
+	int chessIndexX, chessIndexY;	//棋盘下标
 };
 #endif // CHESSWIDGET_H
