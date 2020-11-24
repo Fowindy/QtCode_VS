@@ -97,5 +97,8 @@ void ChessWidget::mousePressEvent(QMouseEvent *event)
 	//获取鼠标点击坐标
 	int x = event->x();
 	int y = event->y();
+	//鼠标点击坐标转换为棋子下标
+	chessIndexX = x / gridW - 1;
+	chessIndexY = y / gridH - 1;
 }
 
