@@ -40,5 +40,7 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	QPen pen;
 	//设置画笔线宽
 	pen.setWidth(4);
+	//将画笔交给画家
+	painter.setPen(pen);
 }
 
