@@ -28,6 +28,9 @@ void ChessWidget::paintEvent(QPaintEvent *)
 
 	//画家画背景图
 	//[不推荐]:指定位置和大小画图,缺点:固定,不会随窗口拉伸变化
-	painter.drawPixmap(50, 50, 200, 200, QPixmap(":/Image/bk.jpg"));
+	//painter.drawPixmap(50, 50, 200, 200, QPixmap(":/Image/bk.jpg"));
+
+	//[推荐]---填充窗口式画图,优点:随窗口拉伸变化
+	painter.drawPixmap(rect(), QPixmap(":/Image/bk.jpg"));
 }
 
