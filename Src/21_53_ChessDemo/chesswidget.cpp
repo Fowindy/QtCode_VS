@@ -55,8 +55,8 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	 * X起点:(startX+7*gridW,startY)				X终点:(startX+8*gridW,startY)
 	 * Y起点:(startX,startY+gridH)		Y终点:(startX+gridW,startY+gridH)
 	 */
-	 //取中间8份画棋盘
-	for (int i = 0; i < 8; i++)
+	 //取中间8份画棋盘_9条线才有8个间隔
+	for (int i = 0; i < 9; i++)
 	{
 		//横线
 		//第一条横线
