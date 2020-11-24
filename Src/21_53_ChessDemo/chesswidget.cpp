@@ -40,11 +40,27 @@ void ChessWidget::paintEvent(QPaintEvent *)
 	QPen pen;
 	//设置画笔线宽
 	pen.setWidth(4);
+	//设置画笔颜色
+	pen.setColor(Qt::darkBlue);
 	//将画笔交给画家
 	painter.setPen(pen);
 
 	/**
 	 * 画棋盘
+	 * 第一格的四点坐标分别是:
+	 * X起点:(startX,startY)				X终点:(startX+gridW,startY)
+	 * Y起点:(startX,startY+gridH)		Y终点:(startX+gridW,startY+gridH)
+	 *
+	 * 横向最后一格的四点坐标为:
+	 * X起点:(startX+7*gridW,startY)				X终点:(startX+8*gridW,startY)
+	 * Y起点:(startX,startY+gridH)		Y终点:(startX+gridW,startY+gridH)
 	 */
+	 //取中间8份画棋盘
+	for (int i = 0; i < 8; i++)
+	{
+		//横线
+		//第一条横线
+		painter.drawLine(startX, startY, startX + 8 * gridW, startY);
+	}
 }
 
