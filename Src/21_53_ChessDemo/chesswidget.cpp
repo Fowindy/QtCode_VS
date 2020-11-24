@@ -3,6 +3,7 @@
 #include <QPainter>
 #include <QPixmap>
 #include <QPen>
+#include <QMouseEvent>
 
 ChessWidget::ChessWidget(QWidget *parent)
 	: QWidget(parent)
@@ -93,6 +94,8 @@ void ChessWidget::paintEvent(QPaintEvent *)
 void ChessWidget::mousePressEvent(QMouseEvent *event)
 {
 	//鼠标点击位置显示棋子
-
+	//获取鼠标点击坐标
+	int x = event->x();
+	int y = event->y();
 }
 
