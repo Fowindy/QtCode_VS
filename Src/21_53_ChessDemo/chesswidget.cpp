@@ -10,3 +10,12 @@ ChessWidget::~ChessWidget()
 {
 }
 
+void ChessWidget::paintEvent(QPaintEvent *)
+{
+#pragma region 窗口宽高均分10份
+	gridW = width() / 10;
+	gridH = height() / 10;
+#pragma endregion
+
+}
+
