@@ -16,6 +16,8 @@ ClientWidget::ClientWidget(QWidget *parent)
 	connect(tcpSocket, &QTcpSocket::connected,
 		[=]()
 	{
+		//显示与服务器连接成功
+		ui->textEditRead->setText(QString("与服务器:[%1:%2]连接成功!").arg(ui->lineEditIP->text()).arg(ui->lineEditPort->text()));
 	}
 	);
 }
