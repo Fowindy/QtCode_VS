@@ -44,3 +44,15 @@ void ClientWidget::on_btnConnect_clicked()
 	//connectToHost主动和服务器建立连接_此处需要将ip转QHostAddress
 	tcpSocket->connectToHost(QHostAddress(ip), port);
 }
+
+/************************************
+*@Method:    on_btnSend_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 14:18
+*@Describe:	 发送按钮
+*************************************/
+void ClientWidget::on_btnSend_clicked()
+{
+}
