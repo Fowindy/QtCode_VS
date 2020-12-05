@@ -18,6 +18,13 @@ ClientWidget::ClientWidget(QWidget *parent)
 	{
 		//显示与服务器连接成功
 		ui->textEditRead->setText(QString("与服务器:[%1:%2]连接成功!").arg(ui->lineEditIP->text()).arg(ui->lineEditPort->text()));
+		connect(tcpSocket, &QTcpSocket::readyRead,
+			[=]()
+		{
+			//读取所有客户端发来的消息
+			QByteArray array = tcpSocket->readAll();
+		}
+		);
 	}
 	);
 }
