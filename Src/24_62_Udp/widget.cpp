@@ -37,4 +37,6 @@ void Widget::delMessage()
 	char buf[1024] = { 0 };
 	//定义对方地址变量_和端口变量
 	QHostAddress address;
+	//定义quint16类型的端口变量_注意quint16不是qint16
+	quint16 port;
 }
