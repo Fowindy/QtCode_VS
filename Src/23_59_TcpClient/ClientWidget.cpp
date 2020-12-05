@@ -20,14 +20,14 @@ ClientWidget::~ClientWidget()
 }
 
 /************************************
-*@Method:    on_btnSend_clicked
+*@Method:    on_btnConnect_clicked
 *@Access:    private
 *@Returns:   void
 *@Author: 	  Fowindy
 *@Created:   2020/12/05 13:21
-*@Describe:	 发送按钮
+*@Describe:	 连接按钮
 *************************************/
-void ClientWidget::on_btnSend_clicked()
+void ClientWidget::on_btnConnect_clicked()
 {
 	//从用户输入框获取服务器的IP和Port
 	QString ip = ui->lineEditIP->text();
