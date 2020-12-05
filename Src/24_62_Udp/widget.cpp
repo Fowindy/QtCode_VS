@@ -74,5 +74,7 @@ void Widget::delMessage()
 *************************************/
 void Widget::on_btnSend_clicked()
 {
-
+	//先获取对方的ip和端口
+	QString ip = ui->lineEditIP->text();
+	qint16 port = ui->lineEditPort->text().toInt();
 }
