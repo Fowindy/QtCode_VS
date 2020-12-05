@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "20_50_QBuffer", "Src\20_50_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "21_53_ChessDemo", "Src\21_53_ChessDemo\21_53_ChessDemo.vcxproj", "{F4FE74A9-5D06-3E2E-9004-7CB286D8E85C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22_57_TCP", "Src\22_57_TCP\22_57_TCP.vcxproj", "{51FC366B-C871-419C-A7D3-0F7A5BDB1CDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -135,6 +137,10 @@ Global
 		{F4FE74A9-5D06-3E2E-9004-7CB286D8E85C}.Debug|x64.Build.0 = Debug|x64
 		{F4FE74A9-5D06-3E2E-9004-7CB286D8E85C}.Release|x64.ActiveCfg = Release|x64
 		{F4FE74A9-5D06-3E2E-9004-7CB286D8E85C}.Release|x64.Build.0 = Release|x64
+		{51FC366B-C871-419C-A7D3-0F7A5BDB1CDF}.Debug|x64.ActiveCfg = Debug|x64
+		{51FC366B-C871-419C-A7D3-0F7A5BDB1CDF}.Debug|x64.Build.0 = Debug|x64
+		{51FC366B-C871-419C-A7D3-0F7A5BDB1CDF}.Release|x64.ActiveCfg = Release|x64
+		{51FC366B-C871-419C-A7D3-0F7A5BDB1CDF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
