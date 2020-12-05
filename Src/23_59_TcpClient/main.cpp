@@ -1,12 +1,12 @@
 ﻿#pragma execution_character_set("utf-8")
-#include "widget.h"
+#include "ClientWidget.h"
 
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	Widget w;
+	ClientWidget w;
 	w.show();
 	return a.exec();
 }

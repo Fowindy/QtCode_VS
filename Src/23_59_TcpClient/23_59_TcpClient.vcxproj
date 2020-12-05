@@ -188,15 +188,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="widget.cpp" />
+    <ClCompile Include="ClientWidget.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="widget.h">
+    <QtMoc Include="ClientWidget.h">
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="widget.ui">
-    </QtUic>
+    <QtUic Include="ClientWidget.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="image.qrc" />
