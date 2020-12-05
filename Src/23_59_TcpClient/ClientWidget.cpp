@@ -12,6 +12,12 @@ ClientWidget::ClientWidget(QWidget *parent)
 	tcpSocket = NULL;
 	//为通讯套接字分配空间,指定父对象
 	tcpSocket = new QTcpSocket(this);
+	//客户端连接信息对接服务端
+	connect(tcpSocket, &QTcpSocket::connected,
+		[=]()
+	{
+	}
+	);
 }
 
 ClientWidget::~ClientWidget()
