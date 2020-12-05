@@ -68,4 +68,6 @@ void ClientWidget::on_btnSend_clicked()
 	QString str = ui->textEditWrite->toPlainText();
 	//发送数据
 	tcpSocket->write(str.toUtf8().data());
+	//发送数据后清空写入窗口
+	ui->textEditWrite->clear();
 }

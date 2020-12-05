@@ -88,6 +88,8 @@ void Widget::on_btnSend_clicked()
 	//tcpSocket->write给对方发送数据
 	//str.toUtf8().data()_字符串转QByteArray
 	tcpSocket->write(str.toUtf8().data());
+	//发送后清空写入窗口
+	ui->textEditWrite->clear();
 }
 
 /************************************
