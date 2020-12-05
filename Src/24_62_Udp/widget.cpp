@@ -35,10 +35,13 @@ void Widget::delMessage()
 {
 	//定义一个1024长度的char字符数组_用于存储读取到的接收内容
 	char buf[1024] = { 0 };
+#pragma region 方法一:使用变量
 	//定义对方地址变量_和端口变量
 	QHostAddress address;
 	//定义quint16类型的端口变量_注意quint16不是qint16
 	quint16 port;
 	//定义长度变量,获取readDatagram读取内容返回长度
 	qint64 len = udpSocket->readDatagram(buf, sizeof(buf), &address, &port);
+#pragma endregion
+
 }
