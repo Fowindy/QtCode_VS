@@ -12,9 +12,9 @@ Widget::Widget(QWidget *parent)
 	//给套接字分配空间_指定父对象_回收空间_不指定也可以
 	udpSocket = new QUdpSocket(this);
 	//udpSocket->bind绑定(8888)
-	udpSocket->bind(8888);
+	udpSocket->bind(9999);
 	//设置窗口标题
-	setWindowTitle("服务器端口为:8888");
+	setWindowTitle("服务器端口为:9999");
 	//当对方成功发送数据过来自动触发readyRead()信号
 	//this当前窗口接收_&Widget::delMessage当前窗口槽函数:接收后处理
 	connect(udpSocket, &QUdpSocket::readyRead, this, &Widget::delMessage);
@@ -38,28 +38,28 @@ void Widget::delMessage()
 	//定义一个1024长度的char字符数组_用于存储读取到的接收内容
 	char buf[1024] = { 0 };
 #pragma region 方法一:使用变量
-	////定义对方地址变量_和端口变量
-	//QHostAddress address;
-	////定义quint16类型的端口变量_注意quint16不是qint16
-	//quint16 port;
-	////定义长度变量,获取readDatagram读取内容返回长度
-	//qint64 len = udpSocket->readDatagram(buf, sizeof(buf), &address, &port);
+	//定义对方地址变量_和端口变量
+	QHostAddress address;
+	//定义quint16类型的端口变量_注意quint16不是qint16
+	quint16 port;
+	//定义长度变量,获取readDatagram读取内容返回长度
+	qint64 len = udpSocket->readDatagram(buf, sizeof(buf), &address, &port);
 #pragma endregion
 #pragma region 方法二:使用指针
-	//定义对方地址指针
-	QHostAddress* address;
-	//定义定义quint16类型的端口指针_注意quint16不是qint16
-	quint16* port;
-	//定义长度变量,获取readDatagram读取内容返回长度
-	qint64 len = udpSocket->readDatagram(buf, sizeof(buf), address, port);
+	////定义对方地址指针
+	//QHostAddress* address;
+	////定义定义quint16类型的端口指针_注意quint16不是qint16
+	//quint16* port;
+	////定义长度变量,获取readDatagram读取内容返回长度
+	//qint64 len = udpSocket->readDatagram(buf, sizeof(buf), address, port);
 #pragma endregion
 	//如果长度大于0说明读到内容不为空
 	if (len > 0)
 	{
 		//格式化要显示的字符串
 		QString str = QString("[%1:%2]:%3")
-			.arg(address->toString())
-			.arg(*port)
+			.arg(address.toString())
+			.arg(port)
 			.arg(buf);
 		//将格式化好的字符串setText显示到窗口
 		ui->textEdit->setText(str);

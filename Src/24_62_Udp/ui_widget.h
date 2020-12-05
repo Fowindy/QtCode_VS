@@ -90,7 +90,9 @@ public:
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
         label->setText(QCoreApplication::translate("Widget", "\345\257\271\346\226\271\347\232\204IP:", nullptr));
+        lineEditIP->setText(QCoreApplication::translate("Widget", "127.0.0.1", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "\345\257\271\346\226\271\347\232\204\347\253\257\345\217\243:", nullptr));
+        lineEditPort->setText(QString());
         btnSend->setText(QCoreApplication::translate("Widget", "\345\217\221\351\200\201", nullptr));
         btnClose->setText(QCoreApplication::translate("Widget", "\345\205\263\351\227\255", nullptr));
     } // retranslateUi
