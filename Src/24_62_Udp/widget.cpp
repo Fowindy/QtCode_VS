@@ -35,4 +35,6 @@ void Widget::delMessage()
 {
 	//定义一个1024长度的char字符数组_用于存储读取到的接收内容
 	char buf[1024] = { 0 };
+	//定义对方地址变量_和端口变量
+	QHostAddress address;
 }
