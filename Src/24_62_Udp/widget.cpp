@@ -13,6 +13,8 @@ Widget::Widget(QWidget *parent)
 	udpSocket->bind(8888);
 	//设置窗口标题
 	setWindowTitle("服务器端口为:8888");
+	//当对方成功发送数据过来自动触发readyRead()信号
+	connect(udpSocket, &QUdpSocket::readyRead, )
 }
 
 Widget::~Widget()
