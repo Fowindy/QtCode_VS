@@ -51,6 +51,10 @@ void Widget::delMessage()
 	//定义长度变量,获取readDatagram读取内容返回长度
 	qint64 len = udpSocket->readDatagram(buf, sizeof(buf), address, port);
 #pragma endregion
+	//如果长度大于0说明读到内容不为空
+	if (len > 0)
+	{
 
+	}
 
 }
