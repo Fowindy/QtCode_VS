@@ -25,8 +25,13 @@ ClientWidget::ClientWidget(QWidget *parent)
 		{
 			//读取所有客户端发来的消息
 			QByteArray array = tcpSocket->readAll();
+			QString str = array.data();
 			//显示在读取界面
-			ui->textEditRead->append(QString("服务端[%1]:").arg(ui->lineEditPort->text()) + array.data());
+			//接收消息为空不显示
+			if (!str.isEmpty())
+			{
+				ui->textEditRead->append(QString("服务端[%1]:").arg(ui->lineEditPort->text()) + str);
+			}
 		}
 		);
 	}
@@ -68,12 +73,23 @@ void ClientWidget::on_btnSend_clicked()
 {
 	//toPlainText获取客户端输入的要发送的内容
 	QString str = ui->textEditWrite->toPlainText();
-	//发送的数据也显示在读取界面_模拟聊天
-	ui->textEditRead->append(QString("客户端[%1](自己):").arg(tcpSocket->localPort()) + str);
 	//发送数据
-	tcpSocket->write(str.toUtf8().data());
-	//发送数据后清空写入窗口
-	ui->textEditWrite->clear();
+	qint16 x = tcpSocket->write(str.toUtf8().data());
+	if (x == -1)
+	{
+		ui->textEditRead->append(QString("服务端[%1]:已离线!请重新尝试连接!!!").arg(ui->lineEditPort->text()));
+	}
+	else
+	{
+		//发送的数据也显示在读取界面_模拟聊天
+		//未输入消息不显示自己消息标头
+		if (!str.isEmpty())
+		{
+			ui->textEditRead->append(QString("客户端[%1](自己):").arg(tcpSocket->localPort()) + str);
+		}
+		//发送数据后清空写入窗口
+		ui->textEditWrite->clear();
+	}
 }
 
 /************************************

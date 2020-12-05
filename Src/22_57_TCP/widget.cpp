@@ -86,7 +86,11 @@ void Widget::on_btnSend_clicked()
 	//toPlainText获取编辑区内容
 	QString str = ui->textEditWrite->toPlainText();
 	//发送的数据也显示在读取界面_模拟聊天
-	ui->textEditRead->append(QString("服务端[%1](自己):").arg(tcpSocket->localPort()) + str);
+	//未输入消息不显示自己消息标头
+	if (!str.isEmpty())
+	{
+		ui->textEditRead->append(QString("服务端[%1](自己):").arg(tcpSocket->localPort()) + str);
+	}
 	//tcpSocket->write给对方发送数据
 	//str.toUtf8().data()_字符串转QByteArray
 	tcpSocket->write(str.toUtf8().data());
