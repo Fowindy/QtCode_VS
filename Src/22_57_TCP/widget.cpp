@@ -10,6 +10,8 @@ Widget::Widget(QWidget *parent)
 	ui->setupUi(this);
 	//初始化时tcpSocket置空,防止野指针异常
 	tcpSocket = NULL;
+	//初始化时tcpServer置空,防止野指针异常
+	tcpServer = NULL;
 	//因为用指针初始化时动态分配空间
 	tcpServer = new QTcpServer(this);//指定父对象,自动回收内存空间,不指定也可以
 	//setWindowTitle设置服务器窗口的名字
