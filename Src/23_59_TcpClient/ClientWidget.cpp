@@ -23,6 +23,8 @@ ClientWidget::ClientWidget(QWidget *parent)
 		{
 			//读取所有客户端发来的消息
 			QByteArray array = tcpSocket->readAll();
+			//显示在读取界面
+			ui->textEditRead->append(array.data());
 		}
 		);
 	}
