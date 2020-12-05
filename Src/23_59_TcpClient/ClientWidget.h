@@ -20,6 +20,6 @@ private:
 	Ui::ClientWidget *ui;
 	QTcpSocket *tcpSocket;	//通信套接字对象
 private slots:
-	void on_btnSend_clicked();
+	void on_btnConnect_clicked();
 };
 #endif // WIDGET_H
