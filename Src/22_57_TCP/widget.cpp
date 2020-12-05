@@ -34,7 +34,8 @@ Widget::Widget(QWidget *parent)
 		connect(tcpSocket, &QTcpSocket::readyRead,
 			[=]()
 		{
-
+			//tcpSocket->readAll()读取QByteArray数据
+			QByteArray array = tcpSocket->readAll();
 		}
 		);
 	}
