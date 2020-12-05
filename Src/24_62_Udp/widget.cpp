@@ -59,5 +59,7 @@ void Widget::delMessage()
 			.arg(address->toString())
 			.arg(*port)
 			.arg(buf);
+		//将格式化好的字符串setText显示到窗口
+		ui->textEdit->setText(str);
 	}
 }
