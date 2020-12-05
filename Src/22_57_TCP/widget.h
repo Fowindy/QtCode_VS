@@ -22,5 +22,7 @@ private:
 	QTcpServer *tcpServer;	//监听套接字
 	QTcpSocket *tcpSocket;	//通信套接字
 	//指针和变量:用指针要动态分配空间,用变量要去地址符
+private slots:
+	void sendMessage();	//[qt4方式]_发信息
 };
 #endif // WIDGET_H

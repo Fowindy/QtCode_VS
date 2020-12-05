@@ -15,9 +15,25 @@ Widget::Widget(QWidget *parent)
 	//*监听
 	//*QHostAddress::Any---绑定当前网卡所有ip(默认值)
 	tcpServer->listen(QHostAddress::Any, 8888);//指定端口:8888(默认值为:0)
+	//[qt4方式]_有连接产生newConnection信号
+	connect(tcpServer, SIGNAL(QTcpServer::newConnection()), this, SLOT(sendMessage()));
 }
 
 Widget::~Widget()
 {
 	delete ui;
+}
+
+/************************************
+*@Method:    sendMessage
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 11:28
+*@Describe:	 [qt4方式]_发信息
+*************************************/
+void Widget::sendMessage()
+{
+	//取出建立好连接的套接字
+	tcpSocket = tcpServer->nextPendingConnection();
 }
