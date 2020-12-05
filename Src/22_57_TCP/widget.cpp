@@ -7,6 +7,9 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//因为用指针初始化时动态分配空间
+	tcpServer = new QTcpServer();
+	tcpSocket = new QTcpSocket();
 }
 
 Widget::~Widget()
