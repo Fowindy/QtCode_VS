@@ -30,6 +30,13 @@ Widget::Widget(QWidget *parent)
 		QString temp = QString("[%1:%2]:连接成功!").arg(ip).arg(port);
 		//并将字符串放到ui接收信息控件显示
 		ui->textEditRead->setText(temp);
+		//接收客户端信息_因tcpSocket待取出分配空间后使用
+		connect(tcpSocket, &QTcpSocket::readyRead,
+			[=]()
+		{
+
+		}
+		);
 	}
 	);
 }
