@@ -82,6 +82,8 @@ void ClientWidget::on_btnSend_clicked()
 *************************************/
 void ClientWidget::on_btnClose_clicked()
 {
-	//断开tcpSocket连接
-	tcpSocket->disconnect();
+	//disconnectFromHost断开tcpSocket连接
+	tcpSocket->disconnectFromHost();
+	//关闭tcpSocket连接
+	tcpSocket->close();
 }
