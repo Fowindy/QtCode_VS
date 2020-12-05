@@ -65,4 +65,6 @@ void Widget::on_btnSend_clicked()
 {
 	//toPlainText获取编辑区内容
 	QString str = ui->textEditWrite->toPlainText();
+	//tcpSocket->write给对方发送数据
+	tcpSocket->write();
 }
