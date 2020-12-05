@@ -28,6 +28,8 @@ Widget::Widget(QWidget *parent)
 		qint16 port = tcpSocket->peerPort();
 		//拼接成可以显示的字符串
 		QString temp = QString("[%1:%2]:连接成功!").arg(ip).arg(port);
+		//并将字符串放到ui接收信息控件显示
+		ui->textEditRead->setText(temp);
 	}
 	);
 }
