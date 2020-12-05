@@ -84,4 +84,6 @@ void Widget::on_btnSend_clicked()
 		QMessageBox::information(NULL, "错误", "ip和端口号均不能为空!!!");
 		return;
 	}
+	//toPlainText获取编辑区的所有内容
+	QString str = ui->textEdit->toPlainText();
 }
