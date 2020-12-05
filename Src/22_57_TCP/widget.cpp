@@ -24,6 +24,8 @@ Widget::Widget(QWidget *parent)
 		tcpSocket = tcpServer->nextPendingConnection();
 		//peerAddress获取对方的ip并转字符类型
 		QString ip = tcpSocket->peerAddress().toString();
+		//peerPort获取对方的port(qint16类型)
+		qint16 port = tcpSocket->peerPort();
 	}
 	);
 }
