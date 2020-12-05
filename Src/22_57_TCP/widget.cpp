@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "widget.h"
 #include "ui_widget.h"
+#include <QHostAddress>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -12,7 +13,8 @@ Widget::Widget(QWidget *parent)
 	tcpSocket = new QTcpSocket();
 
 	//*监听
-	tcpServer->listen()
+	//*QHostAddress::Any---绑定当前网卡所有ip(默认值)
+	tcpServer->listen(QHostAddress::Any)
 }
 
 Widget::~Widget()
