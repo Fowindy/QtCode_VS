@@ -55,4 +55,6 @@ void ClientWidget::on_btnConnect_clicked()
 *************************************/
 void ClientWidget::on_btnSend_clicked()
 {
+	//toPlainText获取客户端输入的要发送的内容
+	QString str = ui->textEditWrite->toPlainText();
 }
