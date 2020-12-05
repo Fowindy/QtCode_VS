@@ -91,5 +91,6 @@ void Widget::on_btnSend_clicked()
 *************************************/
 void Widget::on_btnClose_clicked()
 {
-
+	//disconnectFromHost主动与客户端断开连接
+	tcpSocket->disconnectFromHost();
 }
