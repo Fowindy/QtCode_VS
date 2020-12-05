@@ -63,3 +63,16 @@ void Widget::delMessage()
 		ui->textEdit->setText(str);
 	}
 }
+
+/************************************
+*@Method:    on_btnSend_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 22:31
+*@Describe:	 发送按钮
+*************************************/
+void Widget::on_btnSend_clicked()
+{
+
+}

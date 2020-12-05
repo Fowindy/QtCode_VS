@@ -21,5 +21,6 @@ private:
 	QUdpSocket *udpSocket;	//udp套接字
 private slots:
 	void delMessage();	//处理接收的消息的槽函数_因为信号无参数所以槽函数无参数
+	void on_btnSend_clicked();
 };
 #endif // WIDGET_H
