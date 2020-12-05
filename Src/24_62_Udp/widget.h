@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QUdpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -17,5 +18,6 @@ public:
 
 private:
 	Ui::Widget *ui;
+	QUdpSocket *udpSocket;	//udp套接字
 };
 #endif // WIDGET_H
