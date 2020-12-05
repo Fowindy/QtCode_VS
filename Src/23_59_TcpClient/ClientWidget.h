@@ -22,5 +22,6 @@ private:
 private slots:
 	void on_btnConnect_clicked();
 	void on_btnSend_clicked();
+	void on_btnClose_clicked();
 };
 #endif // WIDGET_H

@@ -71,3 +71,17 @@ void ClientWidget::on_btnSend_clicked()
 	//发送数据后清空写入窗口
 	ui->textEditWrite->clear();
 }
+
+/************************************
+*@Method:    on_btnClose_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 18:55
+*@Describe:	 断开连接按钮
+*************************************/
+void ClientWidget::on_btnClose_clicked()
+{
+	//断开tcpSocket连接
+	tcpSocket->disconnect();
+}
