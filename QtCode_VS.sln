@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "22_57_TCP", "Src\22_57_TCP\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23_59_TcpClient", "Src\23_59_TcpClient\23_59_TcpClient.vcxproj", "{3CCCCC9F-FD56-4BE8-AD57-084789146991}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24_62_Udp", "Src\24_62_Udp\24_62_Udp.vcxproj", "{2153C235-1505-4DE6-BC03-D1A27D71B6FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -147,6 +149,10 @@ Global
 		{3CCCCC9F-FD56-4BE8-AD57-084789146991}.Debug|x64.Build.0 = Debug|x64
 		{3CCCCC9F-FD56-4BE8-AD57-084789146991}.Release|x64.ActiveCfg = Release|x64
 		{3CCCCC9F-FD56-4BE8-AD57-084789146991}.Release|x64.Build.0 = Release|x64
+		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Debug|x64.ActiveCfg = Debug|x64
+		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Debug|x64.Build.0 = Debug|x64
+		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Release|x64.ActiveCfg = Release|x64
+		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
