@@ -102,4 +102,6 @@ void Widget::on_btnClose_clicked()
 	tcpSocket->disconnectFromHost();
 	//关闭服务端
 	tcpSocket->close();
+	//关闭后tcpSocket再置空
+	tcpSocket = NULL;
 }
