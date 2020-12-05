@@ -39,4 +39,6 @@ void Widget::delMessage()
 	QHostAddress address;
 	//定义quint16类型的端口变量_注意quint16不是qint16
 	quint16 port;
+	//定义长度变量,获取readDatagram读取内容返回长度
+	qint64 len = udpSocket->readDatagram(buf, sizeof(buf), &address, &port);
 }
