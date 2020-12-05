@@ -71,7 +71,7 @@ public:
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Server_\346\234\215\345\212\241\347\253\257:8888", nullptr));
         btnSend->setText(QCoreApplication::translate("Widget", "\345\217\221\351\200\201", nullptr));
-        btnClose->setText(QCoreApplication::translate("Widget", "\345\205\263\351\227\255", nullptr));
+        btnClose->setText(QCoreApplication::translate("Widget", "\346\226\255\345\274\200\350\277\236\346\216\245", nullptr));
     } // retranslateUi
 
 };
