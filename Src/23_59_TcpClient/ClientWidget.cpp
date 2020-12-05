@@ -9,6 +9,8 @@ ClientWidget::ClientWidget(QWidget *parent)
 	ui->setupUi(this);
 	//将通讯套接字指针置空,防止野指针
 	tcpSocket = NULL;
+	//为通讯套接字分配空间,指定父对象
+	tcpSocket = new QTcpSocket(this);
 }
 
 ClientWidget::~ClientWidget()
