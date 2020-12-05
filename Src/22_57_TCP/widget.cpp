@@ -20,7 +20,7 @@ Widget::Widget(QWidget *parent)
 	//*QHostAddress::Any---绑定当前网卡所有ip(默认值)
 	tcpServer->listen(QHostAddress::Any, 8888);//指定端口:8888(默认值为:0)
 	//[qt4方式]_有连接产生newConnection信号
-	connect(tcpServer, SIGNAL(QTcpServer::newConnection()), this, SLOT(sendMessage()));
+	//connect(tcpServer, SIGNAL(QTcpServer::newConnection()), this, SLOT(sendMessage()));
 	//[qt5方式]_有连接产生newConnection信号_需要Config:C++11_[]相当于返回值()是2号参数的参数
 	connect(tcpServer, &QTcpServer::newConnection,
 		[=]()
@@ -62,11 +62,11 @@ Widget::~Widget()
 *@Created:   2020/12/05 11:28
 *@Describe:	 [qt4方式]_发信息
 *************************************/
-void Widget::sendMessage()
-{
-	//取出建立好连接的套接字
-	tcpSocket = tcpServer->nextPendingConnection();
-}
+//void Widget::sendMessage()
+//{
+//	//取出建立好连接的套接字
+//	tcpSocket = tcpServer->nextPendingConnection();
+//}
 
 /************************************
 *@Method:    on_btnSend_clicked
@@ -103,7 +103,7 @@ void Widget::on_btnSend_clicked()
 void Widget::on_btnClose_clicked()
 {
 	//判断tcpSocket为空则返回
-	if (NULL == tcpSocket)
+	if (NULL == tcpSocket || NULL == tcpServer)
 	{
 		return;
 	}

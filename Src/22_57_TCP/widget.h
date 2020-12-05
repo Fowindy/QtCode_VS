@@ -23,7 +23,7 @@ private:
 	QTcpSocket *tcpSocket;	//通信套接字
 	//指针和变量:用指针要动态分配空间,用变量要去地址符
 private slots:
-	void sendMessage();	//[qt4方式]_发信息
+	//void sendMessage();	//[qt4方式]_发信息
 	void on_btnSend_clicked();
 	void on_btnClose_clicked();
 };
