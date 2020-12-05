@@ -36,6 +36,8 @@ Widget::Widget(QWidget *parent)
 		{
 			//tcpSocket->readAll()读取QByteArray数据
 			QByteArray array = tcpSocket->readAll();
+			//接收界面追加显示客户端信息
+			ui->textEditWrite->append(array);
 		}
 		);
 	}

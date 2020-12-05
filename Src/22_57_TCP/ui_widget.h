@@ -69,7 +69,7 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QCoreApplication::translate("Widget", "Server_\346\234\215\345\212\241\347\253\257", nullptr));
+        Widget->setWindowTitle(QCoreApplication::translate("Widget", "Server_\346\234\215\345\212\241\347\253\257:8888", nullptr));
         btnSend->setText(QCoreApplication::translate("Widget", "\345\217\221\351\200\201", nullptr));
         btnClose->setText(QCoreApplication::translate("Widget", "\345\205\263\351\227\255", nullptr));
     } // retranslateUi
