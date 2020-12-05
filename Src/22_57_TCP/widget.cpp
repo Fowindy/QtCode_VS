@@ -17,6 +17,13 @@ Widget::Widget(QWidget *parent)
 	tcpServer->listen(QHostAddress::Any, 8888);//指定端口:8888(默认值为:0)
 	//[qt4方式]_有连接产生newConnection信号
 	connect(tcpServer, SIGNAL(QTcpServer::newConnection()), this, SLOT(sendMessage()));
+	//[qt5方式]_有连接产生newConnection信号_需要Config:C++11_[]相当于返回值()是2号参数的参数
+	connect(tcpServer, &QTcpServer::newConnection,
+		[=]()
+	{
+
+	}
+	);
 }
 
 Widget::~Widget()
