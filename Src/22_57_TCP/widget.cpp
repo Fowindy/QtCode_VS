@@ -22,6 +22,8 @@ Widget::Widget(QWidget *parent)
 	{
 		//取出建立好连接的套接字_取出的是指针不需要分配内存空间_nextPendingConnection_只会取队列中当前最近一个
 		tcpSocket = tcpServer->nextPendingConnection();
+		//peerAddress获取对方的ip并转字符类型
+		QString ip = tcpSocket->peerAddress().toString();
 	}
 	);
 }
