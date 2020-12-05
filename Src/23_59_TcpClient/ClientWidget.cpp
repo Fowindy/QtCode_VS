@@ -19,14 +19,14 @@ ClientWidget::ClientWidget(QWidget *parent)
 		[=]()
 	{
 		//显示与服务器连接成功
-		ui->textEditRead->setText(QString("与服务器:[%1:%2]连接成功!").arg(ui->lineEditIP->text()).arg(ui->lineEditPort->text()));
+		ui->textEditRead->setText(QString("服务器[%1:%2]:连接成功!").arg(ui->lineEditIP->text()).arg(ui->lineEditPort->text()));
 		connect(tcpSocket, &QTcpSocket::readyRead,
 			[=]()
 		{
 			//读取所有客户端发来的消息
 			QByteArray array = tcpSocket->readAll();
 			//显示在读取界面
-			ui->textEditRead->append(array.data());
+			ui->textEditRead->append(QString("服务端[%1]:").arg(ui->lineEditPort->text()) + array.data());
 		}
 		);
 	}
@@ -68,6 +68,8 @@ void ClientWidget::on_btnSend_clicked()
 {
 	//toPlainText获取客户端输入的要发送的内容
 	QString str = ui->textEditWrite->toPlainText();
+	//发送的数据也显示在读取界面_模拟聊天
+	ui->textEditRead->append(QString("客户端[%1](自己):").arg(tcpSocket->localPort()) + str);
 	//发送数据
 	tcpSocket->write(str.toUtf8().data());
 	//发送数据后清空写入窗口

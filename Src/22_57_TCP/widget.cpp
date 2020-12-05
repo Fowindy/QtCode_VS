@@ -32,7 +32,7 @@ Widget::Widget(QWidget *parent)
 		//peerPort获取对方的port(qint16类型)
 		qint16 port = tcpSocket->peerPort();
 		//拼接成可以显示的字符串
-		QString temp = QString("[%1:%2]:连接成功!").arg(ip).arg(port);
+		QString temp = QString("客户端[%1:%2]:连接成功!").arg(ip).arg(port);
 		//并将字符串放到ui接收信息控件显示
 		ui->textEditRead->setText(temp);
 		//接收客户端信息_因tcpSocket待取出分配空间后使用
@@ -42,7 +42,7 @@ Widget::Widget(QWidget *parent)
 			//tcpSocket->readAll()读取QByteArray数据
 			QByteArray array = tcpSocket->readAll();
 			//接收界面追加显示客户端信息
-			ui->textEditRead->append(array);
+			ui->textEditRead->append(QString("客户端[%1]:").arg(port) + array);
 		}
 		);
 	}
@@ -85,6 +85,8 @@ void Widget::on_btnSend_clicked()
 	}
 	//toPlainText获取编辑区内容
 	QString str = ui->textEditWrite->toPlainText();
+	//发送的数据也显示在读取界面_模拟聊天
+	ui->textEditRead->append(QString("服务端[%1](自己):").arg(tcpSocket->localPort()) + str);
 	//tcpSocket->write给对方发送数据
 	//str.toUtf8().data()_字符串转QByteArray
 	tcpSocket->write(str.toUtf8().data());
