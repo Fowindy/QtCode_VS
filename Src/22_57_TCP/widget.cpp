@@ -93,4 +93,6 @@ void Widget::on_btnClose_clicked()
 {
 	//disconnectFromHost主动与客户端断开连接
 	tcpSocket->disconnectFromHost();
+	//关闭服务端
+	tcpSocket->close();
 }
