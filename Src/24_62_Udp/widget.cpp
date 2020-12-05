@@ -11,6 +11,8 @@ Widget::Widget(QWidget *parent)
 	udpSocket = new QUdpSocket(this);
 	//udpSocket->bind绑定(8888)
 	udpSocket->bind(8888);
+	//设置窗口标题
+	setWindowTitle("服务器端口为:8888");
 }
 
 Widget::~Widget()
