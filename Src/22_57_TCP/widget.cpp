@@ -52,3 +52,15 @@ void Widget::sendMessage()
 	//取出建立好连接的套接字
 	tcpSocket = tcpServer->nextPendingConnection();
 }
+
+/************************************
+*@Method:    on_btnSend_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 11:54
+*@Describe:	 发送信息按钮事件
+*************************************/
+void Widget::on_btnSend_clicked()
+{
+}
