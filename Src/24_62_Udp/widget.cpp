@@ -54,7 +54,10 @@ void Widget::delMessage()
 	//如果长度大于0说明读到内容不为空
 	if (len > 0)
 	{
-
+		//格式化要显示的字符串
+		QString str = QString("[%1:%2]:%3")
+			.arg(address->toString())
+			.arg(*port)
+			.arg(buf);
 	}
-
 }
