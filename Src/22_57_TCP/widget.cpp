@@ -107,9 +107,9 @@ void Widget::on_btnClose_clicked()
 	}
 	//disconnectFromHost主动与客户端断开连接
 	tcpSocket->disconnectFromHost();
-	//关闭服务器前置空
-	tcpSocket = NULL;
-	tcpServer = NULL;
 	//关闭服务端
 	tcpSocket->close();
+	//关闭服务器后tcpSocket和tcpServer置空
+	tcpSocket = NULL;
+	tcpServer = NULL;
 }

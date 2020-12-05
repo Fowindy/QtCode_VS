@@ -47,7 +47,7 @@
    <item row="2" column="2">
     <widget class="QPushButton" name="btnClose">
      <property name="text">
-      <string>关闭</string>
+      <string>断开连接</string>
      </property>
     </widget>
    </item>
