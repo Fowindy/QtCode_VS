@@ -2,6 +2,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QMessageBox>
+#include <QHostAddress>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -86,4 +87,6 @@ void Widget::on_btnSend_clicked()
 	}
 	//toPlainText获取编辑区的所有内容
 	QString str = ui->textEdit->toPlainText();
+	//writeDatagram给指定的ip和端口发送数据
+	udpSocket->writeDatagram(str.toUtf8().data(), (QHostAddress)ip, port);
 }
