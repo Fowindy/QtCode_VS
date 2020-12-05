@@ -26,6 +26,8 @@ Widget::Widget(QWidget *parent)
 		QString ip = tcpSocket->peerAddress().toString();
 		//peerPort获取对方的port(qint16类型)
 		qint16 port = tcpSocket->peerPort();
+		//拼接成可以显示的字符串
+		QString temp = QString("[%1:%2]:连接成功!").arg(ip).arg(port);
 	}
 	);
 }
