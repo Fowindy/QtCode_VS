@@ -9,6 +9,8 @@ Widget::Widget(QWidget *parent)
 	ui->setupUi(this);
 	//给套接字分配空间_指定父对象_回收空间_不指定也可以
 	udpSocket = new QUdpSocket(this);
+	//udpSocket->bind绑定(8888)
+	udpSocket->bind(8888);
 }
 
 Widget::~Widget()
