@@ -14,7 +14,7 @@ Widget::Widget(QWidget *parent)
 
 	//*监听
 	//*QHostAddress::Any---绑定当前网卡所有ip(默认值)
-	tcpServer->listen(QHostAddress::Any)
+	tcpServer->listen(QHostAddress::Any, 8888);//指定端口:8888(默认值为:0)
 }
 
 Widget::~Widget()
