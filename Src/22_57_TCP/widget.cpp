@@ -113,5 +113,6 @@ void Widget::on_btnClose_clicked()
 	tcpSocket->close();
 	//关闭服务器后tcpSocket和tcpServer置空
 	tcpSocket = NULL;
-	tcpServer = NULL;
+	//解决客户端断开,服务端卡死的bug
+	//tcpServer = NULL;
 }
