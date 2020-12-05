@@ -93,6 +93,11 @@ void Widget::on_btnSend_clicked()
 *************************************/
 void Widget::on_btnClose_clicked()
 {
+	//判断tcpSocket为空则返回
+	if (NULL == tcpSocket)
+	{
+		return;
+	}
 	//disconnectFromHost主动与客户端断开连接
 	tcpSocket->disconnectFromHost();
 	//关闭服务端
