@@ -25,5 +25,6 @@ private:
 private slots:
 	void sendMessage();	//[qt4方式]_发信息
 	void on_btnSend_clicked();
+	void on_btnClose_clicked();
 };
 #endif // WIDGET_H

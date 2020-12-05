@@ -80,3 +80,16 @@ void Widget::on_btnSend_clicked()
 	//str.toUtf8().data()_字符串转QByteArray
 	tcpSocket->write(str.toUtf8().data());
 }
+
+/************************************
+*@Method:    on_btnClose_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/05 12:18
+*@Describe:	 关闭服务端
+*************************************/
+void Widget::on_btnClose_clicked()
+{
+
+}
