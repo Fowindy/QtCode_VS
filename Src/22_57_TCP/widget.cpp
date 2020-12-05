@@ -63,4 +63,6 @@ void Widget::sendMessage()
 *************************************/
 void Widget::on_btnSend_clicked()
 {
+	//toPlainText获取编辑区内容
+	QString str = ui->textEditWrite->toPlainText();
 }
