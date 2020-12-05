@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "ClientWidget.h"
 #include "ui_ClientWidget.h"
+#include <QHostAddress>
 
 ClientWidget::ClientWidget(QWidget *parent)
 	: QWidget(parent)
@@ -31,4 +32,7 @@ void ClientWidget::on_btnSend_clicked()
 	//从用户输入框获取服务器的IP和Port
 	QString ip = ui->lineEditIP->text();
 	qint16 port = ui->lineEditPort->text().toInt();
+
+	//connectToHost主动和服务器建立连接_此处需要将ip转QHostAddress
+	tcpSocket->connectToHost(QHostAddress(ip), port);
 }
