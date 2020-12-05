@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "widget.h"
 #include "ui_widget.h"
+#include <QMessageBox>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -77,4 +78,10 @@ void Widget::on_btnSend_clicked()
 	//先获取对方的ip和端口
 	QString ip = ui->lineEditIP->text();
 	qint16 port = ui->lineEditPort->text().toInt();
+	//判断ip和端口是否为空,为空提示返回
+	if (ip.isEmpty() || port == 0)
+	{
+		QMessageBox::information(NULL, "错误", "ip和端口号均不能为空!!!");
+		return;
+	}
 }
