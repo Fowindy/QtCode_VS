@@ -57,4 +57,6 @@ void ClientWidget::on_btnSend_clicked()
 {
 	//toPlainText获取客户端输入的要发送的内容
 	QString str = ui->textEditWrite->toPlainText();
+	//发送数据
+	tcpSocket->write(str.toUtf8().data());
 }
