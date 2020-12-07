@@ -38,7 +38,11 @@ Widget::~Widget()
 void Widget::on_btnClose_clicked()
 {
 	//>stop(停止定时器
-	timer->stop();
+	//避免按两次导致崩溃_只有定时器激活才可停止
+	if (true == timer->isActive())
+	{
+		timer->stop();
+	}
 }
 
 /************************************
