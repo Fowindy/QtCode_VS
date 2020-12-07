@@ -59,4 +59,9 @@ void Widget::on_btnSelectFile_clicked()
 {
 	//选择文件对话框获取文件全路径
 	QString filePath = QFileDialog::getSaveFileName(this, "Open", "../");
+
+	if (false == filePath.isEmpty())	//如果选择文件路径有效
+	{
+
+	}
 }
