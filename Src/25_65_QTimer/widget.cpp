@@ -17,6 +17,8 @@ Widget::Widget(QWidget *parent)
 		static int num = 0;
 		//每次触发自增
 		num++;
+		//将自增的内容显示到定时器中
+		ui->lcdNumber->display(num);
 	});
 }
 
