@@ -73,7 +73,7 @@ void Widget::sendData()
 		len = tcpSocket->write(buf, len);
 		//已发送数据长度累加
 		sendSize += len;
-	} while ();
+	} while (len > 0);	//如果发送数据大于0继续发送_或fileSize != sendSize
 }
 
 /************************************
