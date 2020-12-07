@@ -110,5 +110,6 @@ void Widget::on_btnSelectFile_clicked()
 *************************************/
 void Widget::on_btnSendFile_clicked()
 {
-
+	//先发送文件头信息_文件名##文件大小
+	QString head = QString("%1##%2").arg(fileName).arg(fileSize);
 }
