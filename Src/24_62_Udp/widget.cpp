@@ -20,6 +20,8 @@ Widget::Widget(QWidget *parent)
 	//joinMulticastGroup加入某个组播
 	//组播地址是D类地址
 	udpSocket->joinMulticastGroup(QHostAddress("224.0.0.2"));
+	//leaveMulticastGroup退出组播
+	//udpSocket->leaveMulticastGroup(QHostAddress("224.0.0.2"));
 	//设置窗口标题
 	setWindowTitle("服务器端口为:9999");
 	//当对方成功发送数据过来自动触发readyRead()信号
