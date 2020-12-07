@@ -74,6 +74,12 @@ void Widget::sendData()
 		//已发送数据长度累加
 		sendSize += len;
 	} while (len > 0);	//如果发送数据大于0继续发送_或fileSize != sendSize
+
+	//已发送文件大小等于文件总大小则发送完毕
+	if (sendSize == fileSize)
+	{
+		ui->textEdit->append("文件发送完毕!");
+	}
 }
 
 /************************************
