@@ -43,13 +43,14 @@ Widget::Widget(QWidget *parent)
 		ui->btnSelectFile->setEnabled(true);
 	});
 
-		//连接定时器
-		connect(&timer, &QTimer::timeout,
-			[=]()
-		{
-			
-		}
-		);
+	//连接定时器
+	connect(&timer, &QTimer::timeout,
+		[=]()
+	{
+		//发送文件时关闭定时器
+		timer.stop();
+	}
+	);
 }
 
 Widget::~Widget()
