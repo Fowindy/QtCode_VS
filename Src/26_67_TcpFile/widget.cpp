@@ -86,6 +86,9 @@ void Widget::on_btnSelectFile_clicked()
 			qDebug() << "只读方式打开文件失败 77";
 		}
 
+		//显示打开文件路径
+		ui->textEdit->append(filePath);
+
 		//选择文件后按钮变灰
 		ui->btnSelectFile->setEnabled(false);
 		//选择文件后发送按钮变亮
