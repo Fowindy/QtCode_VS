@@ -9,6 +9,12 @@ Widget::Widget(QWidget *parent)
 	ui->setupUi(this);
 	//实例化通信套接字对象
 	tcpSocket = new QTcpSocket(this);
+	//接收连接
+	connect(tcpSocket, &QTcpSocket::readyRead,
+		[=]()
+	{
+	}
+	);
 }
 
 Widget::~Widget()
