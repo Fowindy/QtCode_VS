@@ -12,7 +12,10 @@ Widget::Widget(QWidget *parent)
 	//给套接字分配空间_指定父对象_回收空间_不指定也可以
 	udpSocket = new QUdpSocket(this);
 	//udpSocket->bind绑定(8888)
-	udpSocket->bind(9999);
+	//udpSocket->bind(9999);
+
+	//组播绑定AnyIPv4和端口
+	udpSocket->bind(QHostAddress::AnyIPv4, 8888);
 	//设置窗口标题
 	setWindowTitle("服务器端口为:9999");
 	//当对方成功发送数据过来自动触发readyRead()信号
