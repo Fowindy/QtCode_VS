@@ -21,6 +21,10 @@ Widget::Widget(QWidget *parent)
 		[=]() {
 		//取出建立好连接的套接字_tcpServer->nextPendingConnection
 		tcpSocket = tcpServer->nextPendingConnection();
+
+		//获取对方的ip和端口_tcpSocket->peerAddress_tcpSocket->peerPort
+		QString ip = tcpSocket->peerAddress().toString();
+		quint16 port = tcpSocket->peerPort();
 	});
 }
 
