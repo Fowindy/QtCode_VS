@@ -67,6 +67,8 @@ void Widget::sendData()
 		char buf[4 * 1024] = { 0 };
 		//每次循环长度置0
 		len = 0;
+		//往文件中读数据
+		file.read(buf, sizeof(buf));
 	} while ();
 }
 
