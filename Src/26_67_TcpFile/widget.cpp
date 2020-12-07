@@ -19,6 +19,8 @@ Widget::Widget(QWidget *parent)
 	//connect如果客户端成功和服务器连接tcpServer会自动触发newconnection()信号
 	connect(tcpServer, &QTcpServer::newConnection,
 		[=]() {
+		//取出建立好连接的套接字_tcpServer->nextPendingConnection
+		tcpSocket = tcpServer->nextPendingConnection();
 	});
 }
 
