@@ -49,6 +49,8 @@ Widget::Widget(QWidget *parent)
 	{
 		//发送文件时关闭定时器
 		timer.stop();
+		//发送文件
+		sendData();
 	}
 	);
 }
