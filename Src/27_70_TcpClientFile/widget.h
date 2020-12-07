@@ -19,6 +19,11 @@ public:
 
 private:
 	Ui::Widget *ui;
+	QTcpSocket* tcpSocket;	//通信套接字对象
+	QFile recvfile;	//接收文件对象
+	QString recvfileName;	//接收文件名字
+	qint64 recvFileSize;	//接收文件大小
+	qint64 recvSize;	//已接收文件大小
 
 };
 #endif // WIDGET_H
