@@ -26,5 +26,6 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnStart_clicked()
 {
-
+	//>start(启动定时器_时间间隔1000ms_每隔1000ms,定时器自动触发timeout信号
+	timer->start(1000);
 }
