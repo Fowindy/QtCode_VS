@@ -1,6 +1,7 @@
 ﻿#pragma execution_character_set("utf-8")
 #include "widget.h"
 #include "ui_widget.h"
+#include <QFileDialog>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -56,5 +57,6 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnSelectFile_clicked()
 {
-
+	//选择文件对话框获取文件全路径
+	QString filePath = QFileDialog::getSaveFileName(this, "Open", "../");
 }
