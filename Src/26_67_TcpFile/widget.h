@@ -23,6 +23,9 @@ private:
 	QTcpServer *tcpServer;	//监听套接字对象
 	QTcpSocket *tcpSocket;	//通信套接字对象
 	QFile file;	//文件对象
+	QString fileName;	//文件名字
+	qint64 fileSize;	//文件大小
+	qint64 sendSize;	//已发送文件大小
 
 private slots:
 	void on_btnSelectFile_clicked();

@@ -3,6 +3,7 @@
 #include "ui_widget.h"
 #include <QFileDialog>
 #include <QDebug>
+#include <QFileInfo>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -63,7 +64,30 @@ void Widget::on_btnSelectFile_clicked()
 
 	if (false == filePath.isEmpty())	//如果选择文件路径有效
 	{
+		//先清除一下文件名称,避免上次干扰
+		fileName.clear();
+		//重置文件大小
+		fileSize = 0;
+		//初始化已发送的大小为0
+		sendSize = 0;
+		//只读方式打开文件,获取文件大小和名称(全局变量)
+		QFileInfo info(filePath);
+		fileName = info.fileName();	//获取文件名字
+		fileSize = info.size();	//获取文件大小
 
+		//指定文件的名字
+		file.setFileName(filePath);
+
+		//打开文件
+		bool isok = file.open(QIODevice::ReadOnly);
+
+		if (false == isok)
+		{
+			qDebug() << "只读方式打开文件失败 77";
+		}
+
+		//选择文件后按钮变灰
+		ui->btnSelectFile->setEnabled(false);
 	}
 	else	//如果选择文件路径无效
 	{
