@@ -16,6 +16,10 @@ Widget::Widget(QWidget *parent)
 	//setWindowTitle设置服务器窗口标题提示
 	setWindowTitle("服务器端口为:8888");
 
+	//最开始两个按钮都不能按变灰setEnabled
+	ui->btnSelectFile->setEnabled(false);
+	ui->btnSendFile->setEnabled(false);
+
 	//connect如果客户端成功和服务器连接tcpServer会自动触发newconnection()信号
 	connect(tcpServer, &QTcpServer::newConnection,
 		[=]() {
