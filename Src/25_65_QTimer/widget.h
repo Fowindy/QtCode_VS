@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -17,5 +18,6 @@ public:
 
 private:
 	Ui::Widget *ui;
+	QTimer *timer;	//创建定时器对象
 };
 #endif // WIDGET_H
