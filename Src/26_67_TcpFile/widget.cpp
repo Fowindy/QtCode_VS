@@ -123,6 +123,10 @@ void Widget::on_btnSendFile_clicked()
 	}
 	else
 	{
-
+		//发送失败_提示_关闭文件对象_选择文件按钮置亮_发送按钮置灰
+		qDebug() << "头部信息发送失败110";
+		file.close();
+		ui->btnSelectFile->setEnabled(true);
+		ui->btnSendFile->setEnabled(false);
 	}
 }
