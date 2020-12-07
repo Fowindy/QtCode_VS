@@ -16,6 +16,10 @@ Widget::Widget(QWidget *parent)
 
 	//组播绑定AnyIPv4和端口
 	udpSocket->bind(QHostAddress::AnyIPv4, 8888);
+
+	//joinMulticastGroup加入某个组播
+	//组播地址是D类地址
+	udpSocket->joinMulticastGroup(QHostAddress("224.0.0.2"));
 	//设置窗口标题
 	setWindowTitle("服务器端口为:9999");
 	//当对方成功发送数据过来自动触发readyRead()信号
