@@ -15,3 +15,16 @@ Widget::~Widget()
 {
 	delete ui;
 }
+
+/************************************
+*@Method:    on_btnStart_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/07 9:29
+*@Describe:	 定时器开始按钮
+*************************************/
+void Widget::on_btnStart_clicked()
+{
+
+}

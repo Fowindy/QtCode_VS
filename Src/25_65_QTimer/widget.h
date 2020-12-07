@@ -19,5 +19,6 @@ public:
 private:
 	Ui::Widget *ui;
 	QTimer *timer;	//创建定时器对象
+	void on_btnStart_clicked();
 };
 #endif // WIDGET_H
