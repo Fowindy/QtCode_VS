@@ -7,6 +7,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//实例化通信套接字对象
+	tcpSocket = new QTcpSocket(this);
 }
 
 Widget::~Widget()
