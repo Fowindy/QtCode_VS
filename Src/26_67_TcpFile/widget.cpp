@@ -2,6 +2,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QFileDialog>
+#include <QDebug>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -63,5 +64,9 @@ void Widget::on_btnSelectFile_clicked()
 	if (false == filePath.isEmpty())	//如果选择文件路径有效
 	{
 
+	}
+	else	//如果选择文件路径无效
+	{
+		qDebug() << "选择文件路径出错 62";
 	}
 }
