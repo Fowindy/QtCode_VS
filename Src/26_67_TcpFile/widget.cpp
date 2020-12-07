@@ -7,6 +7,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//监听套接字对象实例化
+	tcpServer = new QTcpServer(this);
 }
 
 Widget::~Widget()
