@@ -68,7 +68,9 @@ void Widget::sendData()
 		//每次循环长度置0
 		len = 0;
 		//往文件中读数据
-		file.read(buf, sizeof(buf));
+		len = file.read(buf, sizeof(buf));
+		//发送数据_读多少发多少
+		len = tcpSocket->write(buf, len);
 	} while ();
 }
 
