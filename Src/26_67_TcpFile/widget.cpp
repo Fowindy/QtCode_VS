@@ -118,6 +118,11 @@ void Widget::on_btnSendFile_clicked()
 	//如果len大于0说明发送成功
 	if (len > 0)
 	{
+		//_发送真正的文件信息
+		//防止TCP黏包文件_需要通过定时器延时20 ms
+	}
+	else
+	{
 
 	}
 }
