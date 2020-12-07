@@ -56,5 +56,9 @@ void Widget::on_btnClose_clicked()
 void Widget::on_btnStart_clicked()
 {
 	//>start(启动定时器_时间间隔100ms_每隔100ms,定时器自动触发timeout信号
-	timer->start(100);
+	//避免按两次导致崩溃_只有定时器未激活才可开始
+	if (false == timer->isActive())
+	{
+		timer->start(100);
+	}
 }
