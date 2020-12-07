@@ -13,7 +13,8 @@ Widget::Widget(QWidget *parent)
 	connect(timer, &QTimer::timeout,
 		[=]()
 	{
-
+		//定义静态自增变量
+		static int num = 0;
 	});
 }
 
