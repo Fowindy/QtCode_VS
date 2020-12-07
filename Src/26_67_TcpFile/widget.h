@@ -5,6 +5,7 @@
 #include <QTcpServer>	//监听套接字
 #include <QTcpSocket>	//通信套接字
 #include <QFile>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -27,6 +28,7 @@ private:
 	QString fileName;	//文件名字
 	qint64 fileSize;	//文件大小
 	qint64 sendSize;	//已发送文件大小
+	QTimer timer;	//定时器对象
 
 private slots:
 	void on_btnSelectFile_clicked();

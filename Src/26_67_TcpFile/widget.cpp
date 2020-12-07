@@ -42,6 +42,14 @@ Widget::Widget(QWidget *parent)
 		//成功连接后才可以按选择按钮setEnabled
 		ui->btnSelectFile->setEnabled(true);
 	});
+
+		//连接定时器
+		connect(&timer, &QTimer::timeout,
+			[=]()
+		{
+			
+		}
+		);
 }
 
 Widget::~Widget()
