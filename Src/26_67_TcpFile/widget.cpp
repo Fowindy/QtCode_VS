@@ -88,6 +88,8 @@ void Widget::on_btnSelectFile_clicked()
 
 		//选择文件后按钮变灰
 		ui->btnSelectFile->setEnabled(false);
+		//选择文件后发送按钮变亮
+		ui->btnSendFile->setEnabled(true);
 	}
 	else	//如果选择文件路径无效
 	{
