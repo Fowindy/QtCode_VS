@@ -17,6 +17,7 @@ class Widget : public QWidget
 public:
 	Widget(QWidget *parent = nullptr);
 	~Widget();
+	void sendData();	//发送文件数据
 
 private:
 	Ui::Widget *ui;

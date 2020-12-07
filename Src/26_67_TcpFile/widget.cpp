@@ -50,6 +50,19 @@ Widget::~Widget()
 }
 
 /************************************
+*@Method:    sendData
+*@Access:    public
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/07 11:45
+*@Describe:	 发送文件数据函数
+*************************************/
+void Widget::sendData()
+{
+
+}
+
+/************************************
 *@Method:    on_btnSelectFile_clicked
 *@Access:    private
 *@Returns:   void
