@@ -37,6 +37,8 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnClose_clicked()
 {
+	//>stop(停止定时器
+	timer->stop();
 }
 
 /************************************
