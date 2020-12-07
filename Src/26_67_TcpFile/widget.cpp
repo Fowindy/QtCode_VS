@@ -79,6 +79,10 @@ void Widget::sendData()
 	if (sendSize == fileSize)
 	{
 		ui->textEdit->append("文件发送完毕!");
+		//发送完毕_完毕文件对象_把客户端端口断开_关闭客户端套接字对象
+		file.close();
+		tcpSocket->disconnectFromHost();
+		tcpSocket->close();
 	}
 }
 
