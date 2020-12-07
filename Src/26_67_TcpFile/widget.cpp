@@ -112,4 +112,6 @@ void Widget::on_btnSendFile_clicked()
 {
 	//先发送文件头信息_文件名##文件大小
 	QString head = QString("%1##%2").arg(fileName).arg(fileSize);
+	//发送头部信息
+	qint64 len = tcpSocket->write(head.toUtf8());
 }
