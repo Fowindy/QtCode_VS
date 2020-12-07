@@ -15,6 +15,8 @@ Widget::Widget(QWidget *parent)
 	{
 		//定义静态自增变量
 		static int num = 0;
+		//每次触发自增
+		num++;
 	});
 }
 
