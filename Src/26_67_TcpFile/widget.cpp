@@ -35,6 +35,9 @@ Widget::Widget(QWidget *parent)
 
 		//显示到界面编辑区
 		ui->textEdit->setText(str);
+
+		//成功连接后才可以按选择按钮setEnabled
+		ui->btnSelectFile->setEnabled(true);
 	});
 }
 
