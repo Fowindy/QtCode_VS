@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "23_59_TcpClient", "Src\23_5
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "24_62_Udp", "Src\24_62_Udp\24_62_Udp.vcxproj", "{2153C235-1505-4DE6-BC03-D1A27D71B6FB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "25_65_QTimer", "Src\25_65_QTimer\25_65_QTimer.vcxproj", "{E246D76B-9149-4DD4-8F1E-9BA8943201F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -153,6 +155,10 @@ Global
 		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Debug|x64.Build.0 = Debug|x64
 		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Release|x64.ActiveCfg = Release|x64
 		{2153C235-1505-4DE6-BC03-D1A27D71B6FB}.Release|x64.Build.0 = Release|x64
+		{E246D76B-9149-4DD4-8F1E-9BA8943201F6}.Debug|x64.ActiveCfg = Debug|x64
+		{E246D76B-9149-4DD4-8F1E-9BA8943201F6}.Debug|x64.Build.0 = Debug|x64
+		{E246D76B-9149-4DD4-8F1E-9BA8943201F6}.Release|x64.ActiveCfg = Release|x64
+		{E246D76B-9149-4DD4-8F1E-9BA8943201F6}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
