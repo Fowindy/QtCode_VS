@@ -65,6 +65,8 @@ void Widget::sendData()
 	{
 		//定义每次发送数据大小为4k的buf
 		char buf[4 * 1024] = { 0 };
+		//每次循环长度置0
+		len = 0;
 	} while ();
 }
 
