@@ -45,3 +45,16 @@ Widget::~Widget()
 {
 	delete ui;
 }
+
+/************************************
+*@Method:    on_btnSelectFile_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/07 11:15
+*@Describe:	 选择文件按钮事件
+*************************************/
+void Widget::on_btnSelectFile_clicked()
+{
+
+}
