@@ -12,6 +12,9 @@ Widget::Widget(QWidget *parent)
 
 	//tcpServer->listen监听
 	tcpServer->listen(QHostAddress::AnyIPv4, 8888);
+
+	//setWindowTitle设置服务器窗口标题提示
+	setWindowTitle("服务器端口为:8888");
 }
 
 Widget::~Widget()
