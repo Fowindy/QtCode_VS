@@ -28,6 +28,9 @@ Widget::Widget(QWidget *parent)
 
 		//拼接提示字符串
 		QString str = QString("[%1:%2] 连接服务器成功!").arg(ip).arg(port);
+
+		//显示到界面编辑区
+		ui->textEdit->setText(str);
 	});
 }
 
