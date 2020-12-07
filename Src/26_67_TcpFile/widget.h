@@ -29,5 +29,6 @@ private:
 
 private slots:
 	void on_btnSelectFile_clicked();
+	void on_btnSendFile_clicked();
 };
 #endif // WIDGET_H
