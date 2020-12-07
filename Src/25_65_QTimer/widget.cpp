@@ -28,6 +28,18 @@ Widget::~Widget()
 }
 
 /************************************
+*@Method:    on_btnClose_clicked
+*@Access:    public
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/07 9:50
+*@Describe:	 定时器关闭按钮
+*************************************/
+void Widget::on_btnClose_clicked()
+{
+}
+
+/************************************
 *@Method:    on_btnStart_clicked
 *@Access:    private
 *@Returns:   void

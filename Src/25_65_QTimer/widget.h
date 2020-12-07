@@ -21,5 +21,6 @@ private:
 	QTimer *timer;	//创建定时器对象
 private slots:
 	void on_btnStart_clicked();
+	void on_btnClose_clicked();
 };
 #endif // WIDGET_H
