@@ -168,6 +168,8 @@ void Widget::on_btnSendFile_clicked()
 	{
 		//_发送真正的文件信息
 		//防止TCP黏包文件_需要通过定时器延时20 ms
+		//发送文件的时候启动定时器,延时20ms
+		timer.start(20);
 	}
 	else
 	{
