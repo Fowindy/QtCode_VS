@@ -2,6 +2,7 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include <QDebug>
+#include <QMessageBox>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -44,6 +45,11 @@ Widget::Widget(QWidget *parent)
 			//获取接收读取内容的长度并加到接收长度中
 			qint64 len = recvfile.write(buf);
 			recvSize += len;
+			if (recvSize == recvFileSize)	//文件接收完成
+			{
+				//弹出文件接收完成的对话框
+				QMessageBox::information(this, "完成", "文件接收完成!");
+			}
 		}
 	}
 	);
