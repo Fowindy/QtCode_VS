@@ -10,6 +10,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//初始化时将进度条置0
+	ui->progressBar->setValue(0);
 	//实例化通信套接字对象
 	tcpSocket = new QTcpSocket(this);
 	//初始化标识
