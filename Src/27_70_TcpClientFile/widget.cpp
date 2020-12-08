@@ -48,6 +48,8 @@ Widget::Widget(QWidget *parent)
 			recvSize += len;
 			if (recvSize == recvFileSize)	//文件接收完成
 			{
+				//文件接收完成务必关闭文件对象
+				recvfile.close();
 				//弹出文件接收完成的对话框
 				QMessageBox::information(this, "完成", "文件接收完成!");
 				//文件接收完成关闭套接字和对象
