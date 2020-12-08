@@ -49,6 +49,9 @@ Widget::Widget(QWidget *parent)
 			{
 				//弹出文件接收完成的对话框
 				QMessageBox::information(this, "完成", "文件接收完成!");
+				//文件接收完成关闭套接字和对象
+				tcpSocket->disconnectFromHost();
+				tcpSocket->close();
 			}
 		}
 	}
