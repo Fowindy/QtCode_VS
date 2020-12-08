@@ -46,6 +46,9 @@ Widget::Widget(QWidget *parent)
 				tcpSocket->close();//关闭套接字
 				return;//如果文件打开失败,中断函数
 			}
+			//弹出对话框,显示接收文件的信息
+			QString str = QString("接收的文件:[%1:%2]").arg(recvfileName).arg(recvFileSize / 1024);
+			QMessageBox::information(this, "文件信息", str);
 		}
 		else	//接收文件信息
 		{
