@@ -41,7 +41,9 @@ Widget::Widget(QWidget *parent)
 		}
 		else	//接收文件信息
 		{
-
+			//获取接收读取内容的长度并加到接收长度中
+			qint64 len = recvfile.write(buf);
+			recvSize += len;
 		}
 	}
 	);
