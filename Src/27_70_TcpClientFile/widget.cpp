@@ -41,6 +41,10 @@ Widget::Widget(QWidget *parent)
 			if (false == isOk)
 			{
 				qDebug() << "写入出错! 40";
+
+				tcpSocket->disconnectFromHost();//断开连接
+				tcpSocket->close();//关闭套接字
+				return;//如果文件打开失败,中断函数
 			}
 		}
 		else	//接收文件信息
