@@ -25,5 +25,7 @@ private:
 	qint64 recvFileSize;	//接收文件大小
 	qint64 recvSize;	//已接收文件大小
 	bool isStart;	//定义标记开头
+private slots:
+	void on_btnConnect_clicked();
 };
 #endif // WIDGET_H

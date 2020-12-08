@@ -62,3 +62,16 @@ Widget::~Widget()
 {
 	delete ui;
 }
+
+/************************************
+*@Method:    on_btnConnect_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	  Fowindy
+*@Created:   2020/12/09 0:11
+*@Describe:	 连接按钮
+*************************************/
+void Widget::on_btnConnect_clicked()
+{
+
+}
