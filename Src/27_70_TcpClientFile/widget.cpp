@@ -49,6 +49,10 @@ Widget::Widget(QWidget *parent)
 			//弹出对话框,显示接收文件的信息
 			QString str = QString("接收的文件:[%1:%2]").arg(recvfileName).arg(recvFileSize / 1024);
 			QMessageBox::information(this, "文件信息", str);
+
+			//定义进度条的最大最小值
+			ui->progressBar->setMinimum(0);	//设定最小值为0
+			ui->progressBar->setMaximum(recvFileSize / 100);	//设定最大值
 		}
 		else	//接收文件信息
 		{
