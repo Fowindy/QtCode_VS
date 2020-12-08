@@ -39,7 +39,7 @@
     <string>服务器的端口:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEditIP">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -52,7 +52,7 @@
     <string>127.0.0.1</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEditPort">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -65,7 +65,7 @@
     <string>8888</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btnConnect">
    <property name="geometry">
     <rect>
      <x>340</x>

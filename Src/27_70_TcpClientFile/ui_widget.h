@@ -23,9 +23,9 @@ class Ui_Widget
 public:
     QLabel *label;
     QLabel *label_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QPushButton *pushButton;
+    QLineEdit *lineEditIP;
+    QLineEdit *lineEditPort;
+    QPushButton *btnConnect;
 
     void setupUi(QWidget *Widget)
     {
@@ -38,15 +38,15 @@ public:
         label_2 = new QLabel(Widget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(110, 100, 81, 16));
-        lineEdit = new QLineEdit(Widget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setGeometry(QRect(170, 70, 113, 20));
-        lineEdit_2 = new QLineEdit(Widget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(190, 100, 113, 20));
-        pushButton = new QPushButton(Widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(340, 90, 75, 23));
+        lineEditIP = new QLineEdit(Widget);
+        lineEditIP->setObjectName(QString::fromUtf8("lineEditIP"));
+        lineEditIP->setGeometry(QRect(170, 70, 113, 20));
+        lineEditPort = new QLineEdit(Widget);
+        lineEditPort->setObjectName(QString::fromUtf8("lineEditPort"));
+        lineEditPort->setGeometry(QRect(190, 100, 113, 20));
+        btnConnect = new QPushButton(Widget);
+        btnConnect->setObjectName(QString::fromUtf8("btnConnect"));
+        btnConnect->setGeometry(QRect(340, 90, 75, 23));
 
         retranslateUi(Widget);
 
@@ -58,9 +58,9 @@ public:
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
         label->setText(QCoreApplication::translate("Widget", "\346\234\215\345\212\241\345\231\250\347\232\204IP:", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "\346\234\215\345\212\241\345\231\250\347\232\204\347\253\257\345\217\243:", nullptr));
-        lineEdit->setText(QCoreApplication::translate("Widget", "127.0.0.1", nullptr));
-        lineEdit_2->setText(QCoreApplication::translate("Widget", "8888", nullptr));
-        pushButton->setText(QCoreApplication::translate("Widget", "connect", nullptr));
+        lineEditIP->setText(QCoreApplication::translate("Widget", "127.0.0.1", nullptr));
+        lineEditPort->setText(QCoreApplication::translate("Widget", "8888", nullptr));
+        btnConnect->setText(QCoreApplication::translate("Widget", "connect", nullptr));
     } // retranslateUi
 
 };

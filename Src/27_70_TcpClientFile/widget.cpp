@@ -73,5 +73,7 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnConnect_clicked()
 {
-
+	//获取服务器的ip和端口
+	QString ip = ui->lineEditIP->text();
+	quint16 port = ui->lineEditPort->text().toInt();
 }
