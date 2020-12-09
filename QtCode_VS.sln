@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "26_67_TcpFile", "Src\26_67_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "27_70_TcpClientFile", "Src\27_70_TcpClientFile\27_70_TcpClientFile.vcxproj", "{8B3A7BFA-C40A-4D7D-842D-9DD6CCB95066}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "28_74_QThread", "Src\28_74_QThread\28_74_QThread.vcxproj", "{8DC4C55B-5B7E-44D7-A51A-6AA7769EBAE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,10 @@ Global
 		{8B3A7BFA-C40A-4D7D-842D-9DD6CCB95066}.Debug|x64.Build.0 = Debug|x64
 		{8B3A7BFA-C40A-4D7D-842D-9DD6CCB95066}.Release|x64.ActiveCfg = Release|x64
 		{8B3A7BFA-C40A-4D7D-842D-9DD6CCB95066}.Release|x64.Build.0 = Release|x64
+		{8DC4C55B-5B7E-44D7-A51A-6AA7769EBAE4}.Debug|x64.ActiveCfg = Debug|x64
+		{8DC4C55B-5B7E-44D7-A51A-6AA7769EBAE4}.Debug|x64.Build.0 = Debug|x64
+		{8DC4C55B-5B7E-44D7-A51A-6AA7769EBAE4}.Release|x64.ActiveCfg = Release|x64
+		{8DC4C55B-5B7E-44D7-A51A-6AA7769EBAE4}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
