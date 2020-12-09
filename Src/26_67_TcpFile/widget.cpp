@@ -41,6 +41,23 @@ Widget::Widget(QWidget *parent)
 
 		//成功连接后才可以按选择按钮setEnabled
 		ui->btnSelectFile->setEnabled(true);
+
+		connect(tcpSocket, &QTcpSocket::readyRead,
+			[=]()
+		{
+			//取客户端的信息
+			QByteArray buf = tcpSocket->readAll();
+			if (QString(buf) == "file done")
+			{//文件接收完毕
+				ui->textEdit->append("文件发送完毕");
+				file.close();
+
+				//断开客户端端口
+				tcpSocket->disconnectFromHost();
+				tcpSocket->close();
+			}
+		}
+		);
 	});
 
 	//连接定时器
@@ -74,6 +91,7 @@ void Widget::sendData()
 	qint64 len = 0;
 	do
 	{
+		ui->textEdit->append("正在发送文件……");
 		//定义每次发送数据大小为4k的buf
 		char buf[4 * 1024] = { 0 };
 		//每次循环长度置0
@@ -87,14 +105,14 @@ void Widget::sendData()
 	} while (len > 0);	//如果发送数据大于0继续发送_或fileSize != sendSize
 
 	//已发送文件大小等于文件总大小则发送完毕
-	if (sendSize == fileSize)
-	{
-		ui->textEdit->append("文件发送完毕!");
-		//发送完毕_完毕文件对象_把客户端端口断开_关闭客户端套接字对象
-		file.close();
-		tcpSocket->disconnectFromHost();
-		tcpSocket->close();
-	}
+	//if (sendSize == fileSize)
+	//{
+	//	ui->textEdit->append("文件发送完毕!");
+	//	//发送完毕_完毕文件对象_把客户端端口断开_关闭客户端套接字对象
+	//	file.close();
+	//	tcpSocket->disconnectFromHost();
+	//	tcpSocket->close();
+	//}
 }
 
 /************************************
@@ -158,6 +176,7 @@ void Widget::on_btnSelectFile_clicked()
 *************************************/
 void Widget::on_btnSendFile_clicked()
 {
+	ui->btnSendFile->setEnabled(false);
 	//先发送文件头信息_文件名##文件大小
 	QString head = QString("%1##%2").arg(fileName).arg(fileSize);
 	//发送头部信息

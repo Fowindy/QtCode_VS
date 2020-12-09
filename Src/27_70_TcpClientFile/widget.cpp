@@ -52,15 +52,23 @@ Widget::Widget(QWidget *parent)
 
 			//定义进度条的最大最小值
 			ui->progressBar->setMinimum(0);	//设定最小值为0
-			ui->progressBar->setMaximum(recvFileSize / 100);	//设定最大值
+			ui->progressBar->setMaximum(recvFileSize / 1024);	//设定最大值
 		}
 		else	//接收文件信息
 		{
 			//获取接收读取内容的长度并加到接收长度中
 			qint64 len = recvfile.write(buf);
-			recvSize += len;
+			if (len > 0)
+			{
+				recvSize += len;	//累计接收大小
+				qDebug() << "接收大小为:" << len;
+			}
+			//更新显示进度条
+			ui->progressBar->setValue(recvSize / 1024);
 			if (recvSize == recvFileSize)	//文件接收完成
 			{
+				//先给服务发送(接收文件完成的信息)
+				tcpSocket->write("file done");
 				//文件接收完成务必关闭文件对象
 				recvfile.close();
 				//弹出文件接收完成的对话框
@@ -95,4 +103,7 @@ void Widget::on_btnConnect_clicked()
 
 	//连接服务器
 	tcpSocket->connectToHost(QHostAddress(ip), port);
+
+	//
+	isStart = true;
 }
