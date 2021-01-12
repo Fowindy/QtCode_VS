@@ -1,4 +1,5 @@
 ﻿#include "MyThread.h"
+#include "QThread"
 
 MyThread::MyThread(QObject *parent)
 	: QObject(parent)
@@ -19,5 +20,9 @@ MyThread::~MyThread()
 *************************************/
 void MyThread::myTimeOut()
 {
-
+	while (1)
+	{
+		//线程触发时间间隔_1秒
+		QThread::sleep(1);
+	}
 }
