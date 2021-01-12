@@ -54,11 +54,6 @@ void Widget::on_btnStart_clicked()
 		myTimer->start(100);
 	}
 
-	//非常复杂的数据处理,耗时较长
-	QThread::sleep(5);
-
-	//处理完数据后,关闭定时器
-	//myTimer->stop();	//5秒之后才工作
-	qDebug() << "over";
-	//当界面有一个过于复杂的数据处理超过几秒钟,就应该用多线程
+	//启动线程处理数据
+	thread->start();
 }
