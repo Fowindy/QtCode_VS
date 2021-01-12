@@ -13,6 +13,8 @@ Widget::Widget(QWidget *parent)
 	thread = new QThread(this);
 	//把自定义线程加入到子线程中
 	myT->moveToThread(thread);
+	//连接信号和槽_发送者:myT_信号函数:mySignal_接受者:this_处理槽函数:dealSignal
+	connect(myT, &MyThread::mySignal, this, &Widget::dealSignal);
 }
 
 Widget::~Widget()
