@@ -11,6 +11,8 @@ public:
 	~MyThread();
 	//线程处理函数myTimeOut_定义
 	void myTimeOut();
+	//定义设置是否停止的公有接口函数默认参数:False
+	void setFlag(bool flag);
 signals:
 	//信号函数_定义
 	void mySignal();
