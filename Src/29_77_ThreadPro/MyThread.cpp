@@ -43,5 +43,6 @@ void MyThread::myTimeOut()
 *************************************/
 void MyThread::setFlag(bool flag)
 {
+	//获取是否停止标志位状态
 	isStop = flag;
 }
