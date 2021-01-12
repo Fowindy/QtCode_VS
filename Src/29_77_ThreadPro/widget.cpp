@@ -58,3 +58,8 @@ void Widget::dealSignal()
 	i++;
 	ui->lcdNumber->display(i);
 }
+
+void Widget::startThread()
+{
+
+}
