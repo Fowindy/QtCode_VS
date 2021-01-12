@@ -66,6 +66,11 @@ void Widget::on_btnStart_clicked()
 *************************************/
 void Widget::on_btnStop_clicked()
 {
+	//如线程已停止停止按钮直接返回
+	if (thread->isRunning() == false)
+	{
+		return;
+	}
 	//停止按钮切换停止标志为true
 	myT->setFlag(true);
 	//主线程退出
