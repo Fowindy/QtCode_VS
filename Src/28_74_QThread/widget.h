@@ -16,8 +16,7 @@ class Widget : public QWidget
 public:
 	Widget(QWidget *parent = nullptr);
 	~Widget();
-	//定义线程结束槽函数
-	void dealDone();
+
 
 private:
 	Ui::Widget *ui;
@@ -25,6 +24,8 @@ private:
 	MyThread *thread;	//创建线程对象指针变量
 private slots:
 	void dealTimeout();	//定时器槽函数
-	void on_btnStart_clicked();
+	void on_btnStart_clicked();	//开始按钮触发槽函数
+	void dealDone();	//定义线程结束槽函数
+	void stopThread();	//停止线程槽函数_定义
 };
 #endif // WIDGET_H

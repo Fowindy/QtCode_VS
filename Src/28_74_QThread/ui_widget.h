@@ -21,7 +21,7 @@ class Ui_Widget
 {
 public:
     QLCDNumber *lcdNumber;
-    QPushButton *pushButton;
+    QPushButton *btnStart;
 
     void setupUi(QWidget *Widget)
     {
@@ -31,9 +31,9 @@ public:
         lcdNumber = new QLCDNumber(Widget);
         lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
         lcdNumber->setGeometry(QRect(130, 120, 241, 81));
-        pushButton = new QPushButton(Widget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(210, 230, 75, 23));
+        btnStart = new QPushButton(Widget);
+        btnStart->setObjectName(QString::fromUtf8("btnStart"));
+        btnStart->setGeometry(QRect(210, 230, 75, 23));
 
         retranslateUi(Widget);
 
@@ -43,7 +43,7 @@ public:
     void retranslateUi(QWidget *Widget)
     {
         Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
-        pushButton->setText(QCoreApplication::translate("Widget", "btnStart", nullptr));
+        btnStart->setText(QCoreApplication::translate("Widget", "\345\274\200\345\247\213", nullptr));
     } // retranslateUi
 
 };
