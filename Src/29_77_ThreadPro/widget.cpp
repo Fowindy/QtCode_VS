@@ -33,3 +33,16 @@ void Widget::on_btnStart_clicked()
 	//启动线程,但是没有启动线程处理函数
 	thread->start();
 }
+
+/************************************
+*@Method:    dealSignal
+*@Access:    public
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 15:20
+*@Describe:	 处理槽函数_实现
+*************************************/
+void Widget::dealSignal()
+{
+
+}
