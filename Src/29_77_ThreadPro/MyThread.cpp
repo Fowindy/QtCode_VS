@@ -21,7 +21,7 @@ MyThread::~MyThread()
 *************************************/
 void MyThread::myTimeOut()
 {
-	while (1)
+	while (!isStop)	//标志位为false则循环线程函数
 	{
 		//线程触发时间间隔_1秒
 		QThread::sleep(1);
