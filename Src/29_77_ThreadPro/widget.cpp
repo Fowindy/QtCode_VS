@@ -7,6 +7,8 @@ Widget::Widget(QWidget *parent)
 	, ui(new Ui::Widget)
 {
 	ui->setupUi(this);
+	//动态分配空间,不能指定父对象
+	myT = new MyThread;
 }
 
 Widget::~Widget()

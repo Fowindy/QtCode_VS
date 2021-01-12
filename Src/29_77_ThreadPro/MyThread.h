@@ -7,7 +7,7 @@ class MyThread : public QObject
 	Q_OBJECT	//使用信号和槽头文件必须有Q_OBJECT宏
 
 public:
-	MyThread(QObject *parent);
+	explicit MyThread(QObject *parent = 0);
 	~MyThread();
 	//线程处理函数myTimeOut_定义
 	void myTimeOut();
