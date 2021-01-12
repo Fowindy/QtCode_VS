@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QTimer>	//定时器头文件
+#include "MyThread.h"	//在widget.h文件中包含MyThread.h头文件
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
