@@ -30,5 +30,6 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnStart_clicked()
 {
-
+	//启动线程,但是没有启动线程处理函数
+	thread->start();
 }
