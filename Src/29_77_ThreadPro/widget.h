@@ -24,5 +24,7 @@ private:
 public slots:
 	//开始按钮槽函数_定义
 	void on_btnStart_clicked();
+	//处理槽函数_定义
+	void dealSignal();
 };
 #endif // WIDGET_H
