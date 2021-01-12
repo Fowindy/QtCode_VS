@@ -21,5 +21,8 @@ private:
 	Ui::Widget *ui;
 	MyThread *myT;	//定义线程函数指针变量
 	QThread *thread;	//自带子线程指针变量
+public slots:
+	//开始按钮槽函数_定义
+	void on_btnStart_clicked();
 };
 #endif // WIDGET_H
