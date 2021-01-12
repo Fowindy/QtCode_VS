@@ -14,4 +14,6 @@ public:
 signals:
 	//信号函数_定义
 	void mySignal();
+private:
+	bool isStop;	//定义子线程是否停止标志位_私有
 };
