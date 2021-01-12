@@ -1,5 +1,6 @@
 ﻿#include "MyThread.h"
 #include "QThread"
+#include <QDebug>
 
 MyThread::MyThread(QObject *parent)
 	: QObject(parent)
@@ -26,5 +27,7 @@ void MyThread::myTimeOut()
 		QThread::sleep(1);
 		//每隔一秒发送一个信号
 		emit mySignal();
+		//打印子线程号
+		qDebug() << "子线程号:" << QThread::currentThread();
 	}
 }
