@@ -20,6 +20,7 @@ public:
 private:
 	Ui::Widget *ui;
 	QTimer *myTimer;	//声明定时器变量
+	MyThread *thread;	//创建线程对象指针变量
 private slots:
 	void dealTimeout();	//定时器槽函数
 	void on_btnStart_clicked();
