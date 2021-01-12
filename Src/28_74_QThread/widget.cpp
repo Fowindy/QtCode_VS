@@ -49,7 +49,8 @@ void Widget::dealDone()
 *************************************/
 void Widget::stopThread()
 {
-
+	//停止线程_使用quit_不要用terminate(会导致内存问题)
+	thread->quit();
 }
 
 /************************************
