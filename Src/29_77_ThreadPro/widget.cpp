@@ -39,6 +39,11 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnStart_clicked()
 {
+	//如线程已启动开始按钮直接返回
+	if (thread->isRunning() == true)
+	{
+		return;
+	}
 	//开始按钮切换停止标志为false
 	myT->setFlag(false);
 	//启动线程,但是没有启动线程处理函数
