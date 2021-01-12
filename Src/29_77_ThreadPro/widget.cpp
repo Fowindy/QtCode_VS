@@ -43,6 +43,8 @@ void Widget::on_btnStart_clicked()
 	//myT->myTimeOut();
 
 	//只能通过signal-slot的方式调用
+	//向子线程发射启动信号
+	emit startThread();
 }
 
 /************************************
@@ -59,17 +61,4 @@ void Widget::dealSignal()
 	static int i = 0;
 	i++;
 	ui->lcdNumber->display(i);
-}
-
-/************************************
-*@Method:    startThread
-*@Access:    private
-*@Returns:   void
-*@Author: 	 Fowindy
-*@Created:   2021/01/12 15:45
-*@Describe:	 开启子线程信号函数_实现
-*************************************/
-void Widget::startThread()
-{
-
 }
