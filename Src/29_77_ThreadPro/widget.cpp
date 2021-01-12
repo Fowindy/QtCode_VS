@@ -46,5 +46,8 @@ void Widget::on_btnStart_clicked()
 *************************************/
 void Widget::dealSignal()
 {
-
+	//一秒数值加1
+	static int i = 0;
+	i++;
+	ui->lcdNumber->display(i);
 }
