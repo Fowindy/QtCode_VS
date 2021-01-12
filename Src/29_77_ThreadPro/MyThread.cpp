@@ -24,5 +24,7 @@ void MyThread::myTimeOut()
 	{
 		//线程触发时间间隔_1秒
 		QThread::sleep(1);
+		//每隔一秒发送一个信号
+		emit mySignal();
 	}
 }
