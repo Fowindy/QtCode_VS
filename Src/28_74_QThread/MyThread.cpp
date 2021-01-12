@@ -23,4 +23,6 @@ void MyThread::run()
 	//很复杂的数据处理需要耗时5秒
 	//sleep:秒_msleep:毫秒_usleep:微秒
 	sleep(5);
+	//处理完成发射信号
+	emit isDone();
 }
