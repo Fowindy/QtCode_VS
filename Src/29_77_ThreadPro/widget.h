@@ -28,6 +28,8 @@ private slots:
 	void on_btnStop_clicked();
 	//处理槽函数_定义
 	void dealSignal();
+	//处理关闭槽函数_定义
+	void dealClose();
 signals:
 	//开启子线程信号函数_定义
 	void startThread();

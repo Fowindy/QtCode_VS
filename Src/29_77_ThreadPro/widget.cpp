@@ -20,6 +20,8 @@ Widget::Widget(QWidget *parent)
 	qDebug() << "主线程号:" << QThread::currentThread();
 	//主窗口信号startThread连接MyThread槽函数myTimeOut
 	connect(this, &Widget::startThread, myT, &MyThread::myTimeOut);
+	//关闭X摧毁线程
+	connect(this, &Widget::destroyed, this, &Widget::dealClose);
 }
 
 Widget::~Widget()
