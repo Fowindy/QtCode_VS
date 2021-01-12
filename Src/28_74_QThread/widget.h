@@ -16,6 +16,8 @@ class Widget : public QWidget
 public:
 	Widget(QWidget *parent = nullptr);
 	~Widget();
+	//定义线程结束槽函数
+	void dealDone();
 
 private:
 	Ui::Widget *ui;

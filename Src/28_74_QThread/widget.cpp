@@ -14,11 +14,18 @@ Widget::Widget(QWidget *parent)
 	connect(myTimer, &QTimer::timeout, this, &Widget::dealTimeout);
 	//在构造函数中为线程指针变量分配空间
 	thread = new MyThread(this);
+	//连接线程完成信号
+	connect(thread, &MyThread::isDone, this, dealDone);
 }
 
 Widget::~Widget()
 {
 	delete ui;
+}
+
+void Widget::dealDone()
+{
+
 }
 
 /************************************
