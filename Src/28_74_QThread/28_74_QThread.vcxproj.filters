@@ -40,9 +40,15 @@
     <ClCompile Include="widget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="widget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyThread.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
