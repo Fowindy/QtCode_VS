@@ -31,3 +31,17 @@ void MyThread::myTimeOut()
 		qDebug() << "子线程号:" << QThread::currentThread();
 	}
 }
+
+/************************************
+*@Method:    setFlag
+*@Access:    public
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Parameter: bool flag
+*@Created:   2021/01/12 16:20
+*@Describe:	 设置是否停止的公有接口函数_实现
+*************************************/
+void MyThread::setFlag(bool flag)
+{
+	isStop = flag;
+}
