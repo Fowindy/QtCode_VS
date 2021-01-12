@@ -18,6 +18,8 @@ Widget::Widget(QWidget *parent)
 	connect(myT, &MyThread::mySignal, this, &Widget::dealSignal);
 	//打印主线程号
 	qDebug() << "主线程号:" << QThread::currentThread();
+	//主窗口信号startThread连接MyThread槽函数myTimeOut
+	connect(this, &Widget::startThread, myT, &MyThread::myTimeOut);
 }
 
 Widget::~Widget()
@@ -59,6 +61,14 @@ void Widget::dealSignal()
 	ui->lcdNumber->display(i);
 }
 
+/************************************
+*@Method:    startThread
+*@Access:    private
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 15:45
+*@Describe:	 开启子线程信号函数_实现
+*************************************/
 void Widget::startThread()
 {
 
