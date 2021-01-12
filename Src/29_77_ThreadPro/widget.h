@@ -20,5 +20,6 @@ public:
 private:
 	Ui::Widget *ui;
 	MyThread *myT;	//定义线程函数指针变量
+	QThread *thread;	//自带子线程指针变量
 };
 #endif // WIDGET_H
