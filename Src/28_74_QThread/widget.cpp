@@ -17,7 +17,7 @@ Widget::Widget(QWidget *parent)
 	//连接线程完成信号
 	connect(thread, &MyThread::isDone, this, &Widget::dealDone);
 	//当按窗口右上角X时,窗口触发destroyed()信号停止线程
-	connect(this, &Widget::destroy, this, &Widget::stopThread);
+	connect(this, &Widget::destroyed, this, &Widget::stopThread);
 }
 
 Widget::~Widget()
