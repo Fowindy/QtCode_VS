@@ -51,6 +51,8 @@ void Widget::stopThread()
 {
 	//停止线程_使用quit_不要用terminate(会导致内存问题)
 	thread->quit();
+	//等待线程处理完手头工作
+	thread->wait();
 }
 
 /************************************
