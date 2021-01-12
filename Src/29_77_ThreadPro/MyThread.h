@@ -4,7 +4,7 @@
 
 class MyThread : public QObject
 {
-	Q_OBJECT
+	Q_OBJECT	//使用信号和槽头文件必须有Q_OBJECT宏
 
 public:
 	MyThread(QObject *parent);
