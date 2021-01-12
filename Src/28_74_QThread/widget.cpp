@@ -12,7 +12,8 @@ Widget::Widget(QWidget *parent)
 	myTimer = new QTimer(this);
 	//只要定时器启动, 自动触发timeout()
 	connect(myTimer, &QTimer::timeout, this, &Widget::dealTimeout);
-
+	//在构造函数中为线程指针变量分配空间
+	thread = new MyThread(this);
 }
 
 Widget::~Widget()
