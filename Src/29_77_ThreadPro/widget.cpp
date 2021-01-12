@@ -48,6 +48,22 @@ void Widget::on_btnStart_clicked()
 }
 
 /************************************
+*@Method:    on_btnStop_clicked
+*@Access:    private
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 16:06
+*@Describe:	 停止按钮槽函数_实现
+*************************************/
+void Widget::on_btnStop_clicked()
+{
+	//主线程退出
+	thread->quit();
+	//主线程等待退出
+	thread->wait();
+}
+
+/************************************
 *@Method:    dealSignal
 *@Access:    public
 *@Returns:   void
