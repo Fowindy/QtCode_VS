@@ -35,6 +35,8 @@ void Widget::dealDone()
 {
 	//打印结束信息
 	qDebug() << "It is over!";
+	//关闭定时器
+	myTimer->stop();
 }
 
 /************************************
