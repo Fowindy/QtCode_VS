@@ -24,6 +24,8 @@ private:
 private slots:
 	//开始按钮槽函数_定义
 	void on_btnStart_clicked();
+	//停止按钮槽函数_定义
+	void on_btnStop_clicked();
 	//处理槽函数_定义
 	void dealSignal();
 signals:
