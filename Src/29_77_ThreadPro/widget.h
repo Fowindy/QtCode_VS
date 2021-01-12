@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "MyThread.h"	//必须包含MyThread头文件
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
