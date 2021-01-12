@@ -1,4 +1,4 @@
-#include "MyThread.h"
+﻿#include "MyThread.h"
 
 MyThread::MyThread(QObject *parent)
 	: QObject(parent)
@@ -7,4 +7,9 @@ MyThread::MyThread(QObject *parent)
 
 MyThread::~MyThread()
 {
+}
+
+void MyThread::myTimeOut()
+{
+
 }

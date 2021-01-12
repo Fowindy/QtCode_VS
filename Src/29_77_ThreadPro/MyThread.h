@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <QObject>
 
@@ -9,4 +9,6 @@ class MyThread : public QObject
 public:
 	MyThread(QObject *parent);
 	~MyThread();
+	//线程处理函数myTimeOut_定义
+	void myTimeOut();
 };
