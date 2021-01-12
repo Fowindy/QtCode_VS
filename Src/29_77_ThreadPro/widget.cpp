@@ -37,6 +37,8 @@ Widget::~Widget()
 *************************************/
 void Widget::on_btnStart_clicked()
 {
+	//开始按钮切换停止标志为false
+	myT->setFlag(false);
 	//启动线程,但是没有启动线程处理函数
 	thread->start();
 	//不能直接调用线程处理函数_直接调用导致线程处理函数和主线程是在同一个线程
@@ -57,6 +59,8 @@ void Widget::on_btnStart_clicked()
 *************************************/
 void Widget::on_btnStop_clicked()
 {
+	//停止按钮切换停止标志为true
+	myT->setFlag(true);
 	//主线程退出
 	thread->quit();
 	//主线程等待退出

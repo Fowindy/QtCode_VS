@@ -5,6 +5,8 @@
 MyThread::MyThread(QObject *parent)
 	: QObject(parent)
 {
+	//指定标志位默认状态:False
+	isStop = false;
 }
 
 MyThread::~MyThread()
