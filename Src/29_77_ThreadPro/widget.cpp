@@ -39,6 +39,8 @@ void Widget::on_btnStart_clicked()
 	thread->start();
 	//不能直接调用线程处理函数_直接调用导致线程处理函数和主线程是在同一个线程
 	//myT->myTimeOut();
+
+	//只能通过signal-slot的方式调用
 }
 
 /************************************
