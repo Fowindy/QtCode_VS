@@ -19,3 +19,16 @@ Widget::~Widget()
 {
 	delete ui;
 }
+
+/************************************
+*@Method:    on_btnStart_clicked
+*@Access:    public
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 15:16
+*@Describe:	 开始按钮槽函数_实现
+*************************************/
+void Widget::on_btnStart_clicked()
+{
+
+}
