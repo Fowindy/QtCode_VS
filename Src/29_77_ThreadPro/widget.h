@@ -18,5 +18,6 @@ public:
 
 private:
 	Ui::Widget *ui;
+	MyThread *myT;	//定义线程函数指针变量
 };
 #endif // WIDGET_H
