@@ -23,6 +23,14 @@ Widget::~Widget()
 	delete ui;
 }
 
+/************************************
+*@Method:    dealDone
+*@Access:    public
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 11:22
+*@Describe:	 实现线程结束槽函数
+*************************************/
 void Widget::dealDone()
 {
 
