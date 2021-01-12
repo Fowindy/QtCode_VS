@@ -84,3 +84,17 @@ void Widget::dealSignal()
 	i++;
 	ui->lcdNumber->display(i);
 }
+
+/************************************
+*@Method:    dealClose
+*@Access:    private
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 16:33
+*@Describe:	 处理关闭槽函数_实现
+*************************************/
+void Widget::dealClose()
+{
+	//先调用关闭线程按钮槽函数
+	on_btnStop_clicked();
+}
