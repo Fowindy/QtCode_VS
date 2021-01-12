@@ -39,6 +39,18 @@ void Widget::dealDone()
 	myTimer->stop();
 }
 
+/************************************
+*@Method:    stopThread
+*@Access:    private
+*@Returns:   void
+*@Author: 	 Fowindy
+*@Created:   2021/01/12 11:35
+*@Describe:	 停止线程槽函数_实现
+*************************************/
+void Widget::stopThread()
+{
+
+}
 
 /************************************
 *@Method:    dealTimeout
